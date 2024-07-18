@@ -19,6 +19,26 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+
+## Contributing guide
+To contribute  
+Create a new branch 
+
+For new features 
+```
+git checkout -b feature/feature-name
+``` 
+For bug-fixes 
+ ```
+ git checkout -b bug-fix/bug-name
+ ```
+ For enhancement 
+  ```
+ git checkout -b enhancement/enhancement-name
+ ```
+
+Raise a PR after working on the feature, bug-fix or enhancement. 
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
