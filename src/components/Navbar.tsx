@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
         className={`${isOpen ? 'block mt-16' : 'hidden'} md:hidden`}
         id='mobile-menu'
       >
-        <div className='fixed flex flex-col w-full h-full p-5 space-y-1 sm:px-3 bg-nav-100 z-50'>
+        <div className='fixed mt-1 flex flex-col w-full p-5 space-y-1 sm:px-3 bg-nav-100 z-50'>
           <Link
             href='/'
             className={getMobileNavLinkClass('/')}
