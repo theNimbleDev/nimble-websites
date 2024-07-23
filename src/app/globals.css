@@ -3,21 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-h1-size: 84px;
+  --primary-h2-size: 68px;
+  --primary-h3-size: 46px;
+  --primary-p-size: 24px
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --primary-h1-size: 32px;
+    --primary-h2-size: 32px;
+    --primary-h3-size: 24px;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: white;
+}
+
+h1 {
+  font-size: var(--primary-h1-size);
+}
+
+h2 {
+  font-size: var(--primary-h2-size);
+}
+
+p {
+  font-size: var(--primary-p-size);
+}
+
+html {
+  background: url('/sitebg.svg') no-repeat top center fixed;
+  background-size: cover;
+}
+
+/* ButtonComponent.css */
+.gradient-border {
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(90deg, #FFA673 0%, #FF7354 50%, #FF7D06 100%);
+  border-radius: 10px;
+  border: 2px solid transparent;
 }
 
 @layer utilities {

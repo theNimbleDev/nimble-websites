@@ -1,8 +1,12 @@
+import Button from '@/components/Button'
 
-export default function Home() {
+export default function Home () {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="font-bold text-xl">theNimbles</h1>
+    <main className=' items-center justify-between'>
+      <h1 className='font-bold text-xl'>theNimbles</h1>
+
+      {/* <Button /> */}
+      <Button />
     </main>
-  );
+  )
 }
