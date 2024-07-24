@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react';
 
 interface ClientscountProps {
@@ -7,10 +8,10 @@ interface ClientscountProps {
 
 const Clientscount: React.FC<ClientscountProps> = ({ count, images }) => {
   return (
-    <div className="clientscount">
+    <div>
       <div className='client-image flex items-center gap-2'>
         {images.map((src, index) => (
-          <img key={index} src={src} alt={`Client ${index + 1}`} className='client-image' />
+          <Image key={index} src={src} alt={`Client ${index + 1}`} width='92' height='43' className='client-image' />
         ))}
 
         <div>

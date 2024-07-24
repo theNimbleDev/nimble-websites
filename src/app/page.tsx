@@ -6,7 +6,7 @@ import styles from './page.module.css'
 import Clientscount from '@/components/Clientscount'
 
 const clientImages = [
-  'client-image.png'
+  'client-image.svg'
 ];
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
               technological advancement and sustainable development.
             </p>
 
-            <div className='flex gap-8 items-center'>
+            <div className='flex gap-8 items-center flex-col-reverse md:flex-row'>
               <Button cta='Book a call' />
               <Clientscount images={clientImages} count={1000} />
             </div>
