@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { Button } from '@nextui-org/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import NavItems from './NavItems'
+import NavItems from '@/components/NavItems'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
