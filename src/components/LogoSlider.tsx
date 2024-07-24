@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const logos = [
@@ -26,7 +27,13 @@ const LogoSlider: React.FC = () => {
               className='flex items-center justify-center border p-4 md:p-6 border-gray-500 rounded-lg h-auto'
               key={index}
             >
-              <img className='max-w-max' src={logo} alt={`Logo ${index + 1}`} />
+              <Image
+                className='max-w-max'
+                width='100'
+                height='100'
+                src={logo}
+                alt={`Logo ${index + 1}`}
+              />
             </div>
           ))}
         </div>
