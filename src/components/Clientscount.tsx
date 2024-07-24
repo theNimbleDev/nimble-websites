@@ -11,7 +11,7 @@ const Clientscount: React.FC<ClientscountProps> = ({ count, images }) => {
     <div>
       <div className='client-image flex items-center gap-2'>
         {images.map((src, index) => (
-          <Image key={index} src={src} alt={`Client ${index + 1}`} width='92' height='43' className='client-image' />
+          <Image key={index} src={src} alt={`Client ${index + 1}`} width='92' height='43' />
         ))}
 
         <div>
