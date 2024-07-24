@@ -1,13 +1,29 @@
 'use client'
-import { useState } from 'react'
-import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { Button } from '@nextui-org/react'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+import NavItems from './NavItems'
+import Link from 'next/link'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const pathname = usePathname()
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -17,21 +33,15 @@ const Navbar: React.FC = () => {
     setIsOpen(false)
   }
 
-  const getNavLinkClass = (path: string) => {
-    return pathname === path
-      ? 'text-primary-100 px-3 py-2 rounded-md text-sm font-medium'
-      : 'hover:text-primary-100 px-3 py-2 rounded-md text-sm font-medium'
-  }
-
-  const getMobileNavLinkClass = (path: string) => {
-    return pathname === path
-      ? 'bg-primary-100 text-black px-3 py-2 rounded-full text-sm font-medium'
-      : 'hover:bg-primary-100 hover:text-black px-3 py-2 rounded-full text-sm font-medium'
-  }
-
   return (
     <>
-      <nav className='md:bg-transparent bg-nav-100 border-b md:border-gray-700 border-primary-100 fixed w-full z-10 top-0'>
+      <nav
+        className={`${
+          isScrolled
+            ? 'md:bg-nav-100 md:border-none'
+            : 'md:bg-transparent md:border-gray-700'
+        } bg-nav-100 border-b  border-primary-100 fixed w-full z-10 top-0`}
+      >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-0'>
           <div className='flex justify-between h-16'>
             <div className='flex-shrink-0 flex items-center'>
@@ -40,15 +50,7 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
             <div className='hidden md:flex md:items-center md:space-x-4'>
-              <Link href='/' className={getNavLinkClass('/')}>
-                Home
-              </Link>
-              <Link href='/about' className={getNavLinkClass('/about')}>
-                About Us
-              </Link>
-              <Link href='/contact' className={getNavLinkClass('/contact')}>
-                Contact Us
-              </Link>
+              <NavItems />
               <Button
                 radius='full'
                 className='bg-primary-100 text-black shadow-lg'
@@ -106,27 +108,7 @@ const Navbar: React.FC = () => {
         id='mobile-menu'
       >
         <div className='fixed mt-1 flex flex-col w-full p-5 space-y-1 sm:px-3 bg-nav-100 z-50'>
-          <Link
-            href='/'
-            className={getMobileNavLinkClass('/')}
-            onClick={closeMenu}
-          >
-            Home
-          </Link>
-          <Link
-            href='/about'
-            className={getMobileNavLinkClass('/about')}
-            onClick={closeMenu}
-          >
-            About
-          </Link>
-          <Link
-            href='/contact'
-            className={getMobileNavLinkClass('/contact')}
-            onClick={closeMenu}
-          >
-            Contact
-          </Link>
+          <NavItems mobile closeMenu={closeMenu} />
         </div>
       </div>
     </>

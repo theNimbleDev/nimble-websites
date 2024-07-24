@@ -6,16 +6,20 @@
   --primary-h1-size: 84px;
   --primary-h2-size: 68px;
   --primary-h3-size: 46px;
-  --primary-p-size: 24px
+  --primary-p-size: 24px;
+  --p-line-height: 38px
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (max-width: 768px) {
   :root {
     --primary-h1-size: 32px;
     --primary-h2-size: 32px;
     --primary-h3-size: 24px;
+    --primary-p-size : 20px;
+    --p-line-height: 24px
   }
 }
+
 
 body {
   color: white;
@@ -23,14 +27,34 @@ body {
 
 h1 {
   font-size: var(--primary-h1-size);
+  line-height: 112%;
+  background: linear-gradient(90deg, #FFA673 0%, #FF7354 50%, #FF7D06 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #FFA673 0%, #FF7354 50%, #FF7D06 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.span-text {
+  color: white !important;
 }
 
 h2 {
   font-size: var(--primary-h2-size);
+  line-height: 118%;
 }
 
 p {
   font-size: var(--primary-p-size);
+  line-height: var(--p-line-height);
 }
 
 html {

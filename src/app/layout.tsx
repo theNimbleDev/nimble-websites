@@ -19,9 +19,7 @@ export default function RootLayout ({
     <html lang='en'>
       <body className={manrope.className}>
         <Navbar />
-        <main className='max-w-7xl mx-auto mt-16 px-4 sm:px-6 lg:px-0'>
-          {children}
-        </main>
+        <main className='mt-16'>{children}</main>
       </body>
     </html>
   )

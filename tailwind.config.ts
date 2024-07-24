@@ -24,8 +24,17 @@ const config: Config = {
           100: '#282828'
         }
       },
+      keyframes: {
+        scroll: {
+          '100%': { transform: 'translateX(calc(-50% - 2.5rem))' },
+        }
+      },
+      animation: {
+        scroll: 'scroll 20s linear infinite',
+      },
     },
   },
   plugins: [nextui()],
 };
+
 export default config;
