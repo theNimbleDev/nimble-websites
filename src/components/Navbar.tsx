@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
             : 'md:bg-transparent md:border-gray-700'
         } bg-nav-100 border-b  border-primary-100 fixed w-full z-10 top-0`}
       >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-0'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-6'>
           <div className='flex justify-between h-16'>
             <div className='flex-shrink-0 flex items-center'>
               <Link href='/' className='text-xl font-bold'>
