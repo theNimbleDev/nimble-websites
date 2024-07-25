@@ -3,8 +3,13 @@ import Button from '@/components/Button'
 import Container from '@/components/Container'
 import LogoSlider from '@/components/LogoSlider'
 import styles from './page.module.css'
+import Clientscount from '@/components/Clientscount'
 
-export default function Home () {
+const clientImages = [
+  'client-image.svg'
+];
+
+export default function Home() {
   return (
     <>
       <section className={`${styles.section} w-full min-h-screen`}>
@@ -18,10 +23,11 @@ export default function Home () {
               technological advancement and sustainable development.
             </p>
 
-            <div className='flex gap-8'>
+            <div className='flex gap-8 items-center flex-col-reverse md:flex-row'>
               <Button cta='Book a call' />
-              {/* The satisfied clients component goes here */}
+              <Clientscount images={clientImages} count={1000} />
             </div>
+
             <LogoSlider />
           </div>
         </Container>
