@@ -3,22 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --primary-h1-size: 84px;
-  --primary-h2-size: 68px;
-  --primary-h3-size: 46px;
-  --primary-p-size: 24px;
-  --p-line-height: 38px
+  --primary-h1-size: 5.25rem; /* 84px / 16 */
+  --primary-h2-size: 4.25rem; /* 68px / 16 */
+  --primary-h3-size: 2.875rem; /* 46px / 16 */
+  --primary-p-size: 1.5rem; /* 24px / 16 */
+  --p-line-height: 2.375rem; /* 38px / 16 */
 }
 
 @media screen and (max-width: 768px) {
   :root {
-    --primary-h1-size: 32px;
-    --primary-h2-size: 32px;
-    --primary-h3-size: 24px;
-    --primary-p-size: 20px;
-    --p-line-height: 24px
+    --primary-h1-size: 2rem; /* 32px / 16 */
+    --primary-h2-size: 2rem; /* 32px / 16 */
+    --primary-h3-size: 1.5rem; /* 24px / 16 */
+    --primary-p-size: 1.0rem; /* 18px / 16 */
+    --p-line-height: 1.5rem; /* 24px / 16 */
   }
 }
+
 
 
 body {
