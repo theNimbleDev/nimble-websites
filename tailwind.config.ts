@@ -20,6 +20,9 @@ const config: Config = {
         primary: {
           100: '#FF6600',
         },
+        secondary: {
+          100: '#A020F0'
+        },
         nav: {
           100: '#282828'
         }
