@@ -5,11 +5,9 @@ import LogoSlider from '@/components/LogoSlider'
 import styles from './page.module.css'
 import Clientscount from '@/components/Clientscount'
 
-const clientImages = [
-  'client-image.svg'
-];
+const clientImages = ['client-image.svg']
 
-export default function Home() {
+export default function Home () {
   return (
     <>
       <section className={`${styles.section} w-full min-h-screen`}>
@@ -24,7 +22,7 @@ export default function Home() {
             </p>
 
             <div className='flex gap-8 items-center flex-col-reverse md:flex-row'>
-              <Button cta='Book a call' />
+              <Button cta='Book a call' borderColor='border-primary-100' />
               <Clientscount images={clientImages} count={1000} />
             </div>
 
