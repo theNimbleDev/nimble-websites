@@ -23,9 +23,15 @@ const config: Config = {
         secondary: {
           100: '#A020F0'
         },
+        subtext: {
+          100: '#989898'
+        },
         nav: {
           100: '#282828'
         }
+      },
+      letterSpacing: {
+        widest: '.35rem'
       },
       keyframes: {
         scroll: {
