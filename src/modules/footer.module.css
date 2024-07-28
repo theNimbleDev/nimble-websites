@@ -1,0 +1,32 @@
+.parent {
+  display: grid;
+  grid-template-columns: 14% 86%;
+}
+
+@media screen and (max-width: 768px) {
+  .parent {
+    display: grid;
+    grid-template-columns: 5% 95%;
+  }
+}
+
+
+@media screen and (max-width: 500px) { /* Adjust breakpoint as needed */
+  .parent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .leftcol{
+    display: none;
+  }
+
+  .hideborder {
+    /* border: none !important; */
+    /* background-color: red; */
+  }
+
+  .inner {
+    flex-direction: column;
+  }
+}
