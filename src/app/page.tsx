@@ -49,7 +49,7 @@ export default function Home () {
               </span>{' '}
               <span className='font-normal'>Future with Us</span>
             </h2>
-            <p className='text-center w-full px-0 md:px-2 mb-8 font-light md:mb-20 inline-block'>
+            <p className='text-center w-full px-0 md:px-8 mb-8 font-light md:mb-20 inline-block'>
               We pride ourselves on offering a comprehensive suite of services,
               ensuring that our clients receive unparalleled support and value
               through the Nimbledev and NimbleTrade.
@@ -87,6 +87,47 @@ export default function Home () {
                   width='720'
                   height='923'
                   alt='about_sect_img'
+                />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* section 3 */}
+      <Section
+        bgClass='sectionH3Bg'
+        classname='pt-24 flex flex-col items-center'
+      >
+        <Container>
+          <div className=''>
+            {/* Review caurosel goes here */}
+            <div>Review Caurosel component goes Here</div>
+            <div className='flex gap-6 md:gap-24 items-center flex-col md:flex-row'>
+              <div className='w-full'>
+                <h2 className='my-3 md:my-6 text-3xl md:text-5xl'>
+                  {' '}
+                  <span className='gradient-text font-medium'>
+                    Discover How We Transform
+                  </span>{' '}
+                  <span className='font-normal'>
+                    Challenges into Opportunities.
+                  </span>
+                </h2>
+                <p className='mb-8 md:mb-20 font-light inline-block'>
+                  We foster sustainable development and global harmony. Explore
+                  how we're shaping a brighter, more balanced future for all.
+                </p>
+
+                <Button cta='Book a call' borderColor='border-primary-100' />
+              </div>
+              {/* Image container component */}
+              <div className='w-full'>
+                <Image
+                  src='/transform.svg'
+                  width='720'
+                  height='923'
+                  alt='transform'
                 />
               </div>
             </div>

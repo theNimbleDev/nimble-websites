@@ -6,10 +6,10 @@
   background: url('/herobg.svg') no-repeat top center fixed;
 }
 .sectionH2Bg {
-  background: url('/section2_bg.svg') no-repeat top center fixed;
+  background: url('/section2_bg.svg') no-repeat center center;
 }
-.sectionH1Bg {
-
+.sectionH3Bg {
+  background: url('/section3_bg.svg') no-repeat center center;
 }
 .sectionH1Bg {
 
