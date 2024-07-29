@@ -116,7 +116,8 @@ export default function Home () {
                 </h2>
                 <p className='mb-8 md:mb-20 font-light inline-block'>
                   We foster sustainable development and global harmony. Explore
-                  how we're shaping a brighter, more balanced future for all.
+                  how we&#39;re shaping a brighter, more balanced future for
+                  all.
                 </p>
 
                 <Button cta='Book a call' borderColor='border-primary-100' />
