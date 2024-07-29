@@ -5,10 +5,11 @@ import LogoSlider from '@/components/LogoSlider'
 import Clientscount from '@/components/Clientscount'
 import Section from '@/components/Section'
 import Image from 'next/image'
+import ServiceCard from '@/components/ServiceCard'
 
 const clientImages = ['client-image.svg']
 
-export default function Home () {
+export default function Home() {
   return (
     <>
       <Section bgClass='sectionH1Bg' classname='min-h-screen'>
@@ -54,10 +55,25 @@ export default function Home () {
               ensuring that our clients receive unparalleled support and value
               through the Nimbledev and NimbleTrade.
             </p>
-            <div className='my-6 md:my-20'>
-              {/* The Service Card Goes Here */}
-              {/*  */}
+
+            <div className='flex my-6 md:my-20'>
+              <ServiceCard
+                logo="/NimbleDev.svg"
+                subsidiary="NimbleDev"
+                description="Our tech-driven arm, specializing in advanced software development and innovative technological solutions, helps businesses enhance productivity and streamline operations."
+                color="primary-100"
+                ButtonColor="border-primary-100"
+              />
+
+              <ServiceCard
+                logo="/NimbleTrade.svg"
+                subsidiary="NimbleTrade"
+                description="Our global trade division promotes economic sustainability by balancing import and export activities. By fostering strong trade relationships and supporting local economies, we ensure a healthy, dynamic global market."
+                color="primary-200"
+                ButtonColor="border-primary-200"
+              />
             </div>
+
             <div className='flex gap-6 md:gap-24 items-center flex-col md:flex-row'>
               <div className='w-full'>
                 <span className='text-subtext-100 text-sm md:text-2xl font-medium tracking-widest'>
