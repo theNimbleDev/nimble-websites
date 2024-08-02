@@ -60,10 +60,10 @@ export default function Home () {
             </div>
             <div className='flex gap-6 md:gap-24 items-center flex-col md:flex-row'>
               <div className='w-full'>
-                <span className='text-subtext-100 text-sm md:text-2xl font-medium tracking-widest'>
+                <span className='text-subtext-100 text-sm md:text-xl font-medium tracking-widest'>
                   ABOUT US{' '}
                 </span>
-                <h2 className='my-3 md:my-6'>
+                <h2 className='my-3 md:my-4'>
                   {' '}
                   <span className='gradient-text font-medium'>
                     Driving Change,

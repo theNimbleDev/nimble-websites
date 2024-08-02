@@ -76,3 +76,12 @@ html {
     text-wrap: balance;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .about-768 {
+    flex-direction: column !important;
+  }
+  .left-768, .right-768 {
+    width: 100% !important;
+  }
+}

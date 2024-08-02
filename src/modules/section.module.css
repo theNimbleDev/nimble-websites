@@ -11,6 +11,10 @@
 .sectionH3Bg {
   background: url('/section3_bg.svg') no-repeat center center;
 }
-.sectionH1Bg {
-
+.sectionA1Bg {
+  background: url('/section3_bg.svg') no-repeat center center;
+}
+.sectionA2Bg {
+  background: url('/tradebg.svg') no-repeat center center;
+  background-color: white;
 }

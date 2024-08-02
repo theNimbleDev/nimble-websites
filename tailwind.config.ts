@@ -15,10 +15,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-linear": "linear-gradient(90deg, #FFA673 0%, #FF7354 50%, #FF7D06 100%)",
+        'custom-gradient': 'linear-gradient(to bottom right, #D9D9D9 0%, #D9D9D9 44%, #737373 35%, #737373 100%)',
+        'custom-diagonal-gradient': 'linear-gradient(to bottom right, rgba(217, 217, 217, 0) 0%, rgba(115, 115, 115, 0.17) 100%)',
       },
       colors: {
         primary: {
           100: '#FF6600',
+          200: 'rgba(255, 124, 17, 0.34)',
+          300: '#1D1D1D'
         },
         secondary: {
           100: '#A020F0'

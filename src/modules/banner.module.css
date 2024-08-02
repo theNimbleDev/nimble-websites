@@ -1,0 +1,4 @@
+.banner {
+  background-size: cover;
+  background: url('/Banner.svg') no-repeat top center;
+}
