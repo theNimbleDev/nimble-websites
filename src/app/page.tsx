@@ -9,7 +9,7 @@ import ServiceCard from '@/components/ServiceCard'
 
 const clientImages = ['client-image.svg']
 
-export default function Home() {
+export default function Home () {
   return (
     <>
       <Section bgClass='sectionH1Bg' classname='min-h-screen'>
@@ -56,30 +56,32 @@ export default function Home() {
               through the Nimbledev and NimbleTrade.
             </p>
 
-            <div className='flex my-6 md:my-20 gap-12'>
+            <div className='flex flex-col md:flex-row my-6 md:mt-5 md:mb-20 gap-12'>
               <ServiceCard
-                logo="/NimbleDev.svg"
-                subsidiary="NimbleDev"
-                description="Our tech-driven arm, specializing in advanced software development and innovative technological solutions, helps businesses enhance productivity and streamline operations."
-                color="primary-100"
-                ButtonColor="border-primary-100"
+                logo='/NimbleDev.svg'
+                subsidiary='Dev'
+                description='Our tech-driven arm, specializing in advanced software development and innovative technological solutions, helps businesses enhance productivity and streamline operations.'
+                color='primary-200'
+                ButtonColor='primary-100'
+                href='/about#NimbleDev'
               />
 
               <ServiceCard
-                logo="/NimbleTrade.svg"
-                subsidiary="NimbleTrade"
-                description="Our tech-driven arm, specializing in advanced software development and innovative technological solutions, helps businesses enhance productivity and streamline operations."
-                color="primary-200"
-                ButtonColor="border-primary-200"
+                logo='/NimbleTrade.svg'
+                subsidiary='Trade'
+                description='Our tech-driven arm, specializing in advanced software development and innovative technological solutions, helps businesses enhance productivity and streamline operations.'
+                color='secondary-200'
+                ButtonColor='secondary-100'
+                href='/about#NimbleTrade'
               />
             </div>
 
             <div className='flex gap-6 md:gap-24 items-center flex-col md:flex-row'>
               <div className='w-full'>
-                <span className='text-subtext-100 text-sm md:text-2xl font-medium tracking-widest'>
+                <span className='text-subtext-100 text-sm md:text-xl font-medium tracking-widest'>
                   ABOUT US{' '}
                 </span>
-                <h2 className='my-3 md:my-6'>
+                <h2 className='my-3 md:my-4'>
                   {' '}
                   <span className='gradient-text font-medium'>
                     Driving Change,
@@ -94,7 +96,11 @@ export default function Home() {
                   objectives.
                 </p>
 
-                <Button cta='Read More' borderColor='border-primary-100' />
+                <Button
+                  href='/about'
+                  cta='Read More'
+                  borderColor='border-primary-100'
+                />
               </div>
               {/* Image container component */}
               <div className='w-full'>
