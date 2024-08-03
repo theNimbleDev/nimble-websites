@@ -3,9 +3,30 @@ import Button from '@/components/Button'
 import Clientscount from '@/components/Clientscount'
 import Container from '@/components/Container'
 import Section from '@/components/Section'
-import TeamCard from '@/components/TeamCard'
+import TeamList from '@/components/TeamList'
 import Image from 'next/image'
 import React from 'react'
+
+const teamMembers = [
+  {
+    first_name: 'Parton',
+    last_name: 'Julian ',
+    position_comp: 'CEO, theNimbles',
+    imageUrl: '/teampics.svg'
+  },
+  {
+    first_name: 'Doe',
+    last_name: 'Jane ',
+    position_comp: 'CTO, theNimbles',
+    imageUrl: '/teampics.svg'
+  },
+  {
+    first_name: 'Smith',
+    last_name: 'John ',
+    position_comp: 'COO, theNimbles',
+    imageUrl: '/teampics.svg'
+  }
+]
 
 const AboutPage = () => {
   return (
@@ -55,9 +76,9 @@ const AboutPage = () => {
         <Container>
           <div className='flex md:flex-row flex-col-reverse gap-5 text-center md:text-left md:gap-20 items-center mb-6 md:mb-28'>
             <Image
-              className='mb-8 md:mb-0'
+              className='mb-8 md:mb-0 mxd:w-[400px]'
               src='/sec2_1.svg'
-              width='640'
+              width='540'
               height='560'
               alt='sec2_1'
             />
@@ -66,7 +87,7 @@ const AboutPage = () => {
               <span className='text-subtext-100 text-sm md:text-xl font-medium tracking-widest'>
                 OUR <span className='text-white'>MISSION</span>
               </span>
-              <h1 className='font-bold mb-8 md:mb-10'>THRIVE</h1>
+              <h1 className='font-bold mb-8 md:mb-10 mxd:text-5xl'>THRIVE</h1>
               <p>
                 Our vision is to create a sustainable future through innovation
                 and strategic economic activities.
@@ -78,7 +99,7 @@ const AboutPage = () => {
               <span className='text-subtext-100 text-sm md:text-xl font-medium tracking-widest'>
                 OUR <span className='text-white'>VISION</span>
               </span>
-              <h1 className='font-bold mb-8 md:mb-10'>UNIFY</h1>
+              <h1 className='font-bold mb-8 md:mb-10 mxd:text-5xl'>UNIFY</h1>
               <p>
                 We unify technological advancements and trade expertise to
                 address and solve modern-day challenges, ensuring a balanced and
@@ -86,9 +107,9 @@ const AboutPage = () => {
               </p>
             </div>
             <Image
-              className=''
+              className='mxd:w-[400px]'
               src='/sect2_2.svg'
-              width='640'
+              width='540'
               height='560'
               alt='sec2_2'
             />
@@ -96,9 +117,9 @@ const AboutPage = () => {
         </Container>
       </Section>
 
-      <Section bgClass='' classname='py-8 md:py-24'>
+      <Section id='NimbleDev' bgClass='' classname='py-8 md:py-24'>
         <Container>
-          <div className='flex md:flex-row flex-col gap-5 text-center md:text-left md:gap-20 items-center mb-6 md:mb-28'>
+          <div className='flex md:flex-row flex-col gap-5 text-center md:text-left md:gap-20 mxd:gap-10 items-center mb-6 md:mb-28'>
             <div>
               <span className='text-subtext-100 text-sm uppercase md:text-xl font-medium tracking-widest'>
                 Nimble<span className='text-primary-100'>dev</span>
@@ -116,9 +137,9 @@ const AboutPage = () => {
               </p>
             </div>
             <Image
-              className='mb-8 md:mb-0'
+              className='mb-8 md:mb-0 mxd:w-[400px]'
               src='/section3Abg.svg'
-              width='500'
+              width='450'
               height='812'
               alt='sec2_1'
             />
@@ -145,7 +166,11 @@ const AboutPage = () => {
         </Container>
       </Section>
 
-      <Section bgClass='sectionA2Bg' classname='py-12 px-7 md:pt-28 md:pb-0'>
+      <Section
+        id='NimbleTrade'
+        bgClass='sectionA2Bg'
+        classname='py-12 md:pt-28 mxd:pb-2 md:pb-0'
+      >
         <Container>
           <div>
             <span className='text-subtext-100 text-center block text-sm uppercase md:text-xl font-medium tracking-widest'>
@@ -155,9 +180,9 @@ const AboutPage = () => {
               Global Growth, Balanced Trade
             </h2>
 
-            <div className='flex md:flex-row flex-col gap-5 text-center md:text-left md:gap-20 items-center mb-6 md:mb-28'>
+            <div className='flex md:flex-row flex-col gap-5 text-center md:text-left md:gap-20 mxd:gap-10 items-center mb-6 md:mb-28'>
               <Image
-                className='mb-8 md:mb-0'
+                className='mb-8 md:mb-0 mxd:w-[400px] h-auto'
                 src='/tradeimg.svg'
                 width='600'
                 height='812'
@@ -185,31 +210,13 @@ const AboutPage = () => {
         </Container>
       </Section>
 
-      <Section classname='pb-6 md:pb-10'>
+      <Section classname='py-10 md:pb-10 md:pt-0'>
         <Container>
-          <h2 className='font-normal text-center mb-8 md:mb-10'>
+          <h2 className='font-normal text-center mxd:mt-8 mb-8 md:mb-10'>
             Meet <span className='text-primary-100'>The</span> Team
           </h2>
-          <div className='flex gap-7 mb-20'>
-            <TeamCard
-              first_name='Parton'
-              last_name='Julian '
-              position_comp='CEO, theNimbles'
-              imageUrl='/teampics.svg'
-            />
-            <TeamCard
-              first_name='Parton'
-              last_name='Julian '
-              position_comp='CEO, theNimbles'
-              imageUrl='/teampics.svg'
-            />
-            <TeamCard
-              first_name='Parton'
-              last_name='Julian '
-              position_comp='CEO, theNimbles'
-              imageUrl='/teampics.svg'
-            />
-          </div>
+          <TeamList teamMembers={teamMembers} />
+
           <Banner
             title1='Explore your next'
             title2='solution with us'

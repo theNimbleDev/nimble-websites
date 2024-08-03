@@ -12,11 +12,11 @@
 
 @media screen and (max-width: 768px) {
   :root {
-    --primary-h1-size: 2rem; /* 32px / 16 */
-    --primary-h2-size: 2rem; /* 32px / 16 */
-    --primary-h3-size: 1.5rem; /* 24px / 16 */
-    --primary-p-size: 1.0rem; /* 18px / 16 */
-    --p-line-height: 1.5rem; /* 24px / 16 */
+    --primary-h1-size: 2rem !important; /* 32px / 16 */
+    --primary-h2-size: 2rem !important; /* 32px / 16 */
+    --primary-h3-size: 1.5rem !important; /* 24px / 16 */
+    --primary-p-size: 1.0rem !important; /* 18px / 16 */
+    --p-line-height: 1.5rem !important; /* 24px / 16 */
   }
 }
 
