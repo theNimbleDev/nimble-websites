@@ -17,6 +17,7 @@ const config: Config = {
         "gradient-linear": "linear-gradient(90deg, #FFA673 0%, #FF7354 50%, #FF7D06 100%)",
         'custom-gradient': 'linear-gradient(to bottom right, #D9D9D9 0%, #D9D9D9 44%, #737373 35%, #737373 100%)',
         'custom-diagonal-gradient': 'linear-gradient(to bottom right, rgba(217, 217, 217, 0) 0%, rgba(115, 115, 115, 0.17) 100%)',
+        'review-gradient': 'linear-gradient(to bottom right, rgba(29, 29, 29, 0) 0%, rgba(22, 22, 22) 100%)',
       },
       screens: {
         'mxd': { 'raw': '(min-width: 768px) and (max-width: 768px)' },
