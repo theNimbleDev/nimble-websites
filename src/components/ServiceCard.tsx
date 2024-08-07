@@ -66,7 +66,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </h3>
       ) : (
         <h3 className='text-5xl font-normal mb-5 mt-11'>
-          Nimble<span className={textClass}>{subsidiary}</span>
+          <span className={textClass}>Nimble</span>{subsidiary}
         </h3>
       )}
 
