@@ -16,7 +16,7 @@ const allLogos = [...logos, ...logos]
 const LogoSlider: React.FC = () => {
   return (
     <>
-      <div className='text-xl mb-4 mt-16 md:mb-9 md:mt-32'>
+      <div className='text-xl mb-4 mt-9 md:mt-16 md:mb-9 text-center'>
         <span className='text-gray-400'>Trust by </span>
         <span className='text-primary-100 font-bold'>15+ Businesses</span>
       </div>

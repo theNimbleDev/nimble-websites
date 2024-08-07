@@ -1,5 +1,6 @@
 {
     "files.autoSave": "onWindowChange",
     "editor.tabSize": 2,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "reactSnippets.settings.prettierEnabled": false
 }
