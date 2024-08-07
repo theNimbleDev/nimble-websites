@@ -4,29 +4,9 @@ import Clientscount from '@/components/Clientscount'
 import Container from '@/components/Container'
 import Section from '@/components/Section'
 import TeamList from '@/components/TeamList'
+import { teamMembers } from '@/mockData'
 import Image from 'next/image'
 import React from 'react'
-
-const teamMembers = [
-  {
-    first_name: 'Parton',
-    last_name: 'Julian ',
-    position_comp: 'CEO, theNimbles',
-    imageUrl: '/teampics.svg'
-  },
-  {
-    first_name: 'Doe',
-    last_name: 'Jane ',
-    position_comp: 'CTO, theNimbles',
-    imageUrl: '/teampics.svg'
-  },
-  {
-    first_name: 'Smith',
-    last_name: 'John ',
-    position_comp: 'COO, theNimbles',
-    imageUrl: '/teampics.svg'
-  }
-]
 
 const AboutPage = () => {
   return (

@@ -9,7 +9,7 @@ import ServiceCard from '@/components/ServiceCard'
 
 const clientImages = ['client-image.svg']
 
-export default function Home () {
+export default function Home() {
   return (
     <>
       <Section bgClass='sectionH1Bg' classname='min-h-screen'>

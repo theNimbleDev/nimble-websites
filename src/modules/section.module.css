@@ -5,16 +5,24 @@
 .sectionH1Bg {
   background: url('/herobg.svg') no-repeat top center fixed;
 }
+
 .sectionH2Bg {
   background: url('/section2_bg.svg') no-repeat center center;
 }
+
 .sectionH3Bg {
   background: url('/section3_bg.svg') no-repeat center center;
 }
+
 .sectionA1Bg {
   background: url('/section3_bg.svg') no-repeat center center;
 }
+
 .sectionA2Bg {
   background: url('/tradebg.svg') no-repeat center center;
   background-color: white;
+}
+
+.sectionANimbleDevBg {
+  background: url('/about_section_bg.svg') no-repeat center center;
 }
