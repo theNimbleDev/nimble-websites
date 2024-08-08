@@ -23,6 +23,10 @@
   background-color: white;
 }
 
+.sectionANimbleDevBg {
+  background: url('/about_section_bg.svg') no-repeat center center;
+}
+
 .sectionS1Bg {
   background: url('/servicedev.svg') no-repeat center center;
 }
