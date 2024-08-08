@@ -6,6 +6,7 @@ import Clientscount from '@/components/Clientscount'
 import Section from '@/components/Section'
 import Image from 'next/image'
 import ServiceCard from '@/components/ServiceCard'
+import TestimonialSlider from '@/components/TestimonialSlider'
 
 const clientImages = ['client-image.svg']
 
@@ -23,7 +24,7 @@ export default function Home() {
               technological advancement and sustainable development.
             </p>
 
-            <div className='flex gap-8 items-center flex-col-reverse md:flex-row'>
+            <div className='flex gap-8 items-center flex-col-reverse md:flex-row mb-0 md:mb-14'>
               <Button cta='Book a call' borderColor='border-primary-100' />
               <Clientscount images={clientImages} count={1000} />
             </div>
@@ -69,7 +70,7 @@ export default function Home() {
               <ServiceCard
                 logo='/NimbleTrade.svg'
                 subsidiary='Trade'
-                description='Our tech-driven arm, specializing in advanced software development and innovative technological solutions, helps businesses enhance productivity and streamline operations.'
+                description='Our global trade division promotes economic sustainability by balancing import and export activities. By fostering strong trade relationships and supporting local economies, we ensure a healthy, dynamic global market'
                 color='secondary-200'
                 ButtonColor='secondary-100'
                 href='/about#NimbleTrade'
@@ -125,6 +126,7 @@ export default function Home() {
           <div className=''>
             {/* Review caurosel goes here */}
             <div>Review Caurosel component goes Here</div>
+            {/* <TestimonialSlider /> */}
             <div className='flex gap-6 md:gap-24 items-center flex-col md:flex-row'>
               <div className='w-full'>
                 <h2 className='my-3 md:my-6 text-3xl md:text-5xl'>

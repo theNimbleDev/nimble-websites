@@ -26,3 +26,21 @@
 .sectionANimbleDevBg {
   background: url('/about_section_bg.svg') no-repeat center center;
 }
+
+.sectionS1Bg {
+  background: url('/servicedev.svg') no-repeat center center;
+}
+
+.sectionS2Bg {
+  background: url('/servicedevbg2.svg') no-repeat center center;
+}
+
+.sectionS3Bg {
+  background: url('/servicebg3.svg') no-repeat center center;
+  background-color: white;
+}
+
+.sectionS4Bg {
+  background: url('/servicedevbg5.svg') no-repeat center center;
+  background-color: white;
+}
