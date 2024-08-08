@@ -1,11 +1,11 @@
-import React from "react";
-import Button from "./Button";
-import styles from "@/modules/banner.module.css";
+import React from "react"
+import Button from "./Button"
+import styles from "@/modules/banner.module.css"
 
 interface BannerProps {
-  title1: string;
-  title2: string;
-  subtext: string;
+  title1: string
+  title2: string
+  subtext: string
 }
 
 const Banner: React.FC<BannerProps> = ({ title1, title2, subtext }) => {
@@ -20,7 +20,7 @@ const Banner: React.FC<BannerProps> = ({ title1, title2, subtext }) => {
       </div>
       <Button cta="Book a call" borderColor="border-white" />
     </div>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner

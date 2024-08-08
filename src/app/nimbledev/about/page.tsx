@@ -1,14 +1,14 @@
-import React from "react";
-import Section from "@/components/Section";
-import Container from "@/components/Container";
-import Button from "@/components/Button";
-import Clientscount from "@/components/Clientscount";
-import Banner from "@/components/Banner";
-import TeamList from "@/components/TeamList";
-import { teamMembers } from "@/mockData";
-import Image from "next/image";
+import React from "react"
+import Section from "@/components/Section"
+import Container from "@/components/Container"
+import Button from "@/components/Button"
+import Clientscount from "@/components/Clientscount"
+import Banner from "@/components/Banner"
+import TeamList from "@/components/TeamList"
+import { teamMembers } from "@/mockData"
+import Image from "next/image"
 
-const clientImages = ["client-image.svg"];
+const clientImages = ["client-image.svg"]
 
 const AboutPage = () => {
   return (
@@ -95,33 +95,31 @@ const AboutPage = () => {
               height="560"
               alt="sec2_2"
             />
-            <div className="md:hidden mb-8 md:mb-20 flex  items-center flex-col-reverse md:flex-row">
-              <Button cta="Book a call" borderColor="border-primary-100" />
+          </div>
+          <Button
+            cta="Book a call"
+            borderColor="border-primary-100 w-full my-7 md:hidden"
+          />
+          <div className="mt-12 md:mt-28">
+            <h2 className="font-normal text-center mxd:mt-8 mb-8 md:mb-10">
+              Meet <span className="text-primary-100">The</span> Team
+            </h2>
+
+            <TeamList teamMembers={teamMembers} />
+            <TeamList teamMembers={teamMembers} />
+
+            <div className="mb-5 md:mb-20">
+              <Banner
+                title1="Crafting Digital Solutions"
+                title2="Beyond Boundaries"
+                subtext="Creating a New world"
+              />
             </div>
           </div>
         </Container>
       </Section>
-
-      <section className="py-10 md:pb-10 md:pt-0">
-        <Container>
-          <h2 className="font-normal text-center mxd:mt-8 mb-8 md:mb-10">
-            Meet <span className="text-primary-100">The</span> Team
-          </h2>
-
-          <TeamList teamMembers={teamMembers} />
-          <TeamList teamMembers={teamMembers} />
-
-          <div className="mb-5 md:mb-20">
-            <Banner
-              title1="Crafting Digital Solutions"
-              title2="Beyond Boundaries"
-              subtext="Creating a New world"
-            />
-          </div>
-        </Container>
-      </section>
     </>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage
