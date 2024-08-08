@@ -1,5 +1,7 @@
 "use client"
+import { useEffect, useState } from "react"
 import NavItem from "./NavItem"
+import { Skeleton } from "@nextui-org/react"
 
 interface NavItemsProps {
   mobile?: boolean
@@ -7,7 +9,11 @@ interface NavItemsProps {
 }
 
 const NavItems: React.FC<NavItemsProps> = ({ mobile, closeMenu }) => {
-  const hostname = typeof window !== "undefined" ? window.location.hostname : ""
+  const [hostname, setHostname] = useState("")
+
+  useEffect(() => {
+    setHostname(window.location.hostname)
+  }, [])
 
   const navItemsLocalhost = [
     { href: "/", label: "Home" },
@@ -20,7 +26,6 @@ const NavItems: React.FC<NavItemsProps> = ({ mobile, closeMenu }) => {
     { href: "/services", label: "Services" },
     { href: "/about", label: "About Us" },
     { href: "/portfolio", label: "Portfolio" },
-    // { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact Us" }
   ]
 
@@ -29,15 +34,32 @@ const NavItems: React.FC<NavItemsProps> = ({ mobile, closeMenu }) => {
 
   return (
     <>
-      {navItems.map((item) => (
-        <NavItem
-          key={item.href}
-          href={item.href}
-          label={item.label}
-          mobile={mobile}
-          closeMenu={closeMenu}
-        />
-      ))}
+      {hostname ? (
+        navItems.map((item) => (
+          <NavItem
+            key={item.href}
+            href={item.href}
+            label={item.label}
+            mobile={mobile}
+            closeMenu={closeMenu}
+          />
+        ))
+      ) : (
+        <>
+          <Skeleton
+            style={{ backgroundColor: "white", opacity: "0.2" }}
+            className="w-[100px] h-3 border-none rounded-lg"
+          />
+          <Skeleton
+            style={{ backgroundColor: "white", opacity: "0.2" }}
+            className="w-[100px] h-3 border-none rounded-lg"
+          />
+          <Skeleton
+            style={{ backgroundColor: "white", opacity: "0.2" }}
+            className="w-[100px] h-3 border-none rounded-lg"
+          />
+        </>
+      )}
     </>
   )
 }
