@@ -21,7 +21,7 @@ const AboutPage = () => {
               </span>{" "}
             </h2>
             <p className="text-center w-full md:w-3/4 md:mx-auto px-0 md:px-8 mb-8 font-light inline-block">
-              We specialize in crafting bespoke software solutions that elevate
+              We specialize in crafting bespokt-mediumfont-medium that elevate
               user experiences and drive business success.
             </p>
             <div className="flex gap-8 items-center flex-col-reverse md:flex-row">
@@ -43,7 +43,7 @@ const AboutPage = () => {
               <h2 className="font-normal mb-8 md:mb-10">
                 <span>Tailored </span>Innovation
               </h2>
-              <p>
+              <p className="font-light">
                 Creating custom software solutions tailored to client needs,
                 leveraging the latest technologies and methodologies to ensure
                 high performance and scalability.
@@ -122,12 +122,12 @@ const AboutPage = () => {
         </Container>
       </Section>
 
-      <Section classname="pt-10 md:pt-16 mxd:pb-10 flex flex-col items-center">
+      <Section classname="pt-10 md:pt-16 mxd:pb-10 flex flex-col text-center md:text-left items-center">
         <Container>
           <div className="flex gap-6 md:gap-16 items-center flex-col md:flex-row">
             <div className="w-full">
               <span className="text-primary-100 text-sm mxd:text-xs uppercase md:text-xl font-medium tracking-widest">
-                SOFTWARE{" "}
+                MOBILE APP{" "}
                 <span className="text-subtext-100 font-thin">DEVELOPMENT</span>
               </span>
               <h3 className="my-3 text-2xl md:text-6xl mxd:text-3xl md:my-4">
@@ -139,7 +139,7 @@ const AboutPage = () => {
                   user experience and performance?
                 </span>
               </h3>
-              <p className="mb-8 md:mb-20 mxd:mb-10 font-light inline-block">
+              <p className="mb-8 md:mb-20 mxd:mb-10 font-light inline-block mt-5 md:mt-10">
                 We specialize in crafting engaging and user-friendly mobile apps
                 for both iOS and Android platforms, aimed at providing
                 exceptional user experiences. Our development process emphasizes
