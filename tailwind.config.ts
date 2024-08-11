@@ -19,6 +19,10 @@ const config: Config = {
         'custom-diagonal-gradient': 'linear-gradient(to bottom right, rgba(217, 217, 217, 0) 0%, rgba(115, 115, 115, 0.17) 100%)',
         'review-gradient': 'linear-gradient(to bottom right, rgba(29, 29, 29, 0) 0%, rgba(22, 22, 22) 100%)',
       },
+      backgroundColor: {
+        'custom-rgba': 'rgba(217, 217, 217, 0.18)',
+        'custom-rgba-2': 'rgba(0, 0, 0, 0.67)'
+      },
       screens: {
         'mxd': { 'raw': '(min-width: 768px) and (max-width: 768px)' },
       },
@@ -40,7 +44,8 @@ const config: Config = {
         }
       },
       letterSpacing: {
-        widest: '.35rem'
+        widest: '.35rem',
+        wider: '.10rem'
       },
       keyframes: {
         scroll: {

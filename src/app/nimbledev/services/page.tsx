@@ -1,9 +1,9 @@
-import Button from "@/components/Button";
-import Clientscount from "@/components/Clientscount";
-import Container from "@/components/Container";
-import Section from "@/components/Section";
-import Image from "next/image";
-import React from "react";
+import Button from "@/components/Button"
+import Clientscount from "@/components/Clientscount"
+import Container from "@/components/Container"
+import Section from "@/components/Section"
+import Image from "next/image"
+import React from "react"
 
 const AboutPage = () => {
   return (
@@ -32,7 +32,7 @@ const AboutPage = () => {
         </Container>
       </Section>
 
-      <Section id="softwaredev" bgClass="sectionS2Bg" classname="py-8 md:py-24">
+      <Section id="softwaredev" bgClass="sectionS2Bg" classname="pt-8 md:pt-24">
         <Container>
           <div className="flex md:flex-row flex-col gap-5 text-center md:text-left md:gap-20 mxd:gap-10 items-center mb-6 md:mb-28">
             <div>
@@ -225,7 +225,7 @@ const AboutPage = () => {
         </Container>
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage

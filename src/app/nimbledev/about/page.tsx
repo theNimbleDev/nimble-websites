@@ -106,15 +106,12 @@ const AboutPage = () => {
             </h2>
 
             <TeamList teamMembers={teamMembers} />
-            <TeamList teamMembers={teamMembers} />
 
-            <div className="mb-5 md:mb-20">
-              <Banner
-                title1="Crafting Digital Solutions"
-                title2="Beyond Boundaries"
-                subtext="Creating a New world"
-              />
-            </div>
+            <Banner
+              title1="Crafting Digital Solutions"
+              title2="Beyond Boundaries"
+              subtext="Creating a New world"
+            />
           </div>
         </Container>
       </Section>
