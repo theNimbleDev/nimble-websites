@@ -1,8 +1,8 @@
-import React from 'react'
-import Section from '@/components/Section'
-import Container from '@/components/Container'
-import Button from '@/components/Button'
-import Clientscount from '@/components/Clientscount'
+import React from "react"
+import Section from "@/components/Section"
+import Container from "@/components/Container"
+import Button from "@/components/Button"
+import Clientscount from "@/components/Clientscount"
 
 const clientImages = ["client-image.svg"]
 
@@ -11,9 +11,9 @@ const AboutPage = () => {
     <Section classname="py-16 md:py-20 flex flex-col items-center">
       <Container>
         <div className="w-ful mx-auto flex flex-col items-center justify-center">
-          <div className='mb-2 mt-9 md:mt-16 md:mb-3 text-center text-subtext-100 text-sm md:text-2xl font-medium tracking-widest block'>
-            <span className='text-gray-400'>PORTFOLIO </span>
-            <span className='text-white font-bold'>CATALOGUE</span>
+          <div className="mb-2 md:mb-3 text-center text-subtext-100 text-sm md:text-2xl font-medium tracking-widest block">
+            <span className="text-gray-400">PORTFOLIO </span>
+            <span className="text-white font-bold">CATALOGUE</span>
           </div>
 
           <h2 className="gradient-text font-bold mb-20 text-center md:mb-20">
@@ -21,7 +21,8 @@ const AboutPage = () => {
           </h2>
 
           <div>
-            {/* The card section/details goes here */}Card Section/Details Goes HERE
+            {/* The card section/details goes here */}Card Section/Details Goes
+            HERE
           </div>
 
           <div className="mt-24 md:mt-32 flex gap-8 items-center flex-col-reverse md:flex-row">
@@ -31,7 +32,6 @@ const AboutPage = () => {
         </div>
       </Container>
     </Section>
-
   )
 }
 
