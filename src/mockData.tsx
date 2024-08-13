@@ -45,5 +45,29 @@ export const projects = [
     // eslint-disable-next-line react/jsx-key
     tools: [<FaFigma />, <FaReact />, <FaReact />, <FaReact />, <FaReact />],
     bgImage: "/project3.svg"
+  },
+  {
+    title: "Motimose Metals",
+    company: "NIMBLESDEV",
+    date: "02.02.2024",
+    // eslint-disable-next-line react/jsx-key
+    tools: [<FaFigma />, <FaReact />],
+    bgImage: "/project2.svg"
+  },
+  {
+    title: "Globacom Nigeria",
+    company: "NimblesDev",
+    date: "12.09.2024",
+    // eslint-disable-next-line react/jsx-key
+    tools: [<FaFigma />, <FaReact />],
+    bgImage: "/project1.svg"
+  },
+  {
+    title: "Globacom Nigeria",
+    company: "NimblesDev",
+    date: "12.09.2024",
+    // eslint-disable-next-line react/jsx-key
+    tools: [<FaFigma />, <FaReact />, <FaReact />, <FaReact />, <FaReact />],
+    bgImage: "/project3.svg"
   }
 ]

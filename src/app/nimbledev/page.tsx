@@ -148,7 +148,7 @@ export default function Home() {
           <h2 className="font-normal text-primary-100 text-center mxd:mt-8 mb-8 md:mb-10">
             Our Projects
           </h2>
-          <ProjectList projects={projects} />
+          <ProjectList projects={projects.slice(0, 3)} />
 
           <Banner
             title1="Explore your next"
