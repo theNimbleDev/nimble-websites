@@ -1,7 +1,8 @@
-"use client"
-import { useEffect, useState } from "react"
-import NavItem from "./NavItem"
-import { Skeleton } from "@nextui-org/react"
+'use client'
+import { useEffect, useState } from 'react'
+import NavItem from './NavItem'
+import { Skeleton } from '@nextui-org/react'
+import { usePathname } from 'next/navigation'
 
 interface NavItemsProps {
   mobile?: boolean
@@ -9,32 +10,29 @@ interface NavItemsProps {
 }
 
 const NavItems: React.FC<NavItemsProps> = ({ mobile, closeMenu }) => {
-  const [hostname, setHostname] = useState("")
+  const path = usePathname()
 
-  useEffect(() => {
-    setHostname(window.location.hostname)
-  }, [])
-
-  const navItemsLocalhost = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/contact", label: "Contact Us" }
+  const navItemsMain = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About Us' },
+    { href: '/contact', label: 'Contact Us' }
   ]
 
   const navItemsNimbleDev = [
-    { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/about", label: "About Us" },
-    { href: "/portfolio", label: "Portfolio" },
-    { href: "/contact", label: "Contact Us" }
+    { href: '/nimbledev', label: 'Home' },
+    { href: '/nimbledev/services', label: 'Services' },
+    { href: '/nimbledev/about', label: 'About Us' },
+    { href: '/nimbledev/portfolio', label: 'Portfolio' },
+    { href: '/nimbledev/contact', label: 'Contact Us' }
   ]
 
-  const navItems =
-    hostname === "nimbledev.localhost" ? navItemsNimbleDev : navItemsLocalhost
+  const navItems = path.startsWith('/nimbledev')
+    ? navItemsNimbleDev
+    : navItemsMain
 
   return (
     <>
-      {hostname ? (
+      {path ? (
         navItems.map((item) => (
           <NavItem
             key={item.href}
@@ -47,15 +45,15 @@ const NavItems: React.FC<NavItemsProps> = ({ mobile, closeMenu }) => {
       ) : (
         <>
           <Skeleton
-            style={{ backgroundColor: "white", opacity: "0.2" }}
+            style={{ backgroundColor: 'white', opacity: '0.2' }}
             className="w-[100px] h-3 border-none rounded-lg"
           />
           <Skeleton
-            style={{ backgroundColor: "white", opacity: "0.2" }}
+            style={{ backgroundColor: 'white', opacity: '0.2' }}
             className="w-[100px] h-3 border-none rounded-lg"
           />
           <Skeleton
-            style={{ backgroundColor: "white", opacity: "0.2" }}
+            style={{ backgroundColor: 'white', opacity: '0.2' }}
             className="w-[100px] h-3 border-none rounded-lg"
           />
         </>

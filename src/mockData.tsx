@@ -5,19 +5,22 @@ export const teamMembers = [
     first_name: "Parton",
     last_name: "Julian ",
     position_comp: "CEO, theNimbles",
-    imageUrl: "/teampics.svg"
+    imageUrl: "/teampics.svg",
+    bio: `Julian is a <span style="color: #FF6600; font-weight: 700">CEO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and a Financial Expert in import and Export`
   },
   {
     first_name: "Doe",
     last_name: "Jane ",
     position_comp: "CTO, theNimbles",
-    imageUrl: "/teampics.svg"
+    imageUrl: "/teampics.svg",
+    bio: `Jane is a <span style="color: #FF6600; font-weight: 700">CTO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and a Financial Expert in import and Export`
   },
   {
     first_name: "Smith",
     last_name: "John ",
     position_comp: "COO, theNimbles",
-    imageUrl: "/teampics.svg"
+    imageUrl: "/teampics.svg",
+    bio: `Jane is a <span style="color: #FF6600; font-weight: 700">COO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and a Financial Expert in import and Export`
   }
 ]
 

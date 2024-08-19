@@ -8,7 +8,7 @@ import TeamList from "@/components/TeamList"
 import { teamMembers } from "@/mockData"
 import Image from "next/image"
 
-const clientImages = ["client-image.svg"]
+const clientImages = ["/client-image.svg"]
 
 const AboutPage = () => {
   return (
@@ -38,7 +38,12 @@ const AboutPage = () => {
             </p>
 
             <div className="flex gap-8 items-center flex-col-reverse md:flex-row">
-              <Button cta="Book a call" borderColor="border-primary-100" />
+              <Button
+                cta="Book a call"
+                href="https://calendly.com/akpjunio4real/30min"
+                blank="_blank"
+                borderColor="border-primary-100"
+              />
               <Clientscount images={clientImages} count={1000} />
             </div>
           </div>
@@ -84,7 +89,12 @@ const AboutPage = () => {
               </p>
 
               <div className="hidden mb-8 md:mb-20 md:flex  items-center flex-col-reverse md:flex-row">
-                <Button cta="Book a call" borderColor="border-primary-100" />
+                <Button
+                  cta="Book a call"
+                  href="https://calendly.com/akpjunio4real/30min"
+                  blank="_blank"
+                  borderColor="border-primary-100"
+                />
               </div>
             </div>
 
@@ -98,6 +108,8 @@ const AboutPage = () => {
           </div>
           <Button
             cta="Book a call"
+            href="https://calendly.com/akpjunio4real/30min"
+            blank="_blank"
             borderColor="border-primary-100 w-full my-7 md:hidden"
           />
           <div className="mt-12 md:mt-28">

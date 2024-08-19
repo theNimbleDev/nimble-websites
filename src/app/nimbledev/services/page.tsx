@@ -25,8 +25,13 @@ const AboutPage = () => {
               user experiences and drive business success.
             </p>
             <div className="flex gap-8 items-center flex-col-reverse md:flex-row">
-              <Button cta="Book a call" borderColor="border-primary-100" />
-              <Clientscount images={["client-image.svg"]} count={1000} />
+              <Button
+                cta="Book a call"
+                href="https://calendly.com/akpjunio4real/30min"
+                blank="_blank"
+                borderColor="border-primary-100"
+              />
+              <Clientscount images={["/client-image.svg"]} count={1000} />
             </div>
           </div>
         </Container>
@@ -67,7 +72,12 @@ const AboutPage = () => {
               realities, using our expertise to bring your innate desires to
               life with precision and creativity.
             </p>
-            <Button cta="Book a call" borderColor="border-primary-100" />
+            <Button
+              cta="Book a call"
+              href="https://calendly.com/akpjunio4real/30min"
+              blank="_blank"
+              borderColor="border-primary-100"
+            />
             <Image
               className="mt-3 md:mb-0"
               src="/barcode.svg"
@@ -113,6 +123,8 @@ const AboutPage = () => {
                 <div className="flex justify-center md:justify-start">
                   <Button
                     cta="Book a call"
+                    href="https://calendly.com/akpjunio4real/30min"
+                    blank="_blank"
                     borderColor="border-primary-100 text-primary-300"
                   />
                 </div>
@@ -122,12 +134,15 @@ const AboutPage = () => {
         </Container>
       </Section>
 
-      <Section classname="pt-10 md:pt-16 mxd:pb-10 flex flex-col items-center">
+      <Section
+        id="mobildev"
+        classname="pt-10 md:pt-16 mxd:pb-10 flex flex-col items-center"
+      >
         <Container>
-          <div className="flex gap-6 md:gap-16 items-center flex-col md:flex-row">
+          <div className="flex gap-6 md:gap-16 items-center text-center md:text-left flex-col md:flex-row">
             <div className="w-full">
               <span className="text-primary-100 text-sm mxd:text-xs uppercase md:text-xl font-medium tracking-widest">
-                SOFTWARE{" "}
+                Mobile Apps{" "}
                 <span className="text-subtext-100 font-thin">DEVELOPMENT</span>
               </span>
               <h3 className="my-3 text-2xl md:text-6xl mxd:text-3xl md:my-4">
@@ -181,7 +196,7 @@ const AboutPage = () => {
       </Section>
 
       <Section
-        id="productDesign"
+        id="proddesign"
         bgClass="sectionS4Bg"
         classname="py-12 mb-10 md:mb-0 md:pt-28 mxd:pb-2 md:pb-0"
       >
@@ -216,7 +231,9 @@ const AboutPage = () => {
                 <div className="flex justify-center md:justify-start">
                   <Button
                     cta="Book a call"
+                    href="https://calendly.com/akpjunio4real/30min"
                     borderColor="border-primary-100 text-primary-300"
+                    blank="_blank"
                   />
                 </div>
               </div>

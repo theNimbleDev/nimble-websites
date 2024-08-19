@@ -18,7 +18,12 @@ const Banner: React.FC<BannerProps> = ({ title1, title2, subtext }) => {
         <span className="font-bold">{title1}</span>
         <span className="font-thin">{title2}</span>
       </div>
-      <Button cta="Book a call" borderColor="border-white" />
+      <Button
+        cta="Book a call"
+        href="https://calendly.com/akpjunio4real/30min"
+        blank="_blank"
+        borderColor="border-white"
+      />
     </div>
   )
 }

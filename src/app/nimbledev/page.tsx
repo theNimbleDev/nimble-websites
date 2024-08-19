@@ -1,13 +1,13 @@
-import Banner from "@/components/Banner"
-import Button from "@/components/Button"
-import Clientscount from "@/components/Clientscount"
-import Container from "@/components/Container"
-import LogoSlider from "@/components/LogoSlider"
-import ProjectList from "@/components/ProjectList"
-import Section from "@/components/Section"
-import ServiceCard from "@/components/ServiceCard"
-import { projects } from "@/mockData"
-import Image from "next/image"
+import Banner from '@/components/Banner'
+import Button from '@/components/Button'
+import Clientscount from '@/components/Clientscount'
+import Container from '@/components/Container'
+import LogoSlider from '@/components/LogoSlider'
+import ProjectList from '@/components/ProjectList'
+import Section from '@/components/Section'
+import ServiceCard from '@/components/ServiceCard'
+import { projects } from '@/mockData'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -15,12 +15,11 @@ export default function Home() {
       <Section bgClass="sectionH1Bg" classname="pb-16">
         <Container>
           <div className="about-768 flex justify-between gap-6 md:gap-24 items-center flex-col md:flex-row pt-10 pb-6 md:pt-24 md:pb-10 md:mb-14 w-auto">
-            <div className="w-full left-768 md:w-[67%] text-center md:text-left">
+            <div className="w-full left-768 md:w-[70%] text-center md:text-left">
               <h2 className="my-3 md:my-4 text-4xl md:text-7xl">
-                {" "}
                 <span className="gradient-text font-bold">
                   We help turn ideas into
-                </span>{" "}
+                </span>
                 <span className="font-thin"> Great softwares.</span>
               </h2>
               <p className="text-base md:text-2xl font-light w-full mb-10 md:mb-16">
@@ -31,8 +30,13 @@ export default function Home() {
               </p>
 
               <div className="flex gap-8 items-center flex-col-reverse md:flex-row">
-                <Button cta="Book a call" borderColor="border-primary-100" />
-                <Clientscount images={["client-image.svg"]} count={1000} />
+                <Button
+                  cta="Book a call"
+                  href="https://calendly.com/akpjunio4real/30min"
+                  blank="_blank"
+                  borderColor="border-primary-100"
+                />
+                <Clientscount images={['client-image.svg']} count={1000} />
               </div>
             </div>
             <div className="w-full right-768 md:w-[46%]">
@@ -55,10 +59,10 @@ export default function Home() {
               SERVICES
             </span>
             <h2 className="mb-5 text-center w-3/4 mx-auto">
-              {" "}
+              {' '}
               <span className="gradient-text font-medium">
                 Empowering business with
-              </span>{" "}
+              </span>{' '}
               <span className="font-normal">cutting-edge solutions </span>
             </h2>
             <p className="text-center w-full px-0 md:px-8 mb-8 font-light md:mb-20 inline-block">
@@ -72,7 +76,7 @@ export default function Home() {
                 description="Leverage our pool of highly skilled, pre-vetted engineers to augment and accelerate your projects efficiently."
                 color="primary-200"
                 ButtonColor="primary-100"
-                href="/services#engineering"
+                href="/nimbledev/services#outsourcingEng"
                 nimbledev
               />
 
@@ -82,7 +86,7 @@ export default function Home() {
                 description="We are dedicated to revolutionizing software development with a focus on innovation, precision, and expert coding."
                 color="primary-200"
                 ButtonColor="primary-100"
-                href="/services#softwaredev"
+                href="/nimbledev/services#softwaredev"
                 nimbledev
               />
               <ServiceCard
@@ -91,7 +95,7 @@ export default function Home() {
                 description="We develop engaging, user-friendly mobile apps for iOS and Android, offering exceptional experiences for your users."
                 color="primary-200"
                 ButtonColor="primary-100"
-                href="/services#mobildev"
+                href="/nimbledev/services#mobildev"
                 nimbledev
               />
               <ServiceCard
@@ -100,7 +104,7 @@ export default function Home() {
                 description="Our focus on UX/UI design ensures that we not only meet but anticipate user needs, crafting solutions that feel natural and easy to use."
                 color="primary-200"
                 ButtonColor="primary-100"
-                href="/services#proddesign"
+                href="/nimbledev/services#proddesign"
                 nimbledev
               />
             </div>
@@ -108,13 +112,13 @@ export default function Home() {
             <div className="flex gap-6 md:gap-16 items-center flex-col md:flex-row">
               <div className="w-full">
                 <span className="text-subtext-100 text-sm md:text-xl font-medium tracking-widest">
-                  ABOUT US{" "}
+                  ABOUT US{' '}
                 </span>
                 <h2 className="my-3 md:text-6xl md:my-4">
-                  {" "}
+                  {' '}
                   <span className="gradient-text font-medium">
                     Innovating today for a
-                  </span>{" "}
+                  </span>{' '}
                   <span className="font-normal">smarter tomorrow</span>
                 </h2>
                 <p className="mb-8 md:mb-20 font-light inline-block">

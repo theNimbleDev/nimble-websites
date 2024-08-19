@@ -44,3 +44,7 @@
   background: url('/servicedevbg5.svg') no-repeat center center;
   background-color: white;
 }
+
+.sectionPBg {
+  background: url('/portfoliodetailsbg.svg') no-repeat center center;
+}
