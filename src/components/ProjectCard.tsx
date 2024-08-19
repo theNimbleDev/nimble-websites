@@ -1,7 +1,6 @@
 import React from "react"
 import styles from "@/modules/projectcard.module.css"
 import Image from "next/image"
-import { FaFigma, FaIcons } from "react-icons/fa"
 
 interface ProjectCardProps {
   title?: string
@@ -21,16 +20,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div>
       <div
-        className={`${styles.container} mb-5 md:mb-7 p-4 md:w-full h-[230px] md:h-[332.79px] rounded-2xl border border-primary-200 relative`}
+        className={`${styles.container} group mb-5 md:mb-7 p-4 md:w-full h-[230px] md:h-[332.79px] rounded-2xl border border-primary-200 relative overflow-hidden`}
       >
         <Image
-          src={bgImage || ""} // Use the bgImage prop if available
-          layout="fill" // Fill the div
-          objectFit="cover" // Object-fit to cover the div area
+          src={bgImage || ""}
+          layout="fill"
+          objectFit="cover"
           alt={`${company}-project`}
           className="rounded-2xl"
         />
-        <div className="absolute bottom-0 left-0 right-0 m-3 flex items-center gap-2 p-4 rounded-full bg-custom-rgba-2">
+        {/* Overlay div */}
+        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 rounded-2xl"></div>
+
+        <div className="absolute bottom-0 left-0 right-0 m-3 flex items-center gap-2 p-4 rounded-full bg-custom-rgba-2 z-10">
           <h3 className="text-xs py-2 px-3 border border-gray-700 bg-custom-rgba rounded-full">
             <span className="gradient-text font-medium">Project</span>{" "}
             <span className="font-thin">architecture</span>

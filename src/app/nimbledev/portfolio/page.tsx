@@ -6,7 +6,7 @@ import Clientscount from "@/components/Clientscount"
 import ProjectList from "@/components/ProjectList"
 import { projects } from "@/mockData"
 
-const clientImages = ["client-image.svg"]
+const clientImages = ["/client-image.svg"]
 
 const AboutPage = () => {
   return (
@@ -23,7 +23,12 @@ const AboutPage = () => {
           </h2>
           <ProjectList projects={projects} />
           <div className=" flex gap-8 items-center flex-col-reverse md:flex-row">
-            <Button cta="Book a call" borderColor="border-primary-100" />
+            <Button
+              cta="Book a call"
+              href="https://calendly.com/akpjunio4real/30min"
+              blank="_blank"
+              borderColor="border-primary-100"
+            />
             <Clientscount images={clientImages} count={1000} />
           </div>
         </div>

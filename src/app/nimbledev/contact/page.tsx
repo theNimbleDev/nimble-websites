@@ -82,6 +82,8 @@ const ContactPage = () => {
           </h2>
           <Button
             cta={`Let's talk`}
+            href="https://calendly.com/akpjunio4real/30min"
+            blank="_blank"
             borderColor="border-[#535353]"
             roundFull="rounded-full w-full md:w-auto"
           />
