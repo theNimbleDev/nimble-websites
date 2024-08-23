@@ -6,6 +6,7 @@ import LogoSlider from '@/components/LogoSlider'
 import ProjectList from '@/components/ProjectList'
 import Section from '@/components/Section'
 import ServiceCard from '@/components/ServiceCard'
+import TestimonialSlider from '@/components/TestimonialSlider'
 import { projects } from '@/mockData'
 import Image from 'next/image'
 
@@ -153,7 +154,7 @@ export default function Home() {
             Our Projects
           </h2>
           <ProjectList projects={projects.slice(0, 3)} />
-
+          <TestimonialSlider />
           <Banner
             title1="Explore your next"
             title2="solution with us"

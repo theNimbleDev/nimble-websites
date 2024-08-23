@@ -2,5 +2,6 @@
     "files.autoSave": "onWindowChange",
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
-    "reactSnippets.settings.prettierEnabled": false
+    "reactSnippets.settings.prettierEnabled": false,
+    "prettier.singleQuote": true
 }
