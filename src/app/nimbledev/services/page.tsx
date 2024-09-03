@@ -1,9 +1,9 @@
-import Button from "@/components/Button"
-import Clientscount from "@/components/Clientscount"
-import Container from "@/components/Container"
-import Section from "@/components/Section"
-import Image from "next/image"
-import React from "react"
+import Button from '@/components/Button'
+import Clientscount from '@/components/Clientscount'
+import Container from '@/components/Container'
+import Section from '@/components/Section'
+import Image from 'next/image'
+import React from 'react'
 
 const AboutPage = () => {
   return (
@@ -15,10 +15,10 @@ const AboutPage = () => {
               SERVICES
             </span>
             <h2 className="mb-5 text-center w-3/4 mx-auto">
-              <span className="font-normal">Transforming Visions into</span>{" "}
+              <span className="font-normal">Transforming Visions into</span>{' '}
               <span className="gradient-text font-medium">
                 Seamless Digital Experiences
-              </span>{" "}
+              </span>{' '}
             </h2>
             <p className="text-center w-full md:w-3/4 md:mx-auto px-0 md:px-8 mb-8 font-light inline-block">
               We specialize in crafting bespoke software solutions that elevate
@@ -31,7 +31,7 @@ const AboutPage = () => {
                 blank="_blank"
                 borderColor="border-primary-100"
               />
-              <Clientscount images={["/client-image.svg"]} count={1000} />
+              <Clientscount images={['/client-image.svg']} count={1000} />
             </div>
           </div>
         </Container>
@@ -42,7 +42,7 @@ const AboutPage = () => {
           <div className="flex md:flex-row flex-col gap-5 text-center md:text-left md:gap-20 mxd:gap-10 items-center mb-6 md:mb-28">
             <div>
               <span className="text-primary-100 text-sm uppercase md:text-xl font-medium tracking-widest">
-                SOFTWARE{" "}
+                SOFTWARE{' '}
                 <span className="text-subtext-100 font-thin">DEVELOPMENT</span>
               </span>
               <h2 className="font-normal mb-8 md:mb-10">
@@ -64,7 +64,7 @@ const AboutPage = () => {
           </div>
           <div className="bg-custom-diagonal-gradient border-t border-l border-r border-primary-200 rounded-tl-2xl rounded-tr-2xl flex items-center justify-center flex-col text-center py-7 px-2 md:pt-20 md:px-28 md:pb-0">
             <h2 className="font-normal mb-4 md:mb-5 w-full md:w-[95%]">
-              We Are Here To Bring To Reality{" "}
+              We Are Here To Bring To Reality{' '}
               <span className="font-bold">Your Innate Desires </span>
             </h2>
             <p className="w-full md:w-[90%] mb-8 md:mb-10">
@@ -99,7 +99,7 @@ const AboutPage = () => {
             <span className="text-[#FF7D06] text-center block text-sm uppercase md:text-xl font-medium tracking-widest">
               Outsourcing of Engineers
             </span>
-            <h2 className="font-light text-primary-300 text-center mb-7 md:mb-20 w-full">
+            <h2 className="font-light text-center mb-7 md:mb-20 w-full">
               Expert Support
             </h2>
 
@@ -111,7 +111,7 @@ const AboutPage = () => {
                 height="812"
                 alt="sec2_1"
               />
-              <div className="text-primary-300">
+              <div className="">
                 <p className="mb-8 md:mb-11">
                   Providing skilled engineers to support various projects,
                   ensuring access to top talent for short-term or long-term
@@ -125,7 +125,7 @@ const AboutPage = () => {
                     cta="Book a call"
                     href="https://calendly.com/akpjunio4real/30min"
                     blank="_blank"
-                    borderColor="border-primary-100 text-primary-300"
+                    borderColor="border-primary-100"
                   />
                 </div>
               </div>
@@ -142,14 +142,14 @@ const AboutPage = () => {
           <div className="flex gap-6 md:gap-16 items-center text-center md:text-left flex-col md:flex-row">
             <div className="w-full">
               <span className="text-primary-100 text-sm mxd:text-xs uppercase md:text-xl font-medium tracking-widest">
-                Mobile Apps{" "}
+                Mobile Apps{' '}
                 <span className="text-subtext-100 font-thin">DEVELOPMENT</span>
               </span>
               <h3 className="my-3 text-2xl md:text-6xl mxd:text-3xl md:my-4">
-                {" "}
+                {' '}
                 <span className="font-thin">
                   Tired of mobile apps that fall short on
-                </span>{" "}
+                </span>{' '}
                 <span className="font-bold">
                   user experience and performance?
                 </span>
@@ -164,8 +164,9 @@ const AboutPage = () => {
               </p>
 
               <Button
-                href="/about"
+                href="https://calendly.com/akpjunio4real/30min"
                 cta="Book a call"
+                blank="_blank"
                 borderColor="border-primary-100 hidden md:flex"
               />
             </div>
@@ -188,7 +189,7 @@ const AboutPage = () => {
             </div>
           </div>
           <Button
-            href="/about"
+            href="https://calendly.com/akpjunio4real/30min"
             cta="Book a call"
             borderColor="border-primary-100 w-full my-7 md:hidden"
           />

@@ -7,53 +7,19 @@ import 'swiper/css/pagination'
 import Image from 'next/image'
 import { Avatar } from '@nextui-org/react'
 
-// Example slide data array
-const slides = [
-  {
-    last_name: 'Oyeyemi',
-    first_name: 'Deborah',
-    image: '/review-profile.svg',
-    review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable.'
-  },
-  {
-    last_name: 'Adebayo',
-    first_name: 'Daniel',
-    image: '/review-profile.svg',
-    review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
-  },
-  {
-    last_name: 'John',
-    first_name: 'Doe',
-    image: '/review-profile.svg',
-    review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
-  },
-  {
-    last_name: 'Oyeyemi',
-    first_name: 'Deborah',
-    image: '/review-profile.svg',
-    review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
-  },
-  {
-    last_name: 'Oyeyemi',
-    first_name: 'Deborah',
-    image: '/review-profile.svg',
-    review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
-  },
-  {
-    last_name: 'Oyeyemi',
-    first_name: 'Deborah',
-    image: '/review-profile.svg',
-    review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
-  }
-]
+interface Testimonial {
+  last_name: string
+  first_name: string
+  image: string
+  review: string
+  id: string
+}
 
-const TestimonialSlider = () => {
+interface testimonialProps {
+  slides: Testimonial[]
+}
+
+const TestimonialSlider: React.FC<testimonialProps> = ({ slides }) => {
   return (
     <div className="w-full relative mb-10">
       <Swiper
@@ -81,8 +47,8 @@ const TestimonialSlider = () => {
         }}
         className="multiple-slide-carousel relative"
       >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.id}>
             <div className="mb-8 mt-4 ml-2 flex justify-between items-center">
               <div className="flex items-center gap-3">
                 <Avatar
@@ -100,7 +66,7 @@ const TestimonialSlider = () => {
             </div>
             <div className="bg-[#161616] p-8 md:p-16 border-2 border-primary-200 rounded-2xl h-[332.13px] md:h-[500px] flex justify-center items-center">
               <div className="h-full overflow-y-auto">
-                <span className="text-xl md:text-2xl text-[#D2D2D2]">
+                <span className="text-sm md:text-2xl text-[#D2D2D2]">
                   {slide.review}
                 </span>
               </div>

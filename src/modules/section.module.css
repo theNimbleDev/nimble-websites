@@ -37,7 +37,7 @@
 
 .sectionS3Bg {
   background: url('/servicebg3.svg') no-repeat center center;
-  background-color: white;
+  background-size: cover !important;
 }
 
 .sectionS4Bg {
