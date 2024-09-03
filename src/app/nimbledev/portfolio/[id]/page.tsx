@@ -69,7 +69,7 @@ const PortfolioDetailsPage = ({ params }: { params: { id: string } }) => {
                     src={portfolioDetailsData?.images[1]}
                     width="1355"
                     height="565"
-                    alt={portfolioDetailsData?.images[1].replace('/', '')}
+                    alt={portfolioDetailsData?.images[1]?.replace('/', '')}
                     className="mb-10 md:mb-20"
                   />
                 )}

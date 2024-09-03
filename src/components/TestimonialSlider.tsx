@@ -79,7 +79,7 @@ const TestimonialSlider: React.FC<testimonialProps> = ({ slides }) => {
         <Image
           src="/arrow-left.svg"
           id="slider-button-left"
-          className="w-12 transition-all duration-500"
+          className="w-12 transition-all duration-500 cursor-pointer"
           data-carousel-prev
           width="100"
           height="0"
@@ -93,7 +93,7 @@ const TestimonialSlider: React.FC<testimonialProps> = ({ slides }) => {
         ></div>
 
         <Image
-          className="w-12 transition-all duration-500"
+          className="w-12 transition-all duration-500 cursor-pointer"
           data-carousel-next
           id="slider-button-right"
           src="/arrow-right.svg"
