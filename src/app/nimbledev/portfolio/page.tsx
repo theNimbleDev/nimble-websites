@@ -1,12 +1,12 @@
-import React from "react"
-import Section from "@/components/Section"
-import Container from "@/components/Container"
-import Button from "@/components/Button"
-import Clientscount from "@/components/Clientscount"
-import ProjectList from "@/components/ProjectList"
-import { projects } from "@/mockData"
+import React from 'react'
+import Section from '@/components/Section'
+import Container from '@/components/Container'
+import Button from '@/components/Button'
+import Clientscount from '@/components/Clientscount'
+import ProjectList from '@/components/ProjectList'
+import { projects } from '@/mockData'
 
-const clientImages = ["/client-image.svg"]
+const clientImages = ['/client-image.svg']
 
 const AboutPage = () => {
   return (

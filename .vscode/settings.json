@@ -1,7 +1,9 @@
 {
-    "files.autoSave": "onWindowChange",
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "reactSnippets.settings.prettierEnabled": false,
-    "prettier.singleQuote": true
+  "files.autoSave": "onWindowChange",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "reactSnippets.settings.prettierEnabled": false,
+  "prettier.singleQuote": true,
+  "diffEditor.renderSideBySideInlineBreakpoint": 300,
+  "editor.wordWrap": "on"
 }

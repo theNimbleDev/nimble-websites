@@ -7,6 +7,7 @@ import Section from '@/components/Section'
 import Image from 'next/image'
 import ServiceCard from '@/components/ServiceCard'
 import TestimonialSlider from '@/components/TestimonialSlider'
+import { testimonial } from '@/mockData'
 
 const clientImages = ['client-image.svg']
 
@@ -129,9 +130,7 @@ export default function Home() {
       >
         <Container>
           <div className="">
-            {/* Review caurosel goes here */}
-            <div>Review Caurosel component goes Here</div>
-            {/* <TestimonialSlider /> */}
+            <TestimonialSlider slides={testimonial} />
             <div className="flex gap-6 md:gap-24 items-center flex-col md:flex-row">
               <div className="w-full">
                 <h2 className="my-3 md:my-6 text-3xl md:text-5xl">

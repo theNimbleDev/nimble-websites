@@ -7,7 +7,7 @@ import ProjectList from '@/components/ProjectList'
 import Section from '@/components/Section'
 import ServiceCard from '@/components/ServiceCard'
 import TestimonialSlider from '@/components/TestimonialSlider'
-import { projects } from '@/mockData'
+import { projects, testimonial } from '@/mockData'
 import Image from 'next/image'
 
 export default function Home() {
@@ -148,13 +148,20 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section bgClass="sectionH3Bg" classname="py-10">
+      <Section bgClass="sectionH3Bg" classname="py-10 md:pt-28">
         <Container>
           <h2 className="font-normal text-primary-100 text-center mxd:mt-8 mb-8 md:mb-10">
             Our Projects
           </h2>
           <ProjectList projects={projects.slice(0, 3)} />
-          <TestimonialSlider />
+          <div className="flex items-center justify-center mb-10 md:mb-40">
+            <Button
+              cta="See more"
+              href="/nimbledev/portfolio"
+              borderColor="border-primary-100"
+            />
+          </div>
+          <TestimonialSlider slides={testimonial} />
           <Banner
             title1="Explore your next"
             title2="solution with us"
