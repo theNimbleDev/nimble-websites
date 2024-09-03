@@ -60,20 +60,20 @@ export const projects = [
       'Plus, the Intuitive Interface simplified tracking and reporting, cutting down on administrative works and errors.'
     ],
     website: 'https://mininglmp.com/'
-  },
-  {
-    id: 'temitope-yoga',
-    title: 'Temitope Yoga',
-    company: 'Temitope Sonuyi',
-    date: '12.09.2024',
-    // eslint-disable-next-line react/jsx-key
-    tools: [<FaWordpress />, <FaFigma />],
-    bgImage: '/project1.svg',
-    images: ['/miningdash.svg'],
-    summary: '',
-    challenges: ['', '', '', ''],
-    solutions: ['', '', '', '']
   }
+  // {
+  //   id: 'temitope-yoga',
+  //   title: 'Temitope Yoga',
+  //   company: 'Temitope Sonuyi',
+  //   date: '12.09.2024',
+  //   // eslint-disable-next-line react/jsx-key
+  //   tools: [<FaWordpress />, <FaFigma />],
+  //   bgImage: '/project1.svg',
+  //   images: ['/miningdash.svg'],
+  //   summary: '',
+  //   challenges: ['', '', '', ''],
+  //   solutions: ['', '', '', '']
+  // }
 ]
 
 export const testimonial = [

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import styles from '@/modules/footer.module.css'
-import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -90,9 +90,15 @@ const Footer = () => {
               Follow us
             </h3>
             <div className="flex gap-5 justify-center md:justify-normal mb-6 md:mb-0">
-              <FaFacebook className="text-3xl" />
-              <FaTwitter className="text-3xl" />
-              <FaLinkedin className="text-3xl" />
+              <Link target="_blank" href="https://www.instagram.com/_nimbledev">
+                <FaInstagram className="text-3xl" />
+              </Link>
+              <Link href="">
+                <FaTwitter className="text-3xl" />
+              </Link>
+              <Link href="">
+                <FaLinkedin className="text-3xl" />
+              </Link>
             </div>
             <p className="text-xl block md:hidden  text-[#828282]">
               (c) 2024 theNimbles

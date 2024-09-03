@@ -130,7 +130,7 @@ export default function Home() {
       >
         <Container>
           <div className="">
-            <TestimonialSlider slides={testimonial} />
+            {/* <TestimonialSlider slides={testimonial} /> */}
             <div className="flex gap-6 md:gap-24 items-center flex-col md:flex-row">
               <div className="w-full">
                 <h2 className="my-3 md:my-6 text-3xl md:text-5xl">
