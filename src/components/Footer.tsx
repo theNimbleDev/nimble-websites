@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '@/modules/footer.module.css'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import Image from 'next/image'
@@ -8,6 +8,25 @@ import { usePathname } from 'next/navigation'
 
 const Footer = () => {
   const path = usePathname()
+  const [subdomain, setSubdomain] = useState<string | null>(null)
+
+  useEffect(() => {
+    const hostname = window.location.hostname
+    const isLocalhost = hostname.endsWith('.localhost')
+    const isVercel = hostname.includes('.vercel.app')
+    const isProduction = hostname.endsWith('.thenimblesgrp.com')
+
+    let subdomain = ''
+    if (isLocalhost || isVercel) {
+      subdomain = hostname.split('.')[0] // nimbledev.localhost or nimbledev.vercel.app
+    } else if (isProduction) {
+      const parts = hostname.split('.')
+      subdomain = parts.length > 2 ? parts[0] : '' // nimbledev.thenimblesgrp.com
+    }
+
+    setSubdomain(subdomain)
+  }, [])
+
   return (
     <footer className="bg-white text-black">
       <div className={`${styles.parent}`}>
@@ -18,13 +37,15 @@ const Footer = () => {
           <div
             className={`w-full flex md:block justify-center  md:w-1/5 text-center  md:text-left border-r-0 md:border-r border-[#DCDCDC] md:py-20 md:px-6`}
           >
-            <Image
-              src="/footer_logo.svg"
-              width="174"
-              height="61"
-              alt="footer_logo"
-              className="text-lg font-semibold md:mb-24"
-            />
+            <Link href="/">
+              <Image
+                src="/footer_logo.svg"
+                width="174"
+                height="61"
+                alt="footer_logo"
+                className="text-lg font-semibold md:mb-24"
+              />
+            </Link>
 
             <p className="text-xl hidden md:block  text-[#828282]">
               (c) 2024 theNimbles
@@ -45,28 +66,28 @@ const Footer = () => {
             </h3>
 
             <div className="flex flex-col text-center mxd:flex-col md:text-left md:flex-row gap-0 md:gap-6">
-              {path.startsWith('/nimbledev') ? (
+              {subdomain === 'nimbledev' ? (
                 <>
                   <ul>
                     <li className="text-xl  text-[#828282] mb-4">
-                      <Link href="/nimbledev">Home</Link>
+                      <Link href="/">Home</Link>
                     </li>
                     <li className="text-xl text-[#828282] mb-4">
-                      <Link href="/nimbledev/services">Service</Link>
+                      <Link href="/services">Service</Link>
                     </li>
                     <li className="text-xl text-[#828282] mb-4">
-                      <Link href="/nimbledev/about">About Us</Link>
+                      <Link href="/about">About Us</Link>
                     </li>
                   </ul>
                   <ul>
                     <li className="text-xl text-[#828282] mb-4">
-                      <Link href="/nimbledev/portfolio">Portfolio</Link>
+                      <Link href="/portfolio">Portfolio</Link>
                     </li>
                     {/* <li className="text-xl text-[#828282] mb-4">
                   <Link href="">Blog</Link>
                 </li> */}
                     <li className="text-xl text-[#828282] mb-4">
-                      <Link href="/nimbledev/contact">Contact Us</Link>
+                      <Link href="/contact">Contact Us</Link>
                     </li>
                   </ul>
                 </>
@@ -91,13 +112,13 @@ const Footer = () => {
             </h3>
             <div className="flex gap-5 justify-center md:justify-normal mb-6 md:mb-0">
               <Link target="_blank" href="https://www.instagram.com/_nimbledev">
-                <FaInstagram className="text-3xl" />
+                <FaInstagram className="text-3xl text-red-700" />
               </Link>
-              <Link href="">
+              {/* <Link href="">
                 <FaTwitter className="text-3xl" />
-              </Link>
-              <Link href="">
-                <FaLinkedin className="text-3xl" />
+              </Link> */}
+              <Link target="_blank" href="https://www.linkedin.com/company/nimbledev/">
+                <FaLinkedin className="text-3xl text-blue-600" />
               </Link>
             </div>
             <p className="text-xl block md:hidden  text-[#828282]">

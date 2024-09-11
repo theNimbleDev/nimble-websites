@@ -22,7 +22,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
     <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb-20">
       {projects.map((member) => (
         <Link
-          href={`/nimbledev/portfolio/${member.id}`}
+          href={`/portfolio/${member.id}`}
           key={member.id}
           passHref
         >

@@ -4,17 +4,39 @@ const nextConfig = {
     return [
       {
         source: '/nimbledev/:path*',
-        destination: '/nimbledev/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'nimbledev.thenimblesgrp.com'
+          }
+        ],
+        destination: '/nimbledev/:path*'
+      },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'thenimblesgrp.com'
+          }
+        ],
+        destination: '/:path*'
       },
       {
         source: '/nimbletrade/:path*',
-        destination: '/nimbletrade/:path*',
-      },
-    ];
+        has: [
+          {
+            type: 'host',
+            value: 'nimbletrade.thenimblesgrp.com'
+          }
+        ],
+        destination: '/nimbletrade/:path*'
+      }
+    ]
   },
   typescript: {
-    ignoreBuildErrors: true,
-  },
-};
+    ignoreBuildErrors: true
+  }
+}
 
-export default nextConfig;
+export default nextConfig

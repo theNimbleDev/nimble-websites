@@ -13,6 +13,7 @@ interface Testimonial {
   image: string
   review: string
   id: string
+  position?: string
 }
 
 interface testimonialProps {
@@ -57,10 +58,13 @@ const TestimonialSlider: React.FC<testimonialProps> = ({ slides }) => {
                   color="warning"
                   src={slide.image}
                 />{' '}
-                <p className="text-md md:text-2xl font-bold text-primary-100">
-                  {slide.last_name}{' '}
-                  <span className="font-light">{slide.first_name}</span>
-                </p>
+                <div>
+                  <p className="text-md md:text-2xl font-bold text-primary-100">
+                    {slide.last_name}{' '}
+                    <span className="font-light">{slide.first_name}</span>
+                  </p>
+                  <p className='text-sm'>{slide?.position}</p>
+                </div>
               </div>
               <Image src="/5star.svg" width="100" height="100" alt="" />
             </div>

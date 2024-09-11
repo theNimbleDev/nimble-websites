@@ -6,10 +6,13 @@ import { Input, Textarea } from '@nextui-org/react'
 import { MdArrowOutward } from 'react-icons/md'
 import { zodResolver } from '@hookform/resolvers/zod'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { ContactFormSchema } from '@/lib/formSchema'
 import { z } from 'zod'
+import axios from 'axios'
+import { Alert } from '@mui/material'
+import { FiLoader } from 'react-icons/fi'
 
 const customInputStyles = {
   label: '!text-[#ffff] pb-1 text-left',
@@ -25,16 +28,36 @@ const customInputStyles = {
 type InputType = z.infer<typeof ContactFormSchema>
 
 const ContactPage = () => {
+  const [successMessage, setSuccessMessage] = useState<string | null>(null)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting }
   } = useForm<InputType>({
     resolver: zodResolver(ContactFormSchema)
   })
 
   const onsubmit: SubmitHandler<InputType> = async (data) => {
-    console.log('Form submission triggered')
+    try {
+      await axios.post('/api/contact', data)
+      setSuccessMessage('Message Sent Successfully!')
+      reset() // Reset form after successful submission
+
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setSuccessMessage(null)
+      }, 7000)
+    } catch (error) {
+      console.error('Error sending message:', error)
+      setErrorMessage('There was an error sending your message. Please try again later.')
+
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setErrorMessage(null)
+      }, 7000)
+    }
   }
 
   const borderGradientStyle = `bg-custom-diagonal-gradient border-t border-l border-r border-primary-200 rounded-tl-2xl rounded-tr-2xl`
@@ -106,11 +129,26 @@ const ContactPage = () => {
                 />
               </div>
 
-              {/* <Button cta="Submit" borderColor="border-primary-100" /> */}
-              <button className="flex justify-center items-center px-5 py-3 gap-6 border-2 border-primary-100 rounded-xl">
-                {' '}
-                Submit <MdArrowOutward className="text-2xl" />
+              <button
+                className="flex justify-center items-center px-5 py-3 gap-6 border-2 border-primary-100 rounded-xl"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <FiLoader className="text-2xl" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Submit <MdArrowOutward className="text-2xl" />
+                  </>
+                )}
               </button>
+              {/* Success Message */}
+              <div className='mt-3'>
+                {successMessage && <Alert severity="success">{successMessage}</Alert>}
+                {errorMessage && <Alert severity="error">{errorMessage}</Alert>}
+              </div>
             </form>
           </div>
         </div>

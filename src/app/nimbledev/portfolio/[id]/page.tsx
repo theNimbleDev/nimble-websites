@@ -124,13 +124,16 @@ const PortfolioDetailsPage = ({ params }: { params: { id: string } }) => {
                   </div>
                 ))}
                 {/* image carousel here */}
-                <Image
-                  src="/project-sum.svg"
-                  width="1355"
-                  height="565"
-                  alt="project-sum"
-                  className="mt-10"
-                />
+                {portfolioDetailsData?.images &&
+                  portfolioDetailsData.images.length > 0 && (
+                    <Image
+                      src={portfolioDetailsData?.images[3]}
+                      width="1355"
+                      height="500"
+                      alt={portfolioDetailsData?.images[3]?.replace('/', '')}
+                      className="mb-10 md:mb-20"
+                    />
+                  )}
               </div>
               <div className="flex flex-col items-center justify-center">
                 <div className="w-full md:w-[60%] my-10 flex items-center gap-2 p-4 rounded-full bg-transparent border border-[#535353] z-10">
