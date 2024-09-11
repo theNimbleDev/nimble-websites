@@ -3,7 +3,7 @@ import React from 'react'
 
 const logos = [
   '/atuenti.svg',
-  '/envato.svg',
+  '/motimose-icon.svg',
   '/gala.svg',
   '/mylife.svg',
   '/vcros.svg',
@@ -17,7 +17,7 @@ const LogoSlider: React.FC = () => {
   return (
     <>
       <div className='text-xl mb-4 mt-9 md:mt-16 md:mb-9 text-center'>
-        <span className='text-gray-400'>Trust by </span>
+        <span className='text-gray-400'>Trusted by </span>
         <span className='text-primary-100 font-bold'>15+ Businesses</span>
       </div>
       <div className='overflow-hidden whitespace-nowrap w-full'>

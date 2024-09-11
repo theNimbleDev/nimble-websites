@@ -14,8 +14,8 @@ export const teamMembers = [
   },
   {
     id: uuidv4(),
-    first_name: 'Doe',
-    last_name: 'Jane ',
+    first_name: 'Korede',
+    last_name: 'Adeuti ',
     position_comp: 'CTO, theNimbles',
     imageUrl: '/teampics.svg',
     bio: `Jane is a <span style="color: #FF6600; font-weight: 700">CTO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and a Financial Expert in import and Export`
@@ -44,7 +44,7 @@ export const projects = [
       <FaFigma />
     ],
     bgImage: '/mininglmp.svg',
-    images: ['/miningdash.svg', '/mining-image-2.svg', '/mining-image-3.svg'],
+    images: ['/miningdash.svg', '/mining-image-2.svg', '/mining-image-3.svg', '/nimbles.gif'],
     summary:
       'In a bid to streamline license management, we developed a comprehensive License Expiration Notification Application for a client handling over 3,000 licenses.The application automated the tracking of expiration dates and sent timely reminders for both quarterly and annual reports, ensuring the client never missed a deadline. Advanced encryption was used to protect sensitive data, addressing security concerns. Its intuitive design simplified administrative tasks, reduced errors, and overall enhanced compliance and operational efficiency, making license management much smoother for the client.',
     challenges: [
@@ -79,33 +79,28 @@ export const projects = [
 export const testimonial = [
   {
     id: uuidv4(),
-    last_name: 'Oyeyemi',
-    first_name: 'Deborah',
-    image: '/review-profile.svg',
+    last_name: 'Atensieye',
+    first_name: 'Ayomide',
+    image: '/ayomide.png',
+    position: 'Project Superintendent, Motimose',
     review:
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable.'
   },
   {
     id: uuidv4(),
-    last_name: 'Adebayo',
-    first_name: 'Daniel',
-    image: '/review-profile.svg',
+    last_name: 'Lawal',
+    first_name: 'Goodness',
+    image: '/goodness.png',
+    position: 'CEO, Afridev',
     review:
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
   },
   {
     id: uuidv4(),
-    last_name: 'John',
-    first_name: 'Doe',
-    image: '/review-profile.svg',
-    review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
-  },
-  {
-    id: uuidv4(),
-    last_name: 'Oyeyemi',
-    first_name: 'Deborah',
-    image: '/review-profile.svg',
+    last_name: 'Lawal',
+    first_name: 'John',
+    image: '/lawal.png',
+    position: 'Freelance Editorial Designer',
     review:
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
   },
@@ -117,12 +112,4 @@ export const testimonial = [
     review:
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
   },
-  {
-    id: uuidv4(),
-    last_name: 'Oyeyemi',
-    first_name: 'Deborah',
-    image: '/review-profile.svg',
-    review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
-  }
 ]

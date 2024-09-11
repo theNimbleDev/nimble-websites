@@ -77,7 +77,7 @@ export default function Home() {
                 description="Leverage our pool of highly skilled, pre-vetted engineers to augment and accelerate your projects efficiently."
                 color="primary-200"
                 ButtonColor="primary-100"
-                href="/nimbledev/services#outsourcingEng"
+                href="services#outsourcingEng"
                 nimbledev
               />
 
@@ -87,7 +87,7 @@ export default function Home() {
                 description="We are dedicated to revolutionizing software development with a focus on innovation, precision, and expert coding."
                 color="primary-200"
                 ButtonColor="primary-100"
-                href="/nimbledev/services#softwaredev"
+                href="/services#softwaredev"
                 nimbledev
               />
               <ServiceCard
@@ -96,7 +96,7 @@ export default function Home() {
                 description="We develop engaging, user-friendly mobile apps for iOS and Android, offering exceptional experiences for your users."
                 color="primary-200"
                 ButtonColor="primary-100"
-                href="/nimbledev/services#mobildev"
+                href="/services#mobildev"
                 nimbledev
               />
               <ServiceCard
@@ -105,7 +105,7 @@ export default function Home() {
                 description="Our focus on UX/UI design ensures that we not only meet but anticipate user needs, crafting solutions that feel natural and easy to use."
                 color="primary-200"
                 ButtonColor="primary-100"
-                href="/nimbledev/services#proddesign"
+                href="/services#proddesign"
                 nimbledev
               />
             </div>
@@ -157,7 +157,7 @@ export default function Home() {
           <div className="flex items-center justify-center mb-10 md:mb-40">
             <Button
               cta="See more"
-              href="/nimbledev/portfolio"
+              href="/portfolio"
               borderColor="border-primary-100"
             />
           </div>

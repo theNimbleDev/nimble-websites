@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react';
 
 interface ClientscountProps {
-  count: number;
+  count?: number;
   images: string[];
 }
 
@@ -15,7 +15,7 @@ const Clientscount: React.FC<ClientscountProps> = ({ count, images }) => {
         ))}
 
         <div>
-          <span>{count}+</span>
+          <span>Our targeted prospects</span>
           <h2 className='text-sm text-gray-400'>Satisfied Clients</h2>
         </div>
       </div>

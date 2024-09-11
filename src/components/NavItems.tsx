@@ -11,6 +11,25 @@ interface NavItemsProps {
 
 const NavItems: React.FC<NavItemsProps> = ({ mobile, closeMenu }) => {
   const path = usePathname()
+  const [subdomain, setSubdomain] = useState<string | null>(null)
+
+  useEffect(() => {
+    // Extract the hostname and determine the subdomain
+    const hostname = window.location.hostname
+    const isLocalhost = hostname.endsWith('.localhost')
+    const isVercel = hostname.includes('.vercel.app')
+    const isProduction = hostname.endsWith('.thenimblesgrp.com')
+
+    let subdomain = ''
+    if (isLocalhost || isVercel) {
+      subdomain = hostname.split('.')[0] // nimbledev.localhost or nimbledev.vercel.app
+    } else if (isProduction) {
+      const parts = hostname.split('.')
+      subdomain = parts.length > 2 ? parts[0] : '' // nimbledev.thenimblesgrp.com
+    }
+
+    setSubdomain(subdomain)
+  }, [])
 
   const navItemsMain = [
     { href: '/', label: 'Home' },
@@ -19,16 +38,18 @@ const NavItems: React.FC<NavItemsProps> = ({ mobile, closeMenu }) => {
   ]
 
   const navItemsNimbleDev = [
-    { href: '/nimbledev', label: 'Home' },
-    { href: '/nimbledev/services', label: 'Services' },
-    { href: '/nimbledev/about', label: 'About Us' },
-    { href: '/nimbledev/portfolio', label: 'Portfolio' },
-    { href: '/nimbledev/contact', label: 'Contact Us' }
+    { href: '/', label: 'Home' },
+    { href: '/services', label: 'Services' },
+    { href: '/about', label: 'About Us' },
+    { href: '/portfolio', label: 'Portfolio' },
+    { href: '/contact', label: 'Contact Us' }
   ]
 
-  const navItems = path.startsWith('/nimbledev')
-    ? navItemsNimbleDev
-    : navItemsMain
+  let navItems = navItemsMain // default to main navigation
+
+  if (subdomain === 'nimbledev') {
+    navItems = navItemsNimbleDev
+  }
 
   return (
     <>
