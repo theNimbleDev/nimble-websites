@@ -4,9 +4,15 @@ import Clientscount from '@/components/Clientscount'
 import Container from '@/components/Container'
 import Section from '@/components/Section'
 import TeamList from '@/components/TeamList'
-import { teamMembers } from '@/mockData'
+import { bodMembers } from '@/mockData'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import React from 'react'
+
+export const metadata: Metadata = {
+  title: 'About Us | Nimblesgrp',
+  description: 'Shaping a Balanced and Innovative Tomorrow.'
+}
 
 const AboutPage = () => {
   return (
@@ -206,7 +212,7 @@ const AboutPage = () => {
           <h2 className="font-normal text-center mxd:mt-8 mb-8 md:mb-10">
             Meet <span className="text-primary-100">The</span> Team
           </h2>
-          <TeamList teamMembers={teamMembers} />
+          <TeamList teamMembers={bodMembers} />
 
           <Banner
             title1="Explore your next"

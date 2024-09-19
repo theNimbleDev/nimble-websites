@@ -6,6 +6,8 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import Image from 'next/image'
 import { Avatar } from '@nextui-org/react'
+import Link from 'next/link'
+import { FaLinkedin } from 'react-icons/fa'
 
 interface Testimonial {
   last_name: string
@@ -14,6 +16,7 @@ interface Testimonial {
   review: string
   id: string
   position?: string
+  socials?: string
 }
 
 interface testimonialProps {
@@ -64,11 +67,14 @@ const TestimonialSlider: React.FC<testimonialProps> = ({ slides }) => {
                     <span className="font-light">{slide.first_name}</span>
                   </p>
                   <p className='text-sm'>{slide?.position}</p>
+                  {slide?.socials?.includes("linkedin") ? <Link target="_blank" href={slide?.socials}>
+                    <FaLinkedin className="text-3xl mt-2 text-white" />
+                  </Link> : <FaLinkedin className="text-3xl mt-2 text-gray-600" />}
                 </div>
               </div>
               <Image src="/5star.svg" width="100" height="100" alt="" />
             </div>
-            <div className="bg-[#161616] p-8 md:p-16 border-2 border-primary-200 rounded-2xl h-[332.13px] md:h-[500px] flex justify-center items-center">
+            <div className="bg-[#161616] p-8 md:p-16 border-2 border-primary-200 rounded-2xl h-[300px] md:h-[400px] flex justify-center items-center">
               <div className="h-full overflow-y-auto">
                 <span className="text-sm md:text-2xl text-[#D2D2D2]">
                   {slide.review}

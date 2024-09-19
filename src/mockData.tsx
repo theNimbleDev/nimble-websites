@@ -3,30 +3,69 @@ import { FaFigma, FaLaravel, FaReact, FaWordpress } from 'react-icons/fa'
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri'
 import { v4 as uuidv4 } from 'uuid'
 
-export const teamMembers = [
+export const bodMembers = [
   {
     id: uuidv4(),
-    first_name: 'Parton',
-    last_name: 'Julian ',
+    first_name: 'Abraham',
+    last_name: 'Akpan ',
     position_comp: 'CEO, theNimbles',
-    imageUrl: '/teampics.svg',
-    bio: `Julian is a <span style="color: #FF6600; font-weight: 700">CEO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and a Financial Expert in import and Export`
+    imageUrl: '/abraham.svg',
+    bio: `Abraham is the <span style="color: #FF6600; font-weight: 700">CEO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and a Software Engineer.`
   },
   {
     id: uuidv4(),
     first_name: 'Korede',
     last_name: 'Adeuti ',
-    position_comp: 'CTO, theNimbles',
-    imageUrl: '/teampics.svg',
-    bio: `Jane is a <span style="color: #FF6600; font-weight: 700">CTO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and a Financial Expert in import and Export`
+    position_comp: 'Co-Founder, theNimbles',
+    imageUrl: '/korex.svg',
+    bio: `Korede is a <span style="color: #FF6600; font-weight: 700">Co-Founder</span> and the Business Development Manager of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and also a Trade Specialist in Import and Export.`
   },
   {
     id: uuidv4(),
-    first_name: 'Smith',
-    last_name: 'John ',
-    position_comp: 'COO, theNimbles',
-    imageUrl: '/teampics.svg',
-    bio: `Jane is a <span style="color: #FF6600; font-weight: 700">COO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and a Financial Expert in import and Export`
+    first_name: 'Miracle',
+    last_name: 'Shaibu ',
+    position_comp: 'CTO, theNimbles',
+    imageUrl: '/miracle.svg',
+    bio: `Miracle is the <span style="color: #FF6600; font-weight: 700">CTO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and an expert in software architecture and backend systems, drives innovation and ensures the seamless delivery of scalable technology solutions`
+
+  }
+]
+
+export const teamMembers = [
+  {
+    id: uuidv4(),
+    first_name: 'Abraham',
+    last_name: 'Akpan ',
+    position_comp: 'Software Engineer',
+    imageUrl: '/abraham.svg',
+    bio: `Abraham is <span style="color: #FF6600; font-weight: 700">Software Engineer</span> and loves writing clean code. He is also learning how to play the keyboard 🎹 🤪🤪🤪`
+  },
+  {
+    id: uuidv4(),
+    first_name: 'Miracle',
+    last_name: 'Shaibu ',
+    position_comp: 'Backend Developer',
+    imageUrl: '/miracle.svg',
+    bio: `Miracle is an expert in <span style="color: #FF6600; font-weight: 700">software architecture</span> and <span style="color: #FF6600; font-weight: 700">backend systems</span>, drives innovation and ensures the seamless delivery of scalable technology solutions`
+
+  },
+  {
+    id: uuidv4(),
+    first_name: 'Samuel',
+    last_name: 'Alisigwe ',
+    position_comp: 'UI/UX Designer & Web Developer',
+    imageUrl: '/samuel.svg',
+    bio: `I am an experienced <span style="color: #FF6600; font-weight: 700">software developer</span>, efficient in frontend technologies like HTML, CSS, JavaScript, and React etc. With a focus on seamless user experiences, I write clean, functional codes that enhances both design and usability. My expertise enables me to create intuitive and responsive interfaces that resonate with users.`
+
+
+  },
+  {
+    id: uuidv4(),
+    first_name: 'Wisdom',
+    last_name: 'Munachi ',
+    position_comp: 'Copy/Content Writer',
+    imageUrl: '/wisdom.svg',
+    bio: `Wisdom is an experienced <span style="color: #FF6600; font-weight: 700">copywriter and content writer</span>, skilled in creating engaging and impactful content. With a focus on clarity and audience connection, I crafts messages that resonate and drive results.`
   }
 ]
 
@@ -84,7 +123,8 @@ export const testimonial = [
     image: '/ayomide.png',
     position: 'Project Superintendent, Motimose',
     review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable.'
+      `The Mining License Management Dashboard has been a game-changer for us. Its intuitive design, automated alerts, and seamless sharepoint integration have made managing over 1,000 licenses effortless and kept us compliant. We’re thrilled with the increased efficiency and organization.`,
+    socials: 'https://www.linkedin.com/in/ayomide-oluwadunsin-atanseiye-2757b9b6/'
   },
   {
     id: uuidv4(),
@@ -93,7 +133,8 @@ export const testimonial = [
     image: '/goodness.png',
     position: 'CEO, Afridev',
     review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
+    socials: ''
   },
   {
     id: uuidv4(),
@@ -102,14 +143,17 @@ export const testimonial = [
     image: '/lawal.png',
     position: 'Freelance Editorial Designer',
     review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
+    socials: ''
   },
   {
     id: uuidv4(),
     last_name: 'Oyeyemi',
     first_name: 'Deborah',
     image: '/review-profile.svg',
+    position: 'Data Scientist',
     review:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
+    socials: ''
   },
 ]

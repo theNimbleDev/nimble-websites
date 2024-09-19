@@ -2,8 +2,14 @@ import Button from '@/components/Button'
 import Clientscount from '@/components/Clientscount'
 import Container from '@/components/Container'
 import Section from '@/components/Section'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import React from 'react'
+
+export const metadata: Metadata = {
+  title: 'Services | Nimbledev',
+  description: 'Transforming Visions into Seamless Digital Experiences'
+}
 
 const AboutPage = () => {
   return (

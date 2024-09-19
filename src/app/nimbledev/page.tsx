@@ -8,7 +8,13 @@ import Section from '@/components/Section'
 import ServiceCard from '@/components/ServiceCard'
 import TestimonialSlider from '@/components/TestimonialSlider'
 import { projects, testimonial } from '@/mockData'
+import { Metadata } from 'next'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'Home | Nimbledev',
+  description: 'Our team of pre-vetted professionals is ready to deliver exceptional results on every project, transforming your ideas into outstanding software solutions with precision and expertise.'
+}
 
 export default function Home() {
   return (

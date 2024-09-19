@@ -1,13 +1,11 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import styles from '@/modules/footer.module.css'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 const Footer = () => {
-  const path = usePathname()
   const [subdomain, setSubdomain] = useState<string | null>(null)
 
   useEffect(() => {
