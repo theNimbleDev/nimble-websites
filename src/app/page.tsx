@@ -1,4 +1,3 @@
-'use client'
 import Button from '@/components/Button'
 import Container from '@/components/Container'
 import LogoSlider from '@/components/LogoSlider'
@@ -6,8 +5,12 @@ import Clientscount from '@/components/Clientscount'
 import Section from '@/components/Section'
 import Image from 'next/image'
 import ServiceCard from '@/components/ServiceCard'
-import TestimonialSlider from '@/components/TestimonialSlider'
-import { testimonial } from '@/mockData'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Home | Nimblesgrp',
+  description: 'Leading Sustainable Innovation in Technology and Trade'
+}
 
 const clientImages = ['client-image.svg']
 

@@ -7,6 +7,12 @@ import Banner from "@/components/Banner"
 import TeamList from "@/components/TeamList"
 import { teamMembers } from "@/mockData"
 import Image from "next/image"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'About Us | Nimbledev',
+  description: 'Shaping a Balanced and Innovative Tomorrow.'
+}
 
 const clientImages = ["/client-image.svg"]
 

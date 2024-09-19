@@ -5,6 +5,12 @@ import Button from '@/components/Button'
 import Clientscount from '@/components/Clientscount'
 import ProjectList from '@/components/ProjectList'
 import { projects } from '@/mockData'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Portfolio | Nimbledev',
+  description: 'Our projects'
+}
 
 const clientImages = ['/client-image.svg']
 

@@ -35,13 +35,16 @@ const TeamCard: React.FC<TeamCardProps> = ({
           </div>
         </div>
         <div className="absolute pl-5 bottom-8 left-0 w-full">
-          <h3 className="text-3xl md:text-4xl text-white font-semibold mb-2">
+          <h3 className="text-3xl text-white font-semibold mb-2">
             <span className="gradient-text">{last_name} </span>
             <span>{first_name}</span>
           </h3>
-          <span className="text-xl md:text-2xl text-white">
-            {position_comp}
-          </span>
+          <div className="w-full max-w-full">
+            <span className="text-xl text-white truncate block overflow-hidden whitespace-nowrap">
+              {position_comp}
+            </span>
+          </div>
+
         </div>
       </div>
     </div>

@@ -1,12 +1,18 @@
-'use client'
 import Button from '@/components/Button'
 import Clientscount from '@/components/Clientscount'
 import Container from '@/components/Container'
 import Section from '@/components/Section'
 import { projects } from '@/mockData'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
+export const metadata: Metadata = {
+  title: 'Portfolio Details | Nimbledev',
+  description: 'Our projects'
+}
+
 const clientImages = ['/client-image.svg']
 
 interface Project {
