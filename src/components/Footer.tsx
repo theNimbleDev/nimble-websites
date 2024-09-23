@@ -55,7 +55,7 @@ const Footer = () => {
             </h3>
             <p className="text-xl text-[#828282] leading-10	">
               3, oreofe street, off obasanjo farm eledi, Ota, Ogun State{' '}
-              <span className="mxd:text-sm font-bold">info@nimbles.com</span>
+              <span className="mxd:text-sm text-sm font-bold">thenimbles24@gmail.com</span>
             </p>
           </div>
           <div className="md:w-1/5 border-r-0 md:border-r border-[#DCDCDC] md:py-20 md:px-6">

@@ -28,9 +28,8 @@ const Button: React.FC<ButtonProps> = ({
     <Link href={href ?? ''} passHref target={blank}>
       <NextButton
         variant="bordered"
-        className={`flex text-sm md:text-xl text-white justify-center gap-2 items-center ${borderColor} ${
-          roundFull ?? 'rounded-lg'
-        } p-6 md:py-7 md:px-6`}
+        className={`flex text-sm md:text-xl text-white justify-center gap-2 items-center ${borderColor} ${roundFull ?? 'rounded-lg'
+          } p-6 md:py-7 md:px-6`}
         endContent={<FiArrowUpRight />}
       >
         {cta}
@@ -39,9 +38,8 @@ const Button: React.FC<ButtonProps> = ({
   ) : (
     <NextButton
       variant="bordered"
-      className={`flex text-sm md:text-xl text-white justify-center gap-2 items-center ${borderColor} ${
-        roundFull ?? 'rounded-lg'
-      } p-6 md:py-7 md:px-6`}
+      className={`flex text-sm md:text-xl text-white justify-center gap-2 items-center ${borderColor} ${roundFull ?? 'rounded-lg'
+        } p-6 md:py-7 md:px-6`}
       endContent={<FiArrowUpRight />}
       onClick={handleClick}
     >
