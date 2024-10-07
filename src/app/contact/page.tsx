@@ -33,7 +33,7 @@ const ContactPage = () => {
           </div>
 
           <div className="border border-[#535353] py-5 px-7 md:py-8 md:px-10 rounded-3xl md:rounded-full flex flex-col md:flex-row gap-7 justify-between items-center">
-            <h2 className="text-center md:text-left text-3xl md:text-5xl mxd:text-3xl">
+            <h2 className="text-center md:text-left text-2xl md:text-5xl mxd:text-3xl">
               Say Hello <span className="text-primary-100">thenimbles24@gmail.com</span>
             </h2>
             <Button
