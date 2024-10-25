@@ -84,6 +84,16 @@ export default function Home() {
                 ButtonColor="secondary-100"
                 href="/about#NimbleTrade"
               />
+
+              <ServiceCard
+                logo=""
+                subsidiary="Academy"
+                description="Our programs equip you with the essential digital skills needed in today’s world. We focus on personal growth and real-world impact, inspiring continuous learning to empower your journey toward meaningful career success."
+                color="primary-100"
+                ButtonColor="primary-100"
+                href="/nimbleacademy"
+                target='true'
+              />
             </div>
 
             <div className="flex gap-6 md:gap-24 items-center flex-col md:flex-row">

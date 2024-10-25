@@ -5,12 +5,32 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NavItems from '@/components/NavItems'
 import { usePathname } from 'next/navigation'
+import { MdArrowOutward } from 'react-icons/md'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [subdomain, setSubdomain] = useState<string | null>(null)
 
   const path = usePathname()
+
+  useEffect(() => {
+    // Extract the hostname and determine the subdomain
+    const hostname = window.location.hostname
+    const isLocalhost = hostname.endsWith('.localhost')
+    const isVercel = hostname.includes('.vercel.app')
+    const isProduction = hostname.endsWith('.thenimblesgrp.com')
+
+    let subdomain = ''
+    if (isLocalhost || isVercel) {
+      subdomain = hostname.split('.')[0] // nimbledev.localhost or nimbledev.vercel.app
+    } else if (isProduction) {
+      const parts = hostname.split('.')
+      subdomain = parts.length > 2 ? parts[0] : '' // nimbledev.thenimblesgrp.com
+    }
+
+    setSubdomain(subdomain)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,25 +59,24 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`${
-          isScrolled
-            ? 'md:bg-nav-100 md:border-none'
-            : 'md:bg-transparent md:border-gray-700'
-        } bg-nav-100 border-b  border-primary-100 fixed w-full z-50 top-0`}
+        className={`${isScrolled
+          ? `${subdomain === 'nimbleacademy' ? 'md:bg-white shadow-md md:border-none text-academy-black font-thin' : 'md:bg-nav-100 md:border-none'}`
+          : `md:bg-transparent ${subdomain === 'nimbleacademy' ? 'md:border-none text-academy-black font-thin' : 'md:border-gray-700'}`
+          } bg-nav-100 border-b  border-primary-100 fixed w-full z-50 top-0`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
           <div className="flex justify-between h-16">
             <div className="flex-shrink-0 flex items-center">
               <Link
                 href={path.startsWith('/nimbledev') ? '/nimbledev' : '/'}
-                className="text-xl font-bold"
+                className="text-xl font-bold text-primary-100"
               >
-                <Image src="/logo.svg" width={50} height={50} alt="logo" />
+                {subdomain != 'nimbleacademy' ? <Image src="/logo.svg" width={50} height={50} alt="logo" /> : 'NimbleAcad'}
               </Link>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-4">
               <NavItems />
-              <Link
+              {subdomain != 'nimbleacademy' ? <Link
                 href="https://calendly.com/akpjunio4real/30min"
                 passHref
                 target="_blank"
@@ -68,7 +87,11 @@ const Navbar: React.FC = () => {
                 >
                   Book a call
                 </Button>
-              </Link>
+              </Link> : <Button as='a' target='blank' href='https://docs.google.com/forms/d/1U98Vv4H7JzG9VnuPmNiH_eHfWeiJZYRQlFueMboU_Xo/edit' endContent={<MdArrowOutward />} radius='none' className='text-white cursor-pointer bg-primary-100'>
+                Start Your Journey Now!
+              </Button>
+
+              }
             </div>
             <div className="-mr-2 flex md:hidden">
               <button

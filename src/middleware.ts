@@ -26,10 +26,19 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL(redirectUrl, request.url))
   }
 
+  // Redirect `/nimbleacademy` to `nimbleacademy.localhost:3000` or `nimbleacademy.thenimblesgrp.com`
+  if (url.pathname === '/nimbleacademy' && subdomain !== 'nimbleacademy') {
+    const redirectUrl = isProduction
+      ? `https://nimbleacademy.thenimblesgrp.com`
+      : `http://nimbleacademy.localhost:3000`
+    return NextResponse.redirect(new URL(redirectUrl, request.url))
+  }
+
   // Handle subdomain routing
   const subdomainPaths: { [key: string]: string } = {
     nimbledev: '/nimbledev',
-    nimbletrade: '/nimbletrade'
+    nimbletrade: '/nimbletrade',
+    nimbleacademy: '/nimbleacademy'
   }
 
   if (subdomain in subdomainPaths) {
@@ -42,7 +51,8 @@ export function middleware(request: NextRequest) {
     // Redirect to 404 for invalid paths
     if (
       url.pathname.startsWith('/nimbledev') ||
-      url.pathname.startsWith('/nimbletrade')
+      url.pathname.startsWith('/nimbletrade') ||
+      url.pathname.startsWith('/nimbleacademy')
     ) {
       return NextResponse.rewrite(new URL('/404', request.url))
     }

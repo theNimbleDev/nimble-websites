@@ -45,6 +45,9 @@ const config: Config = {
         },
         nav: {
           100: '#282828'
+        },
+        academy: {
+          black: '#212121'
         }
       },
       letterSpacing: {
