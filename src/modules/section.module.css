@@ -48,3 +48,11 @@
 .sectionPBg {
   background: url('/portfoliodetailsbg.svg') no-repeat center center;
 }
+
+.academyBg {
+  /* background: url('/highlight-bg.svg') no-repeat left center; */
+  /* background-size: 50% 100%; */
+  background-color: #fff2e6;
+  width: 100vw; /* Extend to full viewport width */
+  /* margin-left: calc(50% - 50vw); */
+}

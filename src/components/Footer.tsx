@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-white text-black">
-      <div className={`${styles.parent}`}>
+      {subdomain !== 'nimbleacademy' ? <div className={`${styles.parent}`}>
         <div className={`${styles.leftcol} p-4`}></div>
         <div
           className={`p-10 md:p-0 flex flex-col items-center md:items-stretch gap-7 md:gap-0 md:flex-row w-full`}
@@ -124,7 +124,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> : <div className='text-center bg-[#FFF2E6] w-full py-6 md:py-10'>© 2024 NimbleAcademy  |  All Rights Reserved. </div>}
     </footer>
   )
 }

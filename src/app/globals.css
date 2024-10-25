@@ -56,10 +56,10 @@ p {
   line-height: var(--p-line-height);
 }
 
-html {
+/* html {
   background: url('/sitebg.svg') no-repeat top center fixed;
   background-size: cover;
-}
+} */
 
 /* ButtonComponent.css */
 .gradient-border {

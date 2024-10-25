@@ -11,6 +11,7 @@ interface ServiceCardProps {
   ButtonColor: string
   href?: string
   nimbledev?: boolean
+  target?: string
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -21,7 +22,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   color,
   href,
   nimbledev,
-  service
+  service,
+  target
 }) => {
   const borderClass =
     color === 'primary-200' ? 'border-primary-200' : 'border-secondary-200'
@@ -51,13 +53,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     <div
       className={`bg-custom-diagonal-gradient border-2 ${borderClass} p-7 md:p-12 rounded-2xl flex-col items-center`}
     >
-      <Image
+      {logo ? <Image
         src={logo}
         alt={`${subsidiary} logo`}
         className='mb-4'
         width={nimbledev ? 145 : 217}
         height={nimbledev ? 145 : 78}
-      />
+      /> :
+        <div className='flex p-5 bg-white opacity-2'>
+          <h2 className="font-bold text-5xl text-primary-100">NimbleAcad</h2>
+        </div>
+      }
+
 
       {nimbledev ? (
         <h3 className='text-4xl mb-5 mt-11'>
@@ -71,7 +78,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       )}
 
       <p className='text-base font-light mb-6'>{description}</p>
-      <Button cta='Learn More' borderColor={borderBtnClass} href={href} />
+      <Button cta='Learn More' borderColor={borderBtnClass} href={href} blank={target} />
     </div>
   )
 }

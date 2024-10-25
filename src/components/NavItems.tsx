@@ -45,10 +45,21 @@ const NavItems: React.FC<NavItemsProps> = ({ mobile, closeMenu }) => {
     { href: '/contact', label: 'Contact Us' }
   ]
 
+  const navItemsNimbleAcademy = [
+    { href: '/', label: 'Home' },
+    { href: '/#about', label: 'About Us' },
+    { href: '/#highlights', label: 'Higlights' },
+    { href: '/#contact', label: 'Contact Us' }
+  ]
+
   let navItems = navItemsMain // default to main navigation
 
   if (subdomain === 'nimbledev') {
     navItems = navItemsNimbleDev
+  }
+
+  if (subdomain === 'nimbleacademy') {
+    navItems = navItemsNimbleAcademy
   }
 
   return (
