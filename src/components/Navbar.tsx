@@ -96,6 +96,7 @@ const Navbar: React.FC = () => {
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={toggleMenu}
+                className='text-white'
                 type="button"
                 aria-controls="mobile-menu"
                 aria-expanded="false"

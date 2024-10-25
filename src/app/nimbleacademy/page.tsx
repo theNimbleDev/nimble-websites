@@ -85,13 +85,13 @@ export default function Home() {
       >
         <div className="flex mb-5 text-center font-semibold w-full md:w-1/2 md:mx-auto text-academy-black">
           <Image
-            className='w-20 md:w-full hidden md:block'
+            className='hidden md:block'
             src="/highlight-stroke.svg"
             alt="stroke"
             width="204"
             height="120"
           />
-          <h2 className="w-full">HighLights</h2>
+          <h2 className="w-full md:w-0">HighLights</h2>
         </div>
 
         <div className='flex flex-col md:flex-row items-center'>
