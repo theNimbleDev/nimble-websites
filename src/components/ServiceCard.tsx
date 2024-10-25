@@ -61,7 +61,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         height={nimbledev ? 145 : 78}
       /> :
         <div className='flex p-5 bg-white opacity-2'>
-          <h2 className="font-bold text-5xl text-primary-100">NimbleAcad</h2>
+          <h2 className="font-bold text-3xl md:text-5xl text-primary-100">NimbleAcad</h2>
         </div>
       }
 
@@ -72,7 +72,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <span className='font-thin'>{lastText}</span>
         </h3>
       ) : (
-        <h3 className='text-5xl font-normal mb-5 mt-11'>
+        <h3 className='text-4xl md:text-5xl font-normal mb-5 mt-11'>
           <span className={textClass}>Nimble</span>{subsidiary}
         </h3>
       )}
