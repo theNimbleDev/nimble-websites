@@ -89,7 +89,7 @@ export default function Home() {
                 logo=""
                 subsidiary="Academy"
                 description="Our programs equip you with the essential digital skills needed in today’s world. We focus on personal growth and real-world impact, inspiring continuous learning to empower your journey toward meaningful career success."
-                color="primary-100"
+                color="primary-200"
                 ButtonColor="primary-100"
                 href="/nimbleacademy"
                 target='true'
