@@ -1,4 +1,5 @@
 import Container from '@/components/Container'
+import ModalClientAcad from '@/components/ModalClientAcad'
 import Section from '@/components/Section'
 import { Button } from '@nextui-org/react'
 import { Metadata } from 'next'
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Section classname="py-16 md:py-28 text-xl">
+        <ModalClientAcad />
         <Container>
           <div className="text-center flex flex-col items-center justify-center">
             <h2 className="mb-5 text-center w-3/4 mx-auto">
