@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { FaFigma, FaLaravel, FaReact, FaWordpress } from 'react-icons/fa'
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri'
+import { SiMongodb } from "react-icons/si";
 import { v4 as uuidv4 } from 'uuid'
 
 export const bodMembers = [
@@ -99,14 +100,38 @@ export const projects = [
       'Plus, the Intuitive Interface simplified tracking and reporting, cutting down on administrative works and errors.'
     ],
     website: 'https://mininglmp.com/'
+  },
+  {
+    id: 'arinze-stanley',
+    title: 'Portfolio website',
+    company: 'Arinse Stanley',
+    date: '2023',
+    // eslint-disable-next-line react/jsx-key
+    tools: [<RiNextjsFill />, <SiMongodb />
+    ],
+    bgImage: '/arinze-bg.png',
+    images: ['/arinze-bg.png', '/gallery.png', '/mobile.png', '/arinze-portfolio.gif'],
+    summary: 'Designed and developed a sleek and professional portfolio website for Arinze Stanley, a hyperrealist artist. The website showcases his life-like pencil drawings and highlights his artistry through an engaging, visually appealing, and user-friendly interface. The portfolio features high-quality images of his artwork, a biography, exhibition history, and publications.',
+    challenges: [
+      'Ensuring the website effectively highlights the intricate details of hyperrealistic pencil drawings.',
+      'Creating a responsive design that maintains the aesthetic quality of artwork on various devices.',
+      'Optimizing high-resolution images without compromising performance.'
+    ],
+    solutions: [
+      'Developed a dynamic gallery section using Next.js to display Arinze’s artwork in an organized and appealing manner.',
+      'Implemented responsive layouts and adaptive image techniques to ensure a seamless user experience across all devices.',
+      'Integrated MongoDB to manage and showcase Arinze’s projects and exhibitions dynamically.'
+    ],
+    website: 'https://arinzestanley.com/'
   }
   // {
-  //   id: 'temitope-yoga',
-  //   title: 'Temitope Yoga',
-  //   company: 'Temitope Sonuyi',
-  //   date: '12.09.2024',
+  //   id: 'arinze-stanley',
+  //   title: 'Arinze`s Portfolio website',
+  //   company: 'Arinse Stanley',
+  //   date: '2023',
   //   // eslint-disable-next-line react/jsx-key
-  //   tools: [<FaWordpress />, <FaFigma />],
+  //   tools: [<FaReact />, <RiNextjsFill />, <SiMongodb />
+  //   ],
   //   bgImage: '/project1.svg',
   //   images: ['/miningdash.svg'],
   //   summary: '',
@@ -125,35 +150,35 @@ export const testimonial = [
     review:
       `The Mining License Management Dashboard has been a game-changer for us. Its intuitive design, automated alerts, and seamless sharepoint integration have made managing over 1,000 licenses effortless and kept us compliant. We’re thrilled with the increased efficiency and organization.`,
     socials: 'https://www.linkedin.com/in/ayomide-oluwadunsin-atanseiye-2757b9b6/'
-  },
-  {
-    id: uuidv4(),
-    last_name: 'Lawal',
-    first_name: 'Goodness',
-    image: '/goodness.png',
-    position: 'CEO, Afridev',
-    review:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
-    socials: ''
-  },
-  {
-    id: uuidv4(),
-    last_name: 'Lawal',
-    first_name: 'John',
-    image: '/lawal.png',
-    position: 'Freelance Editorial Designer',
-    review:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
-    socials: ''
-  },
-  {
-    id: uuidv4(),
-    last_name: 'Oyeyemi',
-    first_name: 'Deborah',
-    image: '/review-profile.svg',
-    position: 'Data Scientist',
-    review:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
-    socials: ''
-  },
+  }
+  // {
+  //   id: uuidv4(),
+  //   last_name: 'Lawal',
+  //   first_name: 'Goodness',
+  //   image: '/goodness.png',
+  //   position: 'CEO, Afridev',
+  //   review:
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
+  //   socials: ''
+  // },
+  // {
+  //   id: uuidv4(),
+  //   last_name: 'Lawal',
+  //   first_name: 'John',
+  //   image: '/lawal.png',
+  //   position: 'Freelance Editorial Designer',
+  //   review:
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
+  //   socials: ''
+  // },
+  // {
+  //   id: uuidv4(),
+  //   last_name: 'Oyeyemi',
+  //   first_name: 'Deborah',
+  //   image: '/review-profile.svg',
+  //   position: 'Data Scientist',
+  //   review:
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
+  //   socials: ''
+  // },
 ]

@@ -80,7 +80,7 @@ const PortfolioDetailsPage = ({ params }: { params: { id: string } }) => {
                   />
                 )}
 
-              <div className="flex flex-col-reverse md:flex-row mb-10 md:mb-20">
+              {portfolioDetailsData?.challenges && <div className="flex flex-col-reverse md:flex-row mb-10 md:mb-20">
                 <div className="w-full md:w-[50%]">
                   {portfolioDetailsData?.images &&
                     portfolioDetailsData.images.length > 0 && (
@@ -111,36 +111,37 @@ const PortfolioDetailsPage = ({ params }: { params: { id: string } }) => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div>}
 
               {/* solutions  */}
-              <div className="mb-10 md:mb-20">
-                <h3 className="text-4xl mb-6 md:text-center">
-                  <span className="gradient-text font-medium">Solutions</span>{' '}
-                </h3>
-                {portfolioDetailsData?.solutions?.map((sol, index) => (
-                  <div className="flex items-baseline gap-8 mb-6" key={index}>
-                    <Image
-                      src="/checklist.svg"
-                      width="25"
-                      height="25"
-                      alt="checklist"
-                    />
-                    <p className="text-xl font-light">{sol}</p>
-                  </div>
-                ))}
-                {/* image carousel here */}
-                {portfolioDetailsData?.images &&
-                  portfolioDetailsData.images.length > 0 && (
-                    <Image
-                      src={portfolioDetailsData?.images[3]}
-                      width="1355"
-                      height="500"
-                      alt={portfolioDetailsData?.images[3]?.replace('/', '')}
-                      className="mb-10 md:mb-20"
-                    />
-                  )}
-              </div>
+              {portfolioDetailsData?.solutions &&
+                <div className="mb-10 md:mb-20">
+                  <h3 className="text-4xl mb-6 md:text-center">
+                    <span className="gradient-text font-medium">Solutions</span>{' '}
+                  </h3>
+                  {portfolioDetailsData?.solutions?.map((sol, index) => (
+                    <div className="flex items-baseline gap-8 mb-6" key={index}>
+                      <Image
+                        src="/checklist.svg"
+                        width="25"
+                        height="25"
+                        alt="checklist"
+                      />
+                      <p className="text-xl font-light">{sol}</p>
+                    </div>
+                  ))}
+                  {/* image carousel here */}
+                  {portfolioDetailsData?.images &&
+                    portfolioDetailsData.images.length > 0 && (
+                      <Image
+                        src={portfolioDetailsData?.images[3]}
+                        width="1355"
+                        height="500"
+                        alt={portfolioDetailsData?.images[3]?.replace('/', '')}
+                        className="mb-10 md:mb-20"
+                      />
+                    )}
+                </div>}
               <div className="flex flex-col items-center justify-center">
                 <div className="w-full md:w-[60%] my-10 flex items-center gap-2 p-4 rounded-full bg-transparent border border-[#535353] z-10">
                   <h3 className="text-xs md:text-xl py-2 px-3 mr-4 border-2 border-[#535353] bg-custom-rgba rounded-full">
