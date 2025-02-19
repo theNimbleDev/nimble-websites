@@ -37,7 +37,7 @@ const ConnectForm = () => {
           onChange={handleChange}
           placeholder="Full Name*"
           required
-          className="w-full px-4 py-4 border-b border-gray-300 focus:border-primary-100 focus:outline-none"
+          className="w-full px-4 py-4 border-b border-gray-300 focus:border-primary-100 focus:outline-none text-black"
         />
       </div>
       <div className="space-y-1">
@@ -48,7 +48,7 @@ const ConnectForm = () => {
           onChange={handleChange}
           placeholder="Email Address*"
           required
-          className="w-full px-4 py-4 border-b border-gray-300 focus:border-primary-100 focus:outline-none"
+          className="w-full px-4 py-4 border-b border-gray-300 focus:border-primary-100 focus:outline-none text-black"
         />
       </div>
       <div className="space-y-1">
@@ -59,7 +59,7 @@ const ConnectForm = () => {
           onChange={handleChange}
           placeholder="Phone Number*"
           required
-          className="w-full px-4 py-4 border-b border-gray-300 focus:border-primary-100 focus:outline-none"
+          className="w-full px-4 py-4 border-b border-gray-300 focus:border-primary-100 focus:outline-none text-black"
         />
       </div>
       <div className="space-y-1 py-4 border-b border-gray-300 focus:border-primary-100 focus:outline-none appearance-none">
