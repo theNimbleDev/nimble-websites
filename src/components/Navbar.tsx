@@ -59,10 +59,19 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`${isScrolled
-          ? `${subdomain === 'nimbleacademy' ? 'md:bg-white shadow-md md:border-none text-academy-black font-thin' : 'md:bg-nav-100 md:border-none'}`
-          : `md:bg-transparent ${subdomain === 'nimbleacademy' ? 'md:border-none text-academy-black font-thin' : 'md:border-gray-700'}`
-          } bg-nav-100 border-b  border-primary-100 fixed w-full z-50 top-0`}
+        className={`${
+          isScrolled
+            ? `${
+                subdomain === 'nimbleacademy'
+                  ? 'md:bg-white shadow-md md:border-none text-academy-black font-thin'
+                  : 'md:bg-nav-100 md:border-none'
+              }`
+            : `md:bg-transparent ${
+                subdomain === 'nimbleacademy'
+                  ? 'md:border-none text-academy-black font-thin'
+                  : 'md:border-gray-700'
+              }`
+        } bg-nav-100 border-b  border-primary-100 fixed w-full z-50 top-0`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
           <div className="flex justify-between h-16">
@@ -71,32 +80,45 @@ const Navbar: React.FC = () => {
                 href={path.startsWith('/nimbledev') ? '/nimbledev' : '/'}
                 className="text-xl font-bold text-primary-100"
               >
-                {subdomain != 'nimbleacademy' ? <Image src="/logo.svg" width={50} height={50} alt="logo" /> : 'NimbleAcad'}
+                {subdomain != 'nimbleacademy' ? (
+                  <Image src="/logo.svg" width={50} height={50} alt="logo" />
+                ) : (
+                  'NimbleAcad'
+                )}
               </Link>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-4">
               <NavItems />
-              {subdomain != 'nimbleacademy' ? <Link
-                href="https://calendly.com/akpjunio4real/30min"
-                passHref
-                target="_blank"
-              >
-                <Button
-                  radius="full"
-                  className="bg-primary-100 text-black shadow-lg"
+              {subdomain != 'nimbleacademy' ? (
+                <Link
+                  href="https://calendly.com/akpjunio4real/30min"
+                  passHref
+                  target="_blank"
                 >
-                  Book a call
+                  <Button
+                    radius="full"
+                    className="bg-primary-100 text-black shadow-lg"
+                  >
+                    Book a call
+                  </Button>
+                </Link>
+              ) : (
+                <Button
+                  as="a"
+                  target="blank"
+                  href="/#contact"
+                  endContent={<MdArrowOutward />}
+                  radius="none"
+                  className="text-white cursor-pointer bg-primary-100"
+                >
+                  Start Your Journey Now!
                 </Button>
-              </Link> : <Button as='a' target='blank' href='https://docs.google.com/forms/d/1U98Vv4H7JzG9VnuPmNiH_eHfWeiJZYRQlFueMboU_Xo/edit' endContent={<MdArrowOutward />} radius='none' className='text-white cursor-pointer bg-primary-100'>
-                Start Your Journey Now!
-              </Button>
-
-              }
+              )}
             </div>
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={toggleMenu}
-                className='text-white'
+                className="text-white"
                 type="button"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
