@@ -1,6 +1,5 @@
 import ContactForm from '@/components/ContactForm'
 import Container from '@/components/Container'
-import ModalClientAcad from '@/components/ModalClientAcad'
 import Section from '@/components/Section'
 import { Button } from '@nextui-org/react'
 import { Metadata } from 'next'

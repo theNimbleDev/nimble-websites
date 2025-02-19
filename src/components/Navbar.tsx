@@ -81,7 +81,12 @@ const Navbar: React.FC = () => {
                 className="text-xl font-bold text-primary-100"
               >
                 {subdomain != 'nimbleacademy' ? (
-                  <Image src="/logo.svg" width={50} height={50} alt="logo" />
+                  <Image
+                    src="/logo.svg"
+                    width={50}
+                    height={50}
+                    alt="nimblelogo"
+                  />
                 ) : (
                   'NimbleAcad'
                 )}

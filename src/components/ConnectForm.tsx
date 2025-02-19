@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { Button } from '@nextui-org/react'
 import { MdArrowOutward } from 'react-icons/md'
-import { RiArrowDropDownLine } from 'react-icons/ri'
 
 const ConnectForm = () => {
   const [formData, setFormData] = useState({
