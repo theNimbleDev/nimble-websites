@@ -6,6 +6,8 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import { MdArrowOutward } from 'react-icons/md'
 import ConnectForm from '@/components/ConnectForm'
+import Experts from '@/components/Experts'
+import Testimonials from '@/components/Testimonials'
 
 export const metadata: Metadata = {
   title: 'Home | NimbleAcademy',
@@ -92,6 +94,8 @@ export default function Home() {
           </div>
         </Container>
       </Section>
+      <Experts />
+      <Testimonials />
 
       <Section
         classname="bg-[#FFF2E6] py-16 md:py-28 text-xl"
