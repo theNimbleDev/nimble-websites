@@ -1,26 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-
-const expertsData = [
-  {
-    id: 1,
-    name: 'Ineh Vanessah',
-    role: 'SMM Instructor',
-    image: '/Ineh.png'
-  },
-  {
-    id: 2,
-    name: 'Blessed Samuel',
-    role: 'Design Instructor',
-    image: '/Blessed.png'
-  },
-  {
-    id: 3,
-    name: 'Emmanuel Ekong',
-    role: 'Photography Instructor',
-    image: '/Zoe.png'
-  }
-]
+import { expertsData } from '@/mockData'
 
 export default function Experts() {
   return (
