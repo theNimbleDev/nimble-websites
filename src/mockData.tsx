@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { FaFigma, FaLaravel, FaReact, FaWordpress } from 'react-icons/fa'
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri'
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb } from 'react-icons/si'
 import { v4 as uuidv4 } from 'uuid'
 
 export const bodMembers = [
@@ -28,7 +28,6 @@ export const bodMembers = [
     position_comp: 'CTO, theNimbles',
     imageUrl: '/miracle.svg',
     bio: `Miracle is the <span style="color: #FF6600; font-weight: 700">CTO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and an expert in software architecture and backend systems, drives innovation and ensures the seamless delivery of scalable technology solutions`
-
   }
 ]
 
@@ -48,7 +47,6 @@ export const teamMembers = [
     position_comp: 'Backend Developer',
     imageUrl: '/miracle.svg',
     bio: `Miracle is an expert in <span style="color: #FF6600; font-weight: 700">software architecture</span> and <span style="color: #FF6600; font-weight: 700">backend systems</span>, drives innovation and ensures the seamless delivery of scalable technology solutions`
-
   },
   {
     id: uuidv4(),
@@ -57,8 +55,6 @@ export const teamMembers = [
     position_comp: 'UI/UX Designer & Web Developer',
     imageUrl: '/samuel.svg',
     bio: `I am an experienced <span style="color: #FF6600; font-weight: 700">software developer</span>, efficient in frontend technologies like HTML, CSS, JavaScript, and React etc. With a focus on seamless user experiences, I write clean, functional codes that enhances both design and usability. My expertise enables me to create intuitive and responsive interfaces that resonate with users.`
-
-
   },
   {
     id: uuidv4(),
@@ -84,7 +80,12 @@ export const projects = [
       <FaFigma />
     ],
     bgImage: '/mininglmp.svg',
-    images: ['/miningdash.svg', '/mining-image-2.svg', '/mining-image-3.svg', '/nimbles.gif'],
+    images: [
+      '/miningdash.svg',
+      '/mining-image-2.svg',
+      '/mining-image-3.svg',
+      '/nimbles.gif'
+    ],
     summary:
       'In a bid to streamline license management, we developed a comprehensive License Expiration Notification Application for a client handling over 3,000 licenses.The application automated the tracking of expiration dates and sent timely reminders for both quarterly and annual reports, ensuring the client never missed a deadline. Advanced encryption was used to protect sensitive data, addressing security concerns. Its intuitive design simplified administrative tasks, reduced errors, and overall enhanced compliance and operational efficiency, making license management much smoother for the client.',
     challenges: [
@@ -107,11 +108,16 @@ export const projects = [
     company: 'Arinse Stanley',
     date: '2023',
     // eslint-disable-next-line react/jsx-key
-    tools: [<RiNextjsFill />, <SiMongodb />
-    ],
+    tools: [<RiNextjsFill />, <SiMongodb />],
     bgImage: '/arinze-bg.png',
-    images: ['/arinze-bg.png', '/gallery.png', '/mobile.png', '/arinze-portfolio.gif'],
-    summary: 'Designed and developed a sleek and professional portfolio website for Arinze Stanley, a hyperrealist artist. The website showcases his life-like pencil drawings and highlights his artistry through an engaging, visually appealing, and user-friendly interface. The portfolio features high-quality images of his artwork, a biography, exhibition history, and publications.',
+    images: [
+      '/arinze-bg.png',
+      '/gallery.png',
+      '/mobile.png',
+      '/arinze-portfolio.gif'
+    ],
+    summary:
+      'Designed and developed a sleek and professional portfolio website for Arinze Stanley, a hyperrealist artist. The website showcases his life-like pencil drawings and highlights his artistry through an engaging, visually appealing, and user-friendly interface. The portfolio features high-quality images of his artwork, a biography, exhibition history, and publications.',
     challenges: [
       'Ensuring the website effectively highlights the intricate details of hyperrealistic pencil drawings.',
       'Creating a responsive design that maintains the aesthetic quality of artwork on various devices.',
@@ -147,9 +153,9 @@ export const testimonial = [
     first_name: 'Ayomide',
     image: '/ayomide.png',
     position: 'Project Superintendent, Motimose',
-    review:
-      `The Mining License Management Dashboard has been a game-changer for us. Its intuitive design, automated alerts, and seamless sharepoint integration have made managing over 1,000 licenses effortless and kept us compliant. We’re thrilled with the increased efficiency and organization.`,
-    socials: 'https://www.linkedin.com/in/ayomide-oluwadunsin-atanseiye-2757b9b6/'
+    review: `The Mining License Management Dashboard has been a game-changer for us. Its intuitive design, automated alerts, and seamless sharepoint integration have made managing over 1,000 licenses effortless and kept us compliant. We’re thrilled with the increased efficiency and organization.`,
+    socials:
+      'https://www.linkedin.com/in/ayomide-oluwadunsin-atanseiye-2757b9b6/'
   }
   // {
   //   id: uuidv4(),
@@ -181,4 +187,64 @@ export const testimonial = [
   //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, tincidunt eu fringilla ut, semper vitae risus. Etiam in accumsan dui. Suspendisse tristique libero quis felis aliquet, eget convallis elit pharetra. Etiam in lorem mi. Curabitur feugiat pretium posuere. Integer pretium blandit ex at mattis. Pellentesque porta quam ac tellus posuere, eget rutrum ipsum consequat.',
   //   socials: ''
   // },
+]
+
+export interface Testimonial {
+  id: number
+  name: string
+  role: string
+  text: string
+  rating: number
+  date: string
+  image: string
+}
+export const testimonialsData: Testimonial[] = [
+  {
+    id: 1,
+    name: 'Sule Wasiu Sunday',
+    role: 'Photography',
+    text: "I'm thrilled to have participated in NimbleAcademy. I'm grateful for the founders and everyone involved. The photography course exceeded my expectations and I learned a great deal. I can now confidently adjust ISO settings and take amazing pictures. Thank you NimbleAcademy",
+    rating: 4.5,
+    date: '12 NOV',
+    image: '/sunday.png'
+  },
+  {
+    id: 2,
+    name: 'John Doe',
+    role: 'Photography',
+    text: 'NimbleAcademy gave me the skills and confidence for pro-level photography. Every session made learning fun and practical!',
+    rating: 4.5,
+    date: '12 NOV',
+    image: '/doe.png'
+  },
+  {
+    id: 3,
+    name: 'John Doe',
+    role: 'Software Dev',
+    text: 'I never knew photography could be this exciting until the training. Now, I capture breathtaking shots effortlessly!',
+    rating: 4.5,
+    date: '12 NOV',
+    image: '/shedoe.png'
+  }
+]
+
+export const expertsData = [
+  {
+    id: 1,
+    name: 'Ineh Vanessah',
+    role: 'SMM Instructor',
+    image: '/Ineh.png'
+  },
+  {
+    id: 2,
+    name: 'Blessed Samuel',
+    role: 'Design Instructor',
+    image: '/Blessed.png'
+  },
+  {
+    id: 3,
+    name: 'Emmanuel Ekong',
+    role: 'Photography Instructor',
+    image: '/Zoe.png'
+  }
 ]

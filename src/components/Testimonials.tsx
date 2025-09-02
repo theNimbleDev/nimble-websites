@@ -1,45 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-
-interface Testimonial {
-  id: number
-  name: string
-  role: string
-  text: string
-  rating: number
-  date: string
-  image: string
-}
-
-const testimonialsData: Testimonial[] = [
-  {
-    id: 1,
-    name: 'Sule Wasiu Sunday',
-    role: 'Photography',
-    text: "I'm thrilled to have participated in NimbleAcademy. I'm grateful for the founders and everyone involved. The photography course exceeded my expectations and I learned a great deal. I can now confidently adjust ISO settings and take amazing pictures. Thank you NimbleAcademy",
-    rating: 4.5,
-    date: '12 NOV',
-    image: '/sunday.png'
-  },
-  {
-    id: 2,
-    name: 'John Doe',
-    role: 'Photography',
-    text: 'NimbleAcademy gave me the skills and confidence for pro-level photography. Every session made learning fun and practical!',
-    rating: 4.5,
-    date: '12 NOV',
-    image: '/doe.png'
-  },
-  {
-    id: 3,
-    name: 'John Doe',
-    role: 'Software Dev',
-    text: 'I never knew photography could be this exciting until the training. Now, I capture breathtaking shots effortlessly!',
-    rating: 4.5,
-    date: '12 NOV',
-    image: '/shedoe.png'
-  }
-]
+import { Testimonial, testimonialsData } from '@/mockData'
 
 const Testimonials: React.FC = () => {
   const renderStars = (rating: number): React.JSX.Element[] => {
