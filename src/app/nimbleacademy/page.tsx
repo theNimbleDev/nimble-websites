@@ -222,7 +222,7 @@ export default function Home() {
               <ConnectForm />
               {/* <Button
                 as="a"
-                target="blank"
+                target="blanks"
                 href="https://docs.google.com/forms/d/1U98Vv4H7JzG9VnuPmNiH_eHfWeiJZYRQlFueMboU_Xo/edit"
                 endContent={<MdArrowOutward />}
                 radius="none"
