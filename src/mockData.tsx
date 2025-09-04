@@ -282,3 +282,56 @@ export const creativeHighlightData: CreativeHighlight[] = [
     highlight: true
   }
 ]
+
+export interface VideoTestimonial {
+  id: number
+  name: string
+  role: string
+  image: string
+  video: string
+}
+
+export const videoTestimonials: VideoTestimonial[] = [
+  {
+    id: 1,
+    name: 'Angela Bower',
+    role: 'Software Developer',
+    image: '/BG-1.png',
+    video: '/angela.mp4'
+  },
+  {
+    id: 2,
+    name: 'Albert Flores',
+    role: 'Founder of GearUp',
+    image: '/flores.png',
+    video: '/albert.mp4'
+  },
+  {
+    id: 3,
+    name: 'Dev Smith',
+    role: 'Product Designer',
+    image: '/albert.png',
+    video: '/dev.mp4'
+  },
+  {
+    id: 4,
+    name: 'Angela Bower',
+    role: 'Software Developer',
+    image: '/BG-1.png',
+    video: '/angela.mp4'
+  },
+  {
+    id: 5,
+    name: 'Albert Flores',
+    role: 'Founder @ GeeksUp',
+    image: '/flores.png',
+    video: '/albert.mp4'
+  },
+  {
+    id: 6,
+    name: 'Dev Smith',
+    role: 'Product Designer',
+    image: '/albert.png',
+    video: '/dev.mp4'
+  }
+]
