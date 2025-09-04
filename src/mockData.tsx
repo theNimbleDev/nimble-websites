@@ -248,3 +248,37 @@ export const expertsData = [
     image: '/Zoe.png'
   }
 ]
+
+export interface CreativeHighlight {
+  title: string
+  year: number
+  image: string
+  description: string
+  highlight: boolean
+}
+export const creativeHighlightData: CreativeHighlight[] = [
+  {
+    title: 'SkillUp Training',
+    year: 2024,
+    image: '/skillUp2024.jpg',
+    description:
+      'Nimble Academy’s Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including:...',
+    highlight: true
+  },
+  {
+    title: 'Internship',
+    year: 2024,
+    image: '/internship24.jpg',
+    description:
+      'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
+    highlight: true
+  },
+  {
+    title: 'SkillUp Training',
+    year: 2025,
+    image: '/skillUp25.png',
+    description:
+      'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
+    highlight: true
+  }
+]
