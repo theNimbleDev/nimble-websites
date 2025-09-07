@@ -297,41 +297,41 @@ export const videoTestimonials: VideoTestimonial[] = [
     name: 'Angela Bower',
     role: 'Software Developer',
     image: '/BG-1.png',
-    video: '/angela.mp4'
+    video: 'https://www.youtube.com/embed/jF8wXdy6J8o'
   },
   {
     id: 2,
     name: 'Albert Flores',
     role: 'Founder of GearUp',
     image: '/flores.png',
-    video: '/albert.mp4'
+    video: 'https://www.youtube.com/embed/QO12Nx0jpxw'
   },
   {
     id: 3,
-    name: 'Dev Smith',
-    role: 'Product Designer',
+    name: 'Albert Flores',
+    role: 'Founder of GearUp',
     image: '/albert.png',
-    video: '/dev.mp4'
+    video: 'https://www.youtube.com/embed/LutQoVmrSlM'
   },
   {
     id: 4,
     name: 'Angela Bower',
     role: 'Software Developer',
     image: '/BG-1.png',
-    video: '/angela.mp4'
+    video: 'https://www.youtube.com/embed/H6A-y1M__oc'
   },
   {
     id: 5,
     name: 'Albert Flores',
-    role: 'Founder @ GeeksUp',
+    role: 'Founder of GearUp',
     image: '/flores.png',
-    video: '/albert.mp4'
+    video: 'https://www.youtube.com/embed/XdACpapyJPM'
   },
   {
     id: 6,
-    name: 'Dev Smith',
-    role: 'Product Designer',
+    name: 'Albert Flores',
+    role: 'Founder of GearUp',
     image: '/albert.png',
-    video: '/dev.mp4'
+    video: 'https://www.youtube.com/embed/QO12Nx0jpxw'
   }
 ]

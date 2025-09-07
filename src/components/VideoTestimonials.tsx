@@ -12,8 +12,12 @@ export default function VideoTestimonials() {
     setPlayingId(id)
   }
 
+  //check if video is YouTube
+  const isYouTube = (url: string) =>
+    url.includes('youtube.com') || url.includes('youtu.be')
+
   return (
-    <div className="py-12 px-4 sm:px-6 md:px-11">
+    <div className="py-12 px-4 sm:px-4 md:px-11">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-[#212121] md:text-[46.33px]">
           What{' '}
@@ -35,12 +39,23 @@ export default function VideoTestimonials() {
             className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition h-[600px]"
           >
             {playingId === testimonial.id ? (
-              <video
-                src={testimonial.video}
-                controls
-                autoPlay
-                className="w-full h-full object-cover"
-              />
+              isYouTube(testimonial.video) ? (
+                <iframe
+                  src={testimonial.video}
+                  title={testimonial.name}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <video
+                  src={testimonial.video}
+                  controls
+                  autoPlay
+                  className="w-full h-full object-cover"
+                />
+              )
             ) : (
               <Image
                 src={testimonial.image}
@@ -73,11 +88,11 @@ export default function VideoTestimonials() {
         ))}
       </div>
 
-      {/* Button for student reviews 
-      <div className="mt-10 text-center">
+      {/* Button for student reviews */}
+      {/* <div className="mt-10 text-center">
         <Link
           href="/student-reviews"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF7354] to-[#FF7D06] text-white font-semibold px-6 py-3 rounded- shadow-md hover:shadow-lg transition"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF7354] to-[#FF7D06] text-white font-semibold px-6 py-3 rounded shadow-md hover:shadow-lg transition"
         >
           See all reviews by our students
           <HiArrowUpRight size={15} />
