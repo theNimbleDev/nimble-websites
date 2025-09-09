@@ -37,8 +37,8 @@ const Testimonials: React.FC = () => {
   }
 
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 md:px-11">
-      <div className="max-w-7xl mx-auto text-center">
+    <div className="py-12 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+      <div className="text-center">
         <h2 className="text-4xl font-extrabold text-[#212121] md:text-[46.33px]">
           What{' '}
           <span className="bg-gradient-to-r from-[#FF7354] to-[#FF7D06] bg-clip-text text-transparent">
@@ -50,8 +50,8 @@ const Testimonials: React.FC = () => {
           exceptional programs. Here’s what they say:
         </p>
       </div>
-
-      <div className="mt-12 md:px-4 grid gap-4 lg:grid-cols-3">
+      {/* cards */}
+      <div className="mt-12 grid gap-4 lg:grid-cols-3">
         {testimonialsData.map((testimonial: Testimonial) => (
           <div
             key={testimonial.id}
@@ -82,7 +82,7 @@ const Testimonials: React.FC = () => {
                 <span className="text-[#7B7B7B] font-bold">
                   {testimonial.rating}
                 </span>
-                <div className="flex ">{renderStars(testimonial.rating)}</div>
+                <div className="flex">{renderStars(testimonial.rating)}</div>
               </div>
               <div className="bg-gradient-to-r from-[#FFA673] to-[#FF7D06] text-white text-sm px-3 py-1 rounded-full">
                 {testimonial.date}

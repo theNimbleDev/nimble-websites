@@ -248,3 +248,90 @@ export const expertsData = [
     image: '/Zoe.png'
   }
 ]
+
+export interface CreativeHighlight {
+  title: string
+  year: number
+  image: string
+  description: string
+  highlight: boolean
+}
+export const creativeHighlightData: CreativeHighlight[] = [
+  {
+    title: 'SkillUp Training',
+    year: 2024,
+    image: '/skillUp2024.jpg',
+    description:
+      'Nimble Academy’s Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including:...',
+    highlight: true
+  },
+  {
+    title: 'Internship',
+    year: 2024,
+    image: '/internship24.jpg',
+    description:
+      'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
+    highlight: true
+  },
+  {
+    title: 'SkillUp Training',
+    year: 2025,
+    image: '/skillUp25.png',
+    description:
+      'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
+    highlight: true
+  }
+]
+
+export interface VideoTestimonial {
+  id: number
+  name: string
+  role: string
+  image: string
+  video: string
+}
+
+export const videoTestimonials: VideoTestimonial[] = [
+  {
+    id: 1,
+    name: 'Angela Bower',
+    role: 'Software Developer',
+    image: '/BG-1.png',
+    video: 'https://www.youtube.com/embed/jF8wXdy6J8o'
+  },
+  {
+    id: 2,
+    name: 'Albert Flores',
+    role: 'Founder of GearUp',
+    image: '/flores.png',
+    video: 'https://www.youtube.com/embed/QO12Nx0jpxw'
+  },
+  {
+    id: 3,
+    name: 'Albert Flores',
+    role: 'Founder of GearUp',
+    image: '/albert.png',
+    video: 'https://www.youtube.com/embed/LutQoVmrSlM'
+  },
+  {
+    id: 4,
+    name: 'Angela Bower',
+    role: 'Software Developer',
+    image: '/BG-1.png',
+    video: 'https://www.youtube.com/embed/H6A-y1M__oc'
+  },
+  {
+    id: 5,
+    name: 'Albert Flores',
+    role: 'Founder of GearUp',
+    image: '/flores.png',
+    video: 'https://www.youtube.com/embed/XdACpapyJPM'
+  },
+  {
+    id: 6,
+    name: 'Albert Flores',
+    role: 'Founder of GearUp',
+    image: '/albert.png',
+    video: 'https://www.youtube.com/embed/QO12Nx0jpxw'
+  }
+]
