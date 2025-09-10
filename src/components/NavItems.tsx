@@ -49,6 +49,7 @@ const NavItems: React.FC<NavItemsProps> = ({ mobile, closeMenu }) => {
     { href: '/', label: 'Home' },
     { href: '/#about', label: 'About Us' },
     { href: '/#highlights', label: 'Higlights' },
+    { href: '/portfolio', label: 'Our Portfolio' },
     { href: '/#contact', label: 'Contact Us' }
   ]
 
