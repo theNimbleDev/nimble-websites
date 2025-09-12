@@ -203,7 +203,7 @@ export const testimonialsData: Testimonial[] = [
     id: 1,
     name: 'Sule Wasiu Sunday',
     role: 'Photography',
-    text: "I'm thrilled to have participated in NimbleAcademy. I'm grateful for the founders and everyone involved. The photography course exceeded my expectations and I learned a great deal. I can now confidently adjust ISO settings and take amazing pictures. Thank you NimbleAcademy",
+    text: 'Participating in NimbleAcademy was an amazing journey. The photography training exceeded my expectations and gave me confidence. I discovered useful skills and learned creative techniques. I’m grateful to the mentors and organizers.',
     rating: 4.5,
     date: '12 NOV',
     image: '/sunday.png'
@@ -212,7 +212,7 @@ export const testimonialsData: Testimonial[] = [
     id: 2,
     name: 'John Doe',
     role: 'Photography',
-    text: 'NimbleAcademy gave me the skills and confidence for pro-level photography. Every session made learning fun and practical!',
+    text: 'I’m grateful for NimbleAcademy and the amazing graphic design tutor. The course gave me a perfect shift and helped me apply what I learned to improve my skills and become confident.I now feel confident in my design journey. Thank you NimbleAcademy.',
     rating: 4.5,
     date: '12 NOV',
     image: '/doe.png'
@@ -221,7 +221,7 @@ export const testimonialsData: Testimonial[] = [
     id: 3,
     name: 'John Doe',
     role: 'Software Dev',
-    text: 'I never knew photography could be this exciting until the training. Now, I capture breathtaking shots effortlessly!',
+    text: 'I’m grateful for NimbleAcademy and the amazing graphic design tutor. The course gave me a perfect shift and helped me apply what I learned to improve my skills and become confident.I now feel confident in my design journey. Thank you NimbleAcademy.',
     rating: 4.5,
     date: '12 NOV',
     image: '/shedoe.png'

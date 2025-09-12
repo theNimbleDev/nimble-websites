@@ -50,6 +50,7 @@ const Testimonials: React.FC = () => {
           exceptional programs. Here’s what they say:
         </p>
       </div>
+
       {/* cards */}
       <div className="mt-12 grid gap-4 lg:grid-cols-3">
         {testimonialsData.map((testimonial: Testimonial) => (
