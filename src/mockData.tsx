@@ -189,6 +189,84 @@ export const testimonial = [
   // },
 ]
 
+export interface CreativeHighlight {
+  id: string // Added unique ID for routing
+  title: string
+  year: number
+  image: string
+  description: string
+  highlight: boolean
+  fullDescription: string
+  detailImages: string[]
+  category: 'skillup' | 'internship'
+  date: string
+  location: string
+}
+
+export const creativeHighlightData: CreativeHighlight[] = [
+  {
+    id: 'skillup-training-2024',
+    title: 'SkillUp Training',
+    year: 2024,
+    image: '/skillUp2024.jpg',
+    description:
+      "Nimble Academy's Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including design, photography, development, social media management, etc. Through guided learning, hands-on experience, and real-world projects, participants will discover their strengths, build future-ready skills, and uncover what excites them most in the digital space.",
+    highlight: true,
+    fullDescription:
+      "Nimble Academy's Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including: design, photography, development, social media management, etc. Through guided learning, hands-on experience, and real-world projects, participants will discover their strengths, build future-ready skills, and uncover what excites them most in the digital space.",
+    detailImages: [
+      '/skillup-training-workshop-session.jpg',
+      '/students-learning-design.jpg',
+      '/photography-training-session.jpg',
+      '/development-coding-workshop.jpg'
+    ],
+    category: 'skillup',
+    date: 'August 2024',
+    location: 'Nimble Academy'
+  },
+  {
+    id: 'internship-2024',
+    title: 'Internship',
+    year: 2024,
+    image: '/internship24.jpg',
+    description:
+      'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
+    highlight: true,
+    fullDescription:
+      "At NimbleDev, We empower interns with the creative and technical expertise to excel in today's digital world. Our programs go beyond theory, delivering immersive, hands-on training that turns passion into professional mastery.",
+    detailImages: [
+      '/intern-participant-1.jpg',
+      '/intern-participant-2.jpg',
+      '/intern-participant-3.jpg',
+      '/intern-participant-4.jpg',
+      '/intern-participant-5.jpg'
+    ],
+    category: 'internship',
+    date: 'August 2024',
+    location: 'Nimble Academy'
+  },
+  {
+    id: 'skillup-training-2025',
+    title: 'SkillUp Training',
+    year: 2025,
+    image: '/skillUp25.png',
+    description:
+      'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
+    highlight: true,
+    fullDescription:
+      'Our 2025 SkillUp Training program builds on the success of previous cohorts, introducing even more comprehensive modules and hands-on projects. Participants explore cutting-edge technologies and creative methodologies that prepare them for the evolving digital landscape.',
+    detailImages: [
+      '/skillup-2025-training-session.jpg',
+      '/advanced-design-workshop.jpg',
+      '/tech-innovation-lab.jpg',
+      '/creative-collaboration-space.jpg'
+    ],
+    category: 'skillup',
+    date: 'Upcoming 2025',
+    location: 'Nimble Academy'
+  }
+]
+
 export interface Testimonial {
   id: number
   name: string
@@ -246,40 +324,6 @@ export const expertsData = [
     name: 'Emmanuel Ekong',
     role: 'Photography Instructor',
     image: '/Zoe.png'
-  }
-]
-
-export interface CreativeHighlight {
-  title: string
-  year: number
-  image: string
-  description: string
-  highlight: boolean
-}
-export const creativeHighlightData: CreativeHighlight[] = [
-  {
-    title: 'SkillUp Training',
-    year: 2024,
-    image: '/skillUp2024.jpg',
-    description:
-      'Nimble Academy’s Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including:...',
-    highlight: true
-  },
-  {
-    title: 'Internship',
-    year: 2024,
-    image: '/internship24.jpg',
-    description:
-      'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
-    highlight: true
-  },
-  {
-    title: 'SkillUp Training',
-    year: 2025,
-    image: '/skillUp25.png',
-    description:
-      'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
-    highlight: true
   }
 ]
 

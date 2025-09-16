@@ -1,5 +1,5 @@
-import { creativeHighlightData } from '@/mockData'
-import type { CreativeHighlight } from '@/mockData'
+import { CreativeHighlight, creativeHighlightData } from '@/mockData'
+import Link from 'next/link'
 
 export default function CreativeHighlights() {
   return (
@@ -19,35 +19,37 @@ export default function CreativeHighlights() {
           Tap into the details and witness the journey from concept to mastery.
         </span>
       </p>
+
       {/* cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {creativeHighlightData.map((item: CreativeHighlight, index: number) => (
-          <div
-            key={index}
-            className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition h-[400px]"
-            style={{
-              backgroundImage: `url(${item.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          >
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+          <Link key={index} href={`/portfolio/${item.id}`} className="block">
+            <div
+              className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-[400px] cursor-pointer transform hover:scale-105"
+              style={{
+                backgroundImage: `url(${item.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
 
-            <div className="absolute bottom-0 p-6 text-white">
-              <div className="flex gap-2 items-center">
-                <h3 className="text-xl md:text-[24.98px] font-semibold bg-gradient-to-r from-[#FFA673] to-[#FF7D06] bg-clip-text text-transparent">
-                  {item.title}
-                </h3>
-                <p className="text-xl md:text-[24.98px] font-semibold">
-                  {item.year}
+              <div className="absolute bottom-0 p-6 text-white">
+                <div className="flex gap-2 items-center">
+                  <h3 className="text-xl md:text-[24.98px] font-semibold bg-gradient-to-r from-[#FFA673] to-[#FF7D06] bg-clip-text text-transparent">
+                    {item.title}
+                  </h3>
+                  <p className="text-xl md:text-[24.98px] font-semibold">
+                    {item.year}
+                  </p>
+                </div>
+                <p className="mt-2 text-sm md:text-[13px] leading-relaxed opacity-90">
+                  {item.description}
                 </p>
               </div>
-              <p className="mt-2 text-sm md:text-[13px] leading-relaxed opacity-90">
-                {item.description}
-              </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
