@@ -480,5 +480,5 @@ export const technicalTrainingData = {
     src: '/process2.png',
     alt: 'Technical training illustration'
   },
-  imagePosition: 'left' as const
+  imagePosition: 'right' as const
 }
