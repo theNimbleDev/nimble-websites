@@ -1,9 +1,7 @@
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
 import { CreativeHighlight, creativeHighlightData } from '@/mockData'
 import SkillUpDetail from '@/components/skillupDetail'
 import InternshipDetail from '@/components/InternshipDetail'
-import { MdArrowOutward } from 'react-icons/md'
 
 interface PortfolioDetailPageProps {
   params: {
@@ -38,14 +36,6 @@ export default function PortfolioDetailPage({
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors mb-8"
-        >
-          <MdArrowOutward className="w-4 h-4" />
-          Back to Portfolio
-        </Link>
-
         {renderPortfolioContent()}
       </div>
     </div>

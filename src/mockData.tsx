@@ -213,12 +213,12 @@ export const creativeHighlightData: CreativeHighlight[] = [
       "Nimble Academy's Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including design, photography, development, social media management, etc. Through guided learning, hands-on experience, and real-world projects, participants will discover their strengths, build future-ready skills, and uncover what excites them most in the digital space.",
     highlight: true,
     fullDescription:
-      "Nimble Academy's Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including: design, photography, development, social media management, etc. Through guided learning, hands-on experience, and real-world projects, participants will discover their strengths, build future-ready skills, and uncover what excites them most in the digital space.",
+      "Nimble Academy's Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including:  design, photography, development, social media management, etc. Through guided learning, hands-on practice, and real-world projects, participants will discover their strengths, build future-ready skills, and uncover what excites them most in the digital space.",
     detailImages: [
-      '/skillup-training-workshop-session.jpg',
-      '/students-learning-design.jpg',
-      '/photography-training-session.jpg',
-      '/development-coding-workshop.jpg'
+      // '/skillup-training-workshop-session.jpg',
+      // '/students-learning-design.jpg',
+      // '/photography-training-session.jpg',
+      // '/development-coding-workshop.jpg'
     ],
     category: 'skillup',
     date: 'August 2024',
@@ -235,11 +235,11 @@ export const creativeHighlightData: CreativeHighlight[] = [
     fullDescription:
       "At NimbleDev, We empower interns with the creative and technical expertise to excel in today's digital world. Our programs go beyond theory, delivering immersive, hands-on training that turns passion into professional mastery.",
     detailImages: [
-      '/intern-participant-1.jpg',
-      '/intern-participant-2.jpg',
-      '/intern-participant-3.jpg',
-      '/intern-participant-4.jpg',
-      '/intern-participant-5.jpg'
+      // '/intern-participant-1.jpg',
+      // '/intern-participant-2.jpg',
+      // '/intern-participant-3.jpg',
+      // '/intern-participant-4.jpg',
+      // '/intern-participant-5.jpg'
     ],
     category: 'internship',
     date: 'August 2024',
@@ -379,3 +379,106 @@ export const videoTestimonials: VideoTestimonial[] = [
     video: 'https://www.youtube.com/embed/QO12Nx0jpxw'
   }
 ]
+
+export const creativeTrainingData = {
+  goals: [
+    {
+      title: '',
+      description:
+        'Train students to capture stunning photos and tell powerful visual stories.'
+    },
+    {
+      title: '',
+      description:
+        'Build creativity in Graphic Design through branding, digital illustration, and design tools.'
+    },
+    {
+      title: '',
+      description:
+        'Develop expertise in Social Media Management with strategy, content creation, and analytics.'
+    },
+    {
+      title: '',
+      description:
+        'Provide beginners with a foundation in coding and digital solution building.'
+    }
+  ],
+  processSteps: [
+    {
+      title: 'Behind the Scenes:',
+      description:
+        'Students explore lighting, composition, design principles, and storytelling.'
+    },
+    {
+      title: 'Practical Sessions:',
+      description:
+        'From camera setup and studio shoots to creating brand visuals and layouts.'
+    },
+    {
+      title: 'Editing & Retouching:',
+      description:
+        'Master tools like Lightroom, Photoshop, and Illustrator for professional results.'
+    },
+    {
+      title: 'Digital Strategy:',
+      description:
+        'Apply skills in social media management, learning content creation, scheduling, and analytics for real-world impact.'
+    }
+  ],
+  mainImage: {
+    src: '/goals.png',
+    alt: 'goals illustration'
+  },
+  secondImage: {
+    src: '/process1.png',
+    alt: 'Students in creative training session'
+  },
+  imagePosition: 'right' as const
+}
+
+export const technicalTrainingData = {
+  goals: [
+    {
+      title: 'Future-Ready Skills:',
+      description: 'Develop creative and technical expertise.'
+    },
+    {
+      title: 'Practical Experience:',
+      description: 'Work on real-world projects.'
+    },
+    {
+      title: 'Modern Tools:',
+      description: 'Learn industry-standard technologies.'
+    },
+    {
+      title: 'Innovation & Problem-Solving:',
+      description: 'Build critical thinking and teamwork.'
+    }
+  ],
+  processSteps: [
+    {
+      title: 'Application & Onboarding:',
+      description:
+        'Candidates submit applications showcasing their motivation, basic skills, or portfolio. Right-fit candidates are prepared, motivated, and aligned with the training goals.'
+    },
+    {
+      title: 'Training & Skill Development:',
+      description:
+        'Participants develop both technical expertise and soft skills while gaining exposure to real-world practices.'
+    },
+    {
+      title: 'Growth Path:',
+      description:
+        'Participants exit with a strong portfolio, confidence, and clear next steps.'
+    }
+  ],
+  mainImage: {
+    src: '/goals.png',
+    alt: 'goals illustration'
+  },
+  secondImage: {
+    src: '/process2.png',
+    alt: 'Technical training illustration'
+  },
+  imagePosition: 'left' as const
+}

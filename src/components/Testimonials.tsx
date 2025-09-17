@@ -37,7 +37,7 @@ const Testimonials: React.FC = () => {
   }
 
   return (
-    <div className="py-12 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+    <div className="py-2 md:py-12 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
       <div className="text-center">
         <h2 className="text-4xl font-extrabold text-[#212121] md:text-[46.33px]">
           What{' '}

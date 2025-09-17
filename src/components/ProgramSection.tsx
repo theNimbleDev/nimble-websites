@@ -3,24 +3,24 @@ import React from 'react'
 import Image from 'next/image'
 
 interface ProgramSectionProps {
-  date: string
+  date?: string
+  subtitle?: string
   title: string
-  description: string
+  description?: string
   images: {
     src: string
     alt: string
   }[]
-  logoSrc?: string
   backgroundColor?: string
   columns?: number
 }
 
 const ProgramSection: React.FC<ProgramSectionProps> = ({
   date,
+  subtitle,
   title,
   description,
   images,
-  logoSrc = '/nimble-logo.svg',
   backgroundColor = 'bg-white',
   columns = 4
 }) => {
@@ -61,29 +61,28 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({
   }
 
   return (
-    <section className={`${backgroundColor} py-12 md:py-20`}>
+    <section className={`${backgroundColor} py-2 md:py-10`}>
       <div className="mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <Image
-              src={logoSrc}
-              width={40}
-              height={40}
-              alt="Nimble Academy Logo"
-              className="w-8 h-8 md:w-10 md:h-10"
-            />
-            <span className="text-gray-500 text-sm md:text-base font-medium">
-              {date} | Nimble Academy
-            </span>
+          <Image
+            src="/Vector1.svg"
+            width={40}
+            height={40}
+            alt="Nimble Academy Logo"
+            className="w-8 h-8 md:w-10 md:h-10 ml-4 md:ml-12"
+          />{' '}
+          <div className="flex items-center justify-center mb-2">
+            <p className="text-sm md:text-lg">
+              <span className="text-orange-400 font-medium">{date}</span>{' '}
+              <span className="text-[#7B7B7B]">{subtitle}</span>
+            </p>
           </div>
-
           <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8">
             <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
               {title}
             </span>
           </h2>
-
           <div className="max-w-4xl mx-auto">
             <p className="text-gray-600 text-base md:text-lg leading-relaxed">
               {description}
