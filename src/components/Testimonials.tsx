@@ -10,7 +10,6 @@ interface TestimonialsProps {
 
 const Testimonials: React.FC<TestimonialsProps> = ({
   data,
-  title = "What They're Saying",
   subtitle = "Don't Just Take our word for it! Our students rave about our exceptional programs. Here's what they say:"
 }) => {
   const renderStars = (rating: number): React.JSX.Element[] => {
@@ -52,7 +51,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({
         <h2 className="text-4xl font-extrabold text-[#212121] md:text-[46.33px]">
           What{' '}
           <span className="bg-gradient-to-r from-[#FF7354] to-[#FF7D06] bg-clip-text text-transparent">
-            They're Saying
+            They&apos;re Saying
           </span>
         </h2>
         <p className="mt-4 text-[20px] text-[#7B7B7B] max-w-2xl mx-auto">
