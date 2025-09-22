@@ -1,45 +1,31 @@
-import { CreativeHighlight, creativeTrainingData } from '@/mockData'
+import {
+  CreativeHighlight,
+  creativeTrainingData,
+  skillUpSponsors,
+  skillUpTestimonialsData
+} from '@/mockData'
 import Image from 'next/image'
 import Testimonials from './Testimonials'
 import ProgramSection from './ProgramSection'
 import TrainingOverview from './TrainingOverview'
+import SponsoredSection from './SponsoredSection'
 
 interface SkillUpDetailProps {
   portfolioItem: CreativeHighlight
 }
-// SkillUp Training Section
-const skillUpData = {
-  date: 'August 2024',
-  subtitle: '| Nimble Academy',
-  title: 'SkillUp Training',
-  images: [
-    { src: '/skillup1.png', alt: 'Student learning photography' },
-    { src: '/skillup2.png', alt: 'Creative workshop session' },
-    { src: '/skillup3.png', alt: 'Social media training' },
-    { src: '/skillup4.png', alt: 'Student presentation' }
-  ]
-}
-
-// Final Results Section
-const finalResultsData = {
-  title: 'Final Results',
-  description:
-    'Our students transformed their creativity into mastery, capturing breathtaking photos, designing powerful visuals, and crafting social media campaigns that truly engage. Their standout projects are showcased here, with many earning recognition and building real impact online.',
-  images: [
-    { src: '/finalr1.png', alt: 'Student project showcase' },
-    { src: '/finalr2.png', alt: 'Photography work' },
-    { src: '/finalr3.png', alt: 'Design presentation' },
-    { src: '/finalr4.png', alt: 'Team collaboration' }
-  ]
-}
 
 export default function SkillUpDetail({ portfolioItem }: SkillUpDetailProps) {
+  const trainingSection = portfolioItem.sections?.training
+  const finalResultsSection = portfolioItem.sections?.finalResults
+
+  if (!trainingSection || !finalResultsSection) {
+    return <div>Portfolio data not available</div>
+  }
+
   return (
     <div className="space-y-16">
-      {/* Header Section */}
-
-      {/* SkillUp Training Section */}
-      <ProgramSection {...skillUpData} />
+      {/* Header Section - SkillUp Training */}
+      <ProgramSection {...trainingSection} />
 
       {/* Training Overview Section */}
       <div className="text-center">
@@ -76,9 +62,14 @@ export default function SkillUpDetail({ portfolioItem }: SkillUpDetailProps) {
       <TrainingOverview {...creativeTrainingData} backgroundColor="bg-white" />
 
       {/* Final Results Section */}
-      <ProgramSection {...finalResultsData} />
+      <ProgramSection {...finalResultsSection} />
 
-      <Testimonials />
+      <Testimonials
+        data={skillUpTestimonialsData}
+        title="SkillUp Success Stories"
+        subtitle="Don’t Just Take our word for it! Our students rave about our exceptional programs. Here’s what they say:"
+      />
+      <SponsoredSection sponsors={skillUpSponsors} />
     </div>
   )
 }

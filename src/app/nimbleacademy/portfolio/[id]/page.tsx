@@ -23,14 +23,14 @@ export default function PortfolioDetailPage({
   }
 
   const renderPortfolioContent = () => {
-    if (portfolioItem.category === 'skillup') {
-      return <SkillUpDetail portfolioItem={portfolioItem} />
-    } else if (portfolioItem.category === 'internship') {
-      return <InternshipDetail portfolioItem={portfolioItem} />
+    switch (portfolioItem.category) {
+      case 'skillup':
+        return <SkillUpDetail portfolioItem={portfolioItem} />
+      case 'internship':
+        return <InternshipDetail portfolioItem={portfolioItem} />
+      default:
+        throw new Error(`Unknown portfolio category: ${portfolioItem.category}`)
     }
-
-    // Fallback for other portfolio types
-    return <SkillUpDetail portfolioItem={portfolioItem} />
   }
 
   return (

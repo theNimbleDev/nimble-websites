@@ -189,18 +189,38 @@ export const testimonial = [
   // },
 ]
 
+export interface PortfolioSection {
+  date?: string
+  subtitle?: string
+  title: string
+  description: string
+  images: { src: string; alt: string }[]
+  showCTA?: boolean
+  ctaText?: string
+  ctaSubtext?: string
+}
+
 export interface CreativeHighlight {
   id: string // Added unique ID for routing
+  Upcoming?: string
   title: string
   year: number
   image: string
   description: string
   highlight: boolean
-  fullDescription: string
+  fullDescription?: string
   detailImages: string[]
   category: 'skillup' | 'internship'
   date: string
   location: string
+  sections?: {
+    training?: PortfolioSection
+    finalResults?: PortfolioSection
+    brand?: {
+      show: boolean
+      logoSrc?: string
+    }
+  }
 }
 
 export const creativeHighlightData: CreativeHighlight[] = [
@@ -210,19 +230,40 @@ export const creativeHighlightData: CreativeHighlight[] = [
     year: 2024,
     image: '/skillUp2024.jpg',
     description:
-      "Nimble Academy's Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including design, photography, development, social media management, etc. Through guided learning, hands-on experience, and real-world projects, participants will discover their strengths, build future-ready skills, and uncover what excites them most in the digital space.",
+      "Nimble Academy's Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including...",
     highlight: true,
     fullDescription:
       "Nimble Academy's Skill-Up Training is designed for absolute beginners who are eager to explore the digital world. The program introduces young talents to core creative and technical areas including:  design, photography, development, social media management, etc. Through guided learning, hands-on practice, and real-world projects, participants will discover their strengths, build future-ready skills, and uncover what excites them most in the digital space.",
-    detailImages: [
-      // '/skillup-training-workshop-session.jpg',
-      // '/students-learning-design.jpg',
-      // '/photography-training-session.jpg',
-      // '/development-coding-workshop.jpg'
-    ],
+    detailImages: [],
     category: 'skillup',
     date: 'August 2024',
-    location: 'Nimble Academy'
+    location: 'Nimble Academy',
+    sections: {
+      training: {
+        date: 'August 2024',
+        subtitle: '| Nimble Academy',
+        title: 'SkillUp Training',
+        description:
+          'Showcasing the training sessions and activities from our SkillUp program.',
+        images: [
+          { src: '/skillup1.png', alt: 'Student learning photography' },
+          { src: '/skillup2.png', alt: 'Creative workshop session' },
+          { src: '/skillup3.png', alt: 'Social media training' },
+          { src: '/skillup4.png', alt: 'Student presentation' }
+        ]
+      },
+      finalResults: {
+        title: 'Final Results',
+        description:
+          'Our students transformed their creativity into mastery, capturing breathtaking photos, designing powerful visuals, and crafting social media campaigns that truly engage. Their standout projects are showcased here, with many earning recognition and building real impact online.',
+        images: [
+          { src: '/finalr1.png', alt: 'Student project showcase' },
+          { src: '/finalr2.png', alt: 'Photography work' },
+          { src: '/finalr3.png', alt: 'Design presentation' },
+          { src: '/finalr4.png', alt: 'Team collaboration' }
+        ]
+      }
+    }
   },
   {
     id: 'internship-2024',
@@ -234,19 +275,50 @@ export const creativeHighlightData: CreativeHighlight[] = [
     highlight: true,
     fullDescription:
       "At NimbleDev, We empower interns with the creative and technical expertise to excel in today's digital world. Our programs go beyond theory, delivering immersive, hands-on training that turns passion into professional mastery.",
-    detailImages: [
-      // '/intern-participant-1.jpg',
-      // '/intern-participant-2.jpg',
-      // '/intern-participant-3.jpg',
-      // '/intern-participant-4.jpg',
-      // '/intern-participant-5.jpg'
-    ],
+    detailImages: [],
     category: 'internship',
     date: 'August 2024',
-    location: 'Nimble Academy'
+    location: 'Nimble Academy',
+    sections: {
+      training: {
+        date: 'August 2024',
+        subtitle: '| Nimble Academy',
+        title: 'Internship 2024',
+        description:
+          'Our students transformed their creativity into mastery, capturing breathtaking photos, designing powerful visuals, and crafting social media campaigns that truly engage. Their standout projects are showcased here, with many earning recognition and building real impact online.',
+        images: [
+          { src: '/intern1.svg', alt: 'Intern profile 1' },
+          { src: '/intern2.svg', alt: 'Intern profile 2' },
+          { src: '/intern3.svg', alt: 'Intern profile 3' },
+          { src: '/intern4.svg', alt: 'Intern profile 4' },
+          { src: '/intern5.svg', alt: 'Intern profile 5' }
+        ]
+      },
+      finalResults: {
+        date: 'August 2024 | Nimble Academy',
+        title: 'Results',
+        description:
+          'Students honed their skills in portrait and landscape photography, capturing stunning visuals. Their best work is showcased right here and some gained recognition online. Each shot tells a unique story, reflecting their creative growth.',
+        images: [
+          { src: '/internw1.png', alt: 'Professional web portfolio design' },
+          { src: '/internw2.svg', alt: 'Stunning landscape photography' },
+          { src: '/internw3.svg', alt: 'Group photo at academy event' },
+          { src: '/internw4.svg', alt: 'Creative photography composition' }
+        ],
+        showCTA: true,
+        ctaText: 'Transform Your Future with',
+        ctaSubtext:
+          "Unlock your potential with exciting courses designed to give you the skills and know-how to improve today's fast-paced world"
+      },
+      brand: {
+        show: true,
+        logoSrc: '/Logo.svg'
+      }
+    }
   },
   {
-    id: 'skillup-training-2025',
+    id: '/',
+    Upcoming: 'COMING SOON',
     title: 'SkillUp Training',
     year: 2025,
     image: '/skillUp25.png',
@@ -303,6 +375,68 @@ export const testimonialsData: Testimonial[] = [
     rating: 4.5,
     date: '12 NOV',
     image: '/shedoe.png'
+  }
+]
+
+// / SkillUp Trainees Reviews
+export const skillUpTestimonialsData: Testimonial[] = [
+  {
+    id: 1,
+    name: 'Sule Wasiu Sunday',
+    role: 'Photography',
+    text: "Participating in NimbleAcademy was an amazing journey. The photography training exceeded my expectations and gave me confidence in technical skills and camera creative techniques. I'm grateful to the mentors and organizers.",
+    rating: 4.5,
+    date: '12 NOV',
+    image: '/sunday.png'
+  },
+  {
+    id: 2,
+    name: 'Victoria Chika',
+    role: 'Graphic Design',
+    text: "I'm grateful for NimbleAcademy and the amazing graphic design tutor. The course gave me a perfect work-only opportunity, away what didn't bring knowledge and experience but also made me feel confident in my design journey. Thank you NimbleAcademy.",
+    rating: 4.5,
+    date: '12 NOV',
+    image: '/sunday.png'
+  },
+  {
+    id: 3,
+    name: 'Ogoh Justice',
+    role: 'Photography',
+    text: "Joining NimbleAcademy and PCS was an inspiring journey. The photography training gave me confidence in a solid foundation in my skills. I learned advanced composition and editing. I'm grateful to the mentors for their guidance and support.",
+    rating: 4.5,
+    date: '12 NOV',
+    image: '/ogoh-justice.svg'
+  }
+]
+
+// Internship Trainees Reviews
+export const internshipTestimonialsData: Testimonial[] = [
+  {
+    id: 1,
+    name: 'Munachi Wisdom',
+    role: 'Content Writer',
+    text: 'Being an intern at Nimbles Academy was truly life-changing. I discovered new strengths and built practical skills. The support from environment made learning exciting. These experiences opened doors to greater opportunities awaiting me.',
+    rating: 4.5,
+    date: '12 NOV',
+    image: '/munachi-wisdom.svg'
+  },
+  {
+    id: 2,
+    name: 'Ekiye Constance',
+    role: 'Copywriter & Project Manager',
+    text: 'My copywriting internship at TheNimbles was a great experience. I sharpened my writing and worked on real projects, learned how to craft content that resonates with people. The journey deepened both my skills and confidence.',
+    rating: 4.5,
+    date: '12 NOV',
+    image: '/ekiye-constance.svg'
+  },
+  {
+    id: 3,
+    name: 'Blessed Samuel',
+    role: 'UI/UX Designer & Developer',
+    text: 'During my UI/UX Design and Development internship at NimbleDev, I grew tremendously. Working on live projects strengthened both my design and coding skills. I tackled real-world challenges. This experience gave me valuable insights.',
+    rating: 4.5,
+    date: '12 NOV',
+    image: '/blessed-samuel.svg'
   }
 ]
 
@@ -482,3 +616,39 @@ export const technicalTrainingData = {
   },
   imagePosition: 'right' as const
 }
+
+export interface Sponsor {
+  id: number
+  name?: string
+  logo?: string
+  alt: string
+}
+
+export const skillUpSponsors: Sponsor[] = [
+  {
+    id: 1,
+    name: 'NimbleAcademy',
+    alt: 'NimbleAcademy Logo'
+  },
+  {
+    id: 2,
+    name: 'PhotographyToSlum',
+    logo: '/p2slum.svg',
+    alt: 'PhotographyToSlum Logo'
+  },
+  {
+    id: 3,
+    name: 'PhotographyToSlum',
+    logo: '/p2slum.svg',
+    alt: 'PhotographyToSlum Logo'
+  }
+]
+
+export const internshipSponsors: Sponsor[] = [
+  {
+    id: 1,
+    name: 'NimbleDev',
+    logo: '/logo-mobile.svg',
+    alt: 'NimbleDev Logo'
+  }
+]

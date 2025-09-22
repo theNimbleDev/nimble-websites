@@ -1,51 +1,82 @@
-import { CreativeHighlight, technicalTrainingData } from '@/mockData'
+import {
+  CreativeHighlight,
+  internshipSponsors,
+  internshipTestimonialsData,
+  technicalTrainingData
+} from '@/mockData'
 import Image from 'next/image'
 import Testimonials from './Testimonials'
 import ProgramSection from './ProgramSection'
 import TrainingOverview from './TrainingOverview'
+import ProgramSectionTileGrid from './ProgramSectionTileGrid'
+import SponsoredSection from './SponsoredSection'
 
 interface InternshipDetailProps {
   portfolioItem: CreativeHighlight
-}
-// Internship Section
-const internshipData = {
-  date: 'August 2024 | Nimble Academy',
-  title: 'Internship 2024',
-  description:
-    'Our students transformed their creativity into mastery, capturing breathtaking photos, designing powerful visuals, and crafting social media campaigns that truly engage. Their standout projects are showcased here, with many earning recognition and building real impact online.',
-  images: [
-    { src: '/intern1.svg', alt: 'Intern profile 1' },
-    { src: '/intern2.svg', alt: 'Intern profile 2' },
-    { src: '/intern3.svg', alt: 'Intern profile 3' },
-    { src: '/intern4.svg', alt: 'Intern profile 4' },
-    { src: '/intern5.svg', alt: 'Intern profile 5' }
-  ]
 }
 
 export default function InternshipDetail({
   portfolioItem
 }: InternshipDetailProps) {
+  const trainingSection = portfolioItem.sections?.training
+  const finalResultsSection = portfolioItem.sections?.finalResults
+
+  if (!trainingSection || !finalResultsSection) {
+    return <div>Portfolio data not available</div>
+  }
+
   return (
     <div className="space-y-16">
-      {/* Header Section */}
-      <ProgramSection {...internshipData} columns={5} />
+      {/* Header Section - Interns */}
+      <ProgramSection {...trainingSection} columns={5} />
 
-      {/* Brand Section */}
-      <div className="">
+      <div className="text-center">
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            Training{' '}
+            <span className="bg-gradient-to-r from-[#FFA673] to-[#FF7D06] bg-clip-text text-transparent">
+              Overview
+            </span>
+          </h2>
+          <div className="pl-6 mb-4 flex">
+            <Image
+              src="/group2.svg"
+              width="30"
+              height="20"
+              alt="decorative vector"
+              className=""
+            />
+          </div>
+        </div>
+        {/* Description Section */}
+        <div className="text-center">
+          <p className="text-gray-600 text-lg leading-relaxed mb-4">
+            {portfolioItem.fullDescription}
+          </p>
+        </div>
+
         <div className="justify-center align-middle flex bg-gradient-to-r from-[#FFA673] to-[#FF7D06] rounded-2xl p-12 text-center md:h-[540px]">
           <div className="justify-center flex">
             <Image
               src="/Logo.svg"
               width="300"
               height="180"
-              alt="decorative vector"
+              alt="Brand logo"
               className=""
             />
           </div>
         </div>
       </div>
+
       <TrainingOverview {...technicalTrainingData} backgroundColor="bg-white" />
-      <Testimonials />
+      <ProgramSectionTileGrid {...finalResultsSection} />
+      <Testimonials
+        data={internshipTestimonialsData}
+        title="SkillUp Success Stories"
+        subtitle="Don't Just Take our word for it! Our students rave about our exceptional programs. Here’s what they say:"
+      />
+
+      <SponsoredSection sponsors={internshipSponsors} />
     </div>
   )
 }
