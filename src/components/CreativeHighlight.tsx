@@ -36,7 +36,7 @@ export default function CreativeHighlights() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
 
               <div className="absolute bottom-0 p-6 text-white">
-                <h3 className="text-xl md:text-[40px] mb-8 font-semibold">
+                <h3 className="text-[28px] md:text-[40px] mb-8 font-semibold">
                   {item.Upcoming}
                 </h3>
                 <div className="flex gap-2 items-center">
