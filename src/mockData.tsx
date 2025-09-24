@@ -315,28 +315,28 @@ export const creativeHighlightData: CreativeHighlight[] = [
         logoSrc: '/Logo.svg'
       }
     }
-  },
-  {
-    id: '/',
-    Upcoming: 'COMING SOON',
-    title: 'SkillUp Training',
-    year: 2025,
-    image: '/skillUp25.png',
-    description:
-      'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
-    highlight: true,
-    fullDescription:
-      'Our 2025 SkillUp Training program builds on the success of previous cohorts, introducing even more comprehensive modules and hands-on projects. Participants explore cutting-edge technologies and creative methodologies that prepare them for the evolving digital landscape.',
-    detailImages: [
-      '/skillup-2025-training-session.jpg',
-      '/advanced-design-workshop.jpg',
-      '/tech-innovation-lab.jpg',
-      '/creative-collaboration-space.jpg'
-    ],
-    category: 'skillup',
-    date: 'Upcoming 2025',
-    location: 'Nimble Academy'
   }
+  // {
+  //   id: '/',
+  //   Upcoming: 'COMING SOON',
+  //   title: 'SkillUp Training',
+  //   year: 2025,
+  //   image: '/skillUp25.png',
+  //   description:
+  //     'Designed for absolute beginners, our Skill-Up Training introduced young talents to core areas like design, photography, development, and digital tools — helping them discover what excites them most.',
+  //   highlight: true,
+  //   fullDescription:
+  //     'Our 2025 SkillUp Training program builds on the success of previous cohorts, introducing even more comprehensive modules and hands-on projects. Participants explore cutting-edge technologies and creative methodologies that prepare them for the evolving digital landscape.',
+  //   detailImages: [
+  //     '/skillup-2025-training-session.jpg',
+  //     '/advanced-design-workshop.jpg',
+  //     '/tech-innovation-lab.jpg',
+  //     '/creative-collaboration-space.jpg'
+  //   ],
+  //   category: 'skillup',
+  //   date: 'Upcoming 2025',
+  //   location: 'Nimble Academy'
+  // }
 ]
 
 export interface Testimonial {
