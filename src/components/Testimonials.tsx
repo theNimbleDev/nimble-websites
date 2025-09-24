@@ -1,8 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
-import { Testimonial, testimonialsData } from '@/mockData'
+import { Testimonial } from '@/mockData'
 
-const Testimonials: React.FC = () => {
+interface TestimonialsProps {
+  data: Testimonial[]
+  title?: string
+  subtitle?: string
+}
+
+const Testimonials: React.FC<TestimonialsProps> = ({
+  data,
+  subtitle = "Don't Just Take our word for it! Our students rave about our exceptional programs. Here's what they say:"
+}) => {
   const renderStars = (rating: number): React.JSX.Element[] => {
     const fullStars = Math.floor(rating)
     const hasHalfStar = rating % 1 !== 0
@@ -37,23 +46,22 @@ const Testimonials: React.FC = () => {
   }
 
   return (
-    <div className="py-12 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <div className="text-center">
         <h2 className="text-4xl font-extrabold text-[#212121] md:text-[46.33px]">
           What{' '}
           <span className="bg-gradient-to-r from-[#FF7354] to-[#FF7D06] bg-clip-text text-transparent">
-            They’re Saying
+            They&apos;re Saying
           </span>
         </h2>
         <p className="mt-4 text-[20px] text-[#7B7B7B] max-w-2xl mx-auto">
-          Don’t Just Take our word for it! Our students rave about our
-          exceptional programs. Here’s what they say:
+          {subtitle}
         </p>
       </div>
 
       {/* cards */}
       <div className="mt-12 grid gap-4 lg:grid-cols-3">
-        {testimonialsData.map((testimonial: Testimonial) => (
+        {data.map((testimonial: Testimonial) => (
           <div
             key={testimonial.id}
             className="bg-gray-10 p-6 rounded-lg border border-[#D9D9D9] flex flex-col"
