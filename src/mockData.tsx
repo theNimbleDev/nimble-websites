@@ -318,7 +318,7 @@ export const creativeHighlightData: CreativeHighlight[] = [
   },
   {
     id: '/',
-    Upcoming: 'COMING SOON',
+    // Upcoming: 'COMING SOON',
     title: 'SkillUp Training',
     year: 2025,
     image: '/skillUp25.png',
