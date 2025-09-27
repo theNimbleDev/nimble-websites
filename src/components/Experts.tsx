@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { expertsData } from '@/mockData'
+import { creativeHighlightData } from '@/mockData'
 
 export default function Experts() {
   return (
@@ -21,7 +21,7 @@ export default function Experts() {
 
       {/* cards */}
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {expertsData.map((expert) => (
+        {creativeHighlightData.experts.map((expert) => (
           <div
             key={expert.id}
             className="flex flex-col items-center text-center"

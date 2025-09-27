@@ -1,8 +1,9 @@
 'use client'
+
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { HiOutlinePlay, HiArrowUpRight } from 'react-icons/hi2'
-import { videoTestimonials, VideoTestimonial } from '@/mockData'
+import { creativeHighlightData } from '@/mockData'
 import Link from 'next/link'
 
 export default function VideoTestimonials() {
@@ -22,18 +23,18 @@ export default function VideoTestimonials() {
         <h2 className="text-4xl font-extrabold text-[#212121] md:text-[46.33px]">
           What{' '}
           <span className="bg-gradient-to-r from-[#FF7354] to-[#FF7D06] bg-clip-text text-transparent">
-            They’re Saying
+            They're Saying
           </span>
         </h2>
         <p className="mt-4 text-[20px] text-[#7B7B7B] max-w-2xl mx-auto">
-          Don’t Just Take our word for it! Our students and interns rave about
-          our exceptional programs. Here’s what they say:
+          Don't Just Take our word for it! Our students and interns rave about
+          our exceptional programs. Here's what they say:
         </p>
       </div>
 
       {/* Cards */}
       <div className="mt-12 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
-        {videoTestimonials.map((testimonial: VideoTestimonial) => (
+        {creativeHighlightData.videoTestimonials.map((testimonial) => (
           <div
             key={testimonial.id}
             className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition h-[600px]"

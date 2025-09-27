@@ -1,9 +1,4 @@
-import {
-  CreativeHighlight,
-  internshipSponsors,
-  internshipTestimonialsData,
-  technicalTrainingData
-} from '@/mockData'
+import { creativeHighlightData } from '@/mockData'
 import Image from 'next/image'
 import Testimonials from './Testimonials'
 import ProgramSection from './ProgramSection'
@@ -12,11 +7,13 @@ import ProgramSectionTileGrid from './ProgramSectionTileGrid'
 import SponsoredSection from './SponsoredSection'
 
 interface InternshipDetailProps {
-  portfolioItem: CreativeHighlight
+  portfolioItem: (typeof creativeHighlightData.highlights)[0]
+  data: typeof creativeHighlightData
 }
 
 export default function InternshipDetail({
-  portfolioItem
+  portfolioItem,
+  data
 }: InternshipDetailProps) {
   const trainingSection = portfolioItem.sections?.training
   const finalResultsSection = portfolioItem.sections?.finalResults
@@ -68,15 +65,18 @@ export default function InternshipDetail({
         </div>
       </div>
 
-      <TrainingOverview {...technicalTrainingData} backgroundColor="bg-white" />
+      <TrainingOverview
+        {...data.trainingData.technical}
+        backgroundColor="bg-white"
+      />
       <ProgramSectionTileGrid {...finalResultsSection} />
       <Testimonials
-        data={internshipTestimonialsData}
+        data={data.testimonials.internship}
         title="SkillUp Success Stories"
-        subtitle="Don't Just Take our word for it! Our students rave about our exceptional programs. Here’s what they say:"
+        subtitle="Don't Just Take our word for it! Our students rave about our exceptional programs. Here's what they say:"
       />
 
-      <SponsoredSection sponsors={internshipSponsors} />
+      <SponsoredSection sponsors={data.sponsors.internship} />
     </div>
   )
 }

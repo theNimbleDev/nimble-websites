@@ -1,9 +1,4 @@
-import {
-  CreativeHighlight,
-  creativeTrainingData,
-  skillUpSponsors,
-  skillUpTestimonialsData
-} from '@/mockData'
+import { creativeHighlightData } from '@/mockData'
 import Image from 'next/image'
 import Testimonials from './Testimonials'
 import ProgramSection from './ProgramSection'
@@ -11,10 +6,14 @@ import TrainingOverview from './TrainingOverview'
 import SponsoredSection from './SponsoredSection'
 
 interface SkillUpDetailProps {
-  portfolioItem: CreativeHighlight
+  portfolioItem: (typeof creativeHighlightData.highlights)[0]
+  data: typeof creativeHighlightData
 }
 
-export default function SkillUpDetail({ portfolioItem }: SkillUpDetailProps) {
+export default function SkillUpDetail({
+  portfolioItem,
+  data
+}: SkillUpDetailProps) {
   const trainingSection = portfolioItem.sections?.training
   const finalResultsSection = portfolioItem.sections?.finalResults
 
@@ -59,17 +58,20 @@ export default function SkillUpDetail({ portfolioItem }: SkillUpDetailProps) {
           />
         </div>
       </div>
-      <TrainingOverview {...creativeTrainingData} backgroundColor="bg-white" />
+      <TrainingOverview
+        {...data.trainingData.creative}
+        backgroundColor="bg-white"
+      />
 
       {/* Final Results Section */}
       <ProgramSection {...finalResultsSection} />
 
       <Testimonials
-        data={skillUpTestimonialsData}
+        data={data.testimonials.skillUp}
         title="SkillUp Success Stories"
-        subtitle="Don’t Just Take our word for it! Our students rave about our exceptional programs. Here’s what they say:"
+        subtitle="Don't Just Take our word for it! Our students rave about our exceptional programs. Here's what they say:"
       />
-      <SponsoredSection sponsors={skillUpSponsors} />
+      <SponsoredSection sponsors={data.sponsors.skillUp} />
     </div>
   )
 }

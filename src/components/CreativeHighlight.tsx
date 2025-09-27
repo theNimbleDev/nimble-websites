@@ -1,4 +1,4 @@
-import { CreativeHighlight, creativeHighlightData } from '@/mockData'
+import { creativeHighlightData } from '@/mockData'
 import Link from 'next/link'
 
 export default function CreativeHighlights() {
@@ -22,7 +22,7 @@ export default function CreativeHighlights() {
 
       {/* cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {creativeHighlightData.map((item: CreativeHighlight, index: number) => (
+        {creativeHighlightData.highlights.map((item, index: number) => (
           <Link key={index} href={`/portfolio/${item.id}`} className="block">
             <div
               className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-[400px] cursor-pointer transform hover:scale-105"
@@ -36,9 +36,6 @@ export default function CreativeHighlights() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
 
               <div className="absolute bottom-0 p-6 text-white">
-                <h3 className="text-[28px] md:text-[40px] mb-8 font-semibold">
-                  {item.Upcoming}
-                </h3>
                 <div className="flex gap-2 items-center">
                   <h3 className="text-xl md:text-[24.98px] font-semibold bg-gradient-to-r from-[#FFA673] to-[#FF7D06] bg-clip-text text-transparent">
                     {item.title}
