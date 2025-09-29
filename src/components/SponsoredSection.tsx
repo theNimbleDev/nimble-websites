@@ -19,7 +19,7 @@ const SponsoredSection: React.FC<SponsoredSectionProps> = ({ sponsors }) => {
         Sponsored By:
       </h3>
 
-      <div className="flex flex-col md:flex-row items-center justify-center align-middle gap-4 md:gap-16">
+      <div className="flex flex-row items-center justify-center align-middle gap-4 md:gap-16">
         {sponsors.map((sponsor) => (
           <div
             key={sponsor.id}
@@ -30,8 +30,8 @@ const SponsoredSection: React.FC<SponsoredSectionProps> = ({ sponsors }) => {
                 <Image
                   src={sponsor.logo}
                   alt={sponsor.alt}
-                  width={50}
-                  height={50}
+                  width={100}
+                  height={100}
                   className="align-middle object-contain"
                 />
               </div>

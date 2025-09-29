@@ -37,7 +37,7 @@ export default function InternshipDetail({
           </h2>
           <div className="pl-6 mb-4 flex">
             <Image
-              src="/group2.svg"
+              src="/Logo.svg"
               width="30"
               height="20"
               alt="decorative vector"

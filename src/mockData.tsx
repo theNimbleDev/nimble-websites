@@ -233,7 +233,7 @@ export const testimonialsData: Testimonial[] = [
 // Types
 interface Sponsor {
   id: number
-  name: string
+  name?: string
   logo?: string
   alt: string
 }
@@ -503,18 +503,11 @@ export const creativeHighlightData: CreativeHighlightData = {
     skillUp: [
       {
         id: 1,
-        name: 'NimbleAcademy',
+        logo: '/logo-mobile.svg',
         alt: 'NimbleAcademy Logo'
       },
       {
         id: 2,
-        name: 'PhotographyToSlum',
-        logo: '/p2slum.svg',
-        alt: 'PhotographyToSlum Logo'
-      },
-      {
-        id: 3,
-        name: 'PhotographyToSlum',
         logo: '/p2slum.svg',
         alt: 'PhotographyToSlum Logo'
       }
@@ -522,7 +515,6 @@ export const creativeHighlightData: CreativeHighlightData = {
     internship: [
       {
         id: 1,
-        name: 'NimbleDev',
         logo: '/logo-mobile.svg',
         alt: 'NimbleDev Logo'
       }
