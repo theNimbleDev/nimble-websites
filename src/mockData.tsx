@@ -472,26 +472,26 @@ export interface VideoTestimonial {
 export const videoTestimonials: VideoTestimonial[] = [
   {
     id: 1,
-    name: 'Angela Bower',
+    name: 'Omotosho Precious',
     role: 'Software Developer',
-    image: '/BG-1.png',
-    video: 'https://www.youtube.com/embed/jF8wXdy6J8o'
+    image: '/intern4.svg',
+    video: '/preciousNimble.mp4'
   },
   {
     id: 2,
-    name: 'Albert Flores',
-    role: 'Founder of GearUp',
-    image: '/flores.png',
-    video: 'https://www.youtube.com/embed/QO12Nx0jpxw'
-  },
-  {
+    name: 'Wisdom Munachi',
+    role: 'Copy/Content Writer',
+    image: '/intern1.svg',
+    video: 'wisdomvid.mp4'
+  }
+  /*{
     id: 3,
-    name: 'Albert Flores',
-    role: 'Founder of GearUp',
-    image: '/albert.png',
+    name: 'Samuel Alisigwe',
+    role: 'UI/UX Designer & Web Developer',
+    image: '/intern2.svg',
     video: 'https://www.youtube.com/embed/LutQoVmrSlM'
   },
-  {
+  /*{
     id: 4,
     name: 'Angela Bower',
     role: 'Software Developer',
@@ -511,7 +511,7 @@ export const videoTestimonials: VideoTestimonial[] = [
     role: 'Founder of GearUp',
     image: '/albert.png',
     video: 'https://www.youtube.com/embed/QO12Nx0jpxw'
-  }
+  }*/
 ]
 
 export const creativeTrainingData = {
