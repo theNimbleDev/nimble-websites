@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { CreativeHighlight, creativeHighlightData } from '@/mockData'
+import { creativeHighlightData } from '@/mockData'
 import SkillUpDetail from '@/components/skillupDetail'
 import InternshipDetail from '@/components/InternshipDetail'
 
@@ -9,8 +9,8 @@ interface PortfolioDetailPageProps {
   }
 }
 
-function getPortfolioItem(id: string): CreativeHighlight | undefined {
-  return creativeHighlightData.find((item) => item.id === id)
+function getPortfolioItem(id: string) {
+  return creativeHighlightData.highlights.find((item) => item.id === id)
 }
 
 export default function PortfolioDetailPage({
@@ -21,13 +21,22 @@ export default function PortfolioDetailPage({
   if (!portfolioItem) {
     notFound()
   }
-
   const renderPortfolioContent = () => {
     switch (portfolioItem.category) {
       case 'skillup':
-        return <SkillUpDetail portfolioItem={portfolioItem} />
+        return (
+          <SkillUpDetail
+            portfolioItem={portfolioItem}
+            data={creativeHighlightData}
+          />
+        )
       case 'internship':
-        return <InternshipDetail portfolioItem={portfolioItem} />
+        return (
+          <InternshipDetail
+            portfolioItem={portfolioItem}
+            data={creativeHighlightData}
+          />
+        )
       default:
         throw new Error(`Unknown portfolio category: ${portfolioItem.category}`)
     }
@@ -43,5 +52,5 @@ export default function PortfolioDetailPage({
 }
 
 export async function generateStaticParams() {
-  return creativeHighlightData.map((item) => ({ id: item.id }))
+  return creativeHighlightData.highlights.map((item) => ({ id: item.id }))
 }

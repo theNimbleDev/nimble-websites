@@ -1,9 +1,9 @@
 'use client'
+
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { HiOutlinePlay, HiArrowUpRight } from 'react-icons/hi2'
+import { HiOutlinePlay } from 'react-icons/hi2'
 import { videoTestimonials, VideoTestimonial } from '@/mockData'
-import Link from 'next/link'
 
 export default function VideoTestimonials() {
   const [playingId, setPlayingId] = useState<number | null>(null)
@@ -26,12 +26,12 @@ export default function VideoTestimonials() {
         <h2 className="text-4xl font-extrabold text-[#212121] md:text-[46.33px]">
           What{' '}
           <span className="bg-gradient-to-r from-[#FF7354] to-[#FF7D06] bg-clip-text text-transparent">
-            They’re Saying
+            They&apos;re Saying
           </span>
         </h2>
         <p className="mt-4 text-[20px] text-[#7B7B7B] max-w-2xl mx-auto">
-          Don’t Just Take our word for it! Our students and interns rave about
-          our exceptional programs. Here’s what they say:
+          Don&apos;t Just Take our word for it! Our students and interns rave
+          about our exceptional programs. Here&apos;s what they say:
         </p>
       </div>
 

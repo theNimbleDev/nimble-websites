@@ -1,12 +1,8 @@
 import Container from '@/components/Container'
 import Section from '@/components/Section'
-import { Button } from '@nextui-org/react'
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { MdArrowOutward } from 'react-icons/md'
-import ConnectForm from '@/components/ConnectForm'
 import VideoTestimonials from '@/components/VideoTestimonials'
-import Testimonials from '@/components/Testimonials'
 import CreativeHighlights from '@/components/CreativeHighlight'
 import Experts from '@/components/Experts'
 
