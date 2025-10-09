@@ -58,6 +58,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({
           {subtitle}
         </p>
       </div>
+
       {/* cards */}
       <div className="mt-12 grid gap-4 lg:grid-cols-3">
         {data.map((testimonial: Testimonial) => (

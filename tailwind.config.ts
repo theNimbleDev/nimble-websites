@@ -56,7 +56,8 @@ const config: Config = {
       },
       keyframes: {
         scroll: {
-          '100%': { transform: 'translateX(calc(-50% - 2.5rem))' }
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(var(--scroll-distance, -50%))' }
         }
       },
       animation: {
