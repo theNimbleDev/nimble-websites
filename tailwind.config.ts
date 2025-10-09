@@ -55,13 +55,13 @@ const config: Config = {
         wider: '.10rem'
       },
       keyframes: {
-        scroll: {
+        scrollX: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(var(--scroll-distance, -50%))' }
+          '100%': { transform: 'translateX(-50%)' }
         }
       },
       animation: {
-        scroll: 'scroll 20s linear infinite'
+        'scroll-x': 'scrollX 25s linear infinite'
       }
     }
   },

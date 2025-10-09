@@ -255,7 +255,7 @@ interface Expert {
   image: string
 }
 
-interface VideoTestimonial {
+export interface VideoTestimonial {
   id: number
   name: string
   role: string
@@ -752,3 +752,48 @@ export const creativeHighlightData: CreativeHighlightData = {
     }
   }
 }
+
+export const videoTestimonials: VideoTestimonial[] = [
+  {
+    id: 1,
+    name: 'Omotosho Precious',
+    role: 'Software Developer',
+    image: '/intern4.svg',
+    video: '/preciousNimble.mp4'
+  },
+  {
+    id: 2,
+    name: 'Wisdom Munachi',
+    role: 'Copy/Content Writer',
+    image: '/intern1.svg',
+    video: 'wisdomvid.mp4'
+  }
+  /*{
+    id: 3,
+    name: 'Samuel Alisigwe',
+    role: 'UI/UX Designer & Web Developer',
+    image: '/intern2.svg',
+    video: 'https://www.youtube.com/embed/LutQoVmrSlM'
+  },
+  /*{
+    id: 4,
+    name: 'Angela Bower',
+    role: 'Software Developer',
+    image: '/BG-1.png',
+    video: 'https://www.youtube.com/embed/H6A-y1M__oc'
+  },
+  {
+    id: 5,
+    name: 'Albert Flores',
+    role: 'Founder of GearUp',
+    image: '/flores.png',
+    video: 'https://www.youtube.com/embed/XdACpapyJPM'
+  },
+  {
+    id: 6,
+    name: 'Albert Flores',
+    role: 'Founder of GearUp',
+    image: '/albert.png',
+    video: 'https://www.youtube.com/embed/QO12Nx0jpxw'
+  }*/
+]
