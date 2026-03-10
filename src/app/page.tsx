@@ -38,7 +38,17 @@ export default function Home() {
               <Clientscount images={clientImages} count={1000} />
             </div>
 
-            <LogoSlider />
+            <LogoSlider
+              highlight="Business"
+              logos={[
+                '/NimbleAcad.svg',
+                '/motimose-icon.svg',
+                '/photographytoslum2.svg',
+                '/clausecore2.svg',
+                '/NimbleDev.svg',
+                '/NimbleTrade.svg'
+              ]}
+            />
           </div>
         </Container>
       </Section>
@@ -92,7 +102,7 @@ export default function Home() {
                 color="primary-200"
                 ButtonColor="primary-100"
                 href="/nimbleacademy"
-                target='true'
+                target="true"
               />
             </div>
 
