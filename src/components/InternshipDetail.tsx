@@ -37,7 +37,7 @@ export default function InternshipDetail({
           </h2>
           <div className="pl-6 mb-4 flex">
             <Image
-              src="/Logo.svg"
+              src="/group2.svg"
               width="30"
               height="20"
               alt="decorative vector"
@@ -55,7 +55,7 @@ export default function InternshipDetail({
         <div className="justify-center align-middle flex bg-gradient-to-r from-[#FFA673] to-[#FF7D06] rounded-2xl p-12 text-center md:h-[540px]">
           <div className="justify-center flex">
             <Image
-              src="/Logo.svg"
+              src="/logo.svg"
               width="300"
               height="180"
               alt="Brand logo"
