@@ -430,9 +430,21 @@ export const creativeHighlightData: CreativeHighlightData = {
           description:
             'Students honed their skills in portrait and landscape photography, capturing stunning visuals. Their best work is showcased right here and some gained recognition online. Each shot tells a unique story, reflecting their creative growth.',
           images: [
-            { src: '/internw1.png', alt: 'Professional web portfolio design', link: 'https://oyeyemi-deborah-portfolio.vercel.app/' },
-            { src: '/internw2.svg', alt: 'Stunning landscape photography', link: 'https://www.thenimblesgrp.com/' },
-            { src: '/internw3.svg', alt: 'Group photo at academy event', link: 'https://nimbleacademy.thenimblesgrp.com/' },
+            {
+              src: '/internw1.png',
+              alt: 'Professional web portfolio design',
+              link: 'https://oyeyemi-deborah-portfolio.vercel.app/'
+            },
+            {
+              src: '/internw2.svg',
+              alt: 'Stunning landscape photography',
+              link: 'https://www.thenimblesgrp.com/'
+            },
+            {
+              src: '/internw3.svg',
+              alt: 'Group photo at academy event',
+              link: 'https://nimbleacademy.thenimblesgrp.com/'
+            },
             { src: '/internw4.svg', alt: 'Creative photography composition' }
           ],
           showCTA: true,
