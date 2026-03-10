@@ -10,6 +10,7 @@ interface ProgramSectionProps {
   images: {
     src: string
     alt: string
+    link?: string
   }[]
   logoSrc?: string
   backgroundColor?: string
@@ -72,19 +73,36 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({
           </div>
           {/* Images Grid */}
           <div className="grid grid-cols-2 md:grid-cols-2 gap-2">
-            {images.slice(0, 4).map((image, index) => (
-              <div
-                key={index}
-                className="relative aspect-square overflow-hidden rounded-lg"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover object-center transition-transform"
-                />
-              </div>
-            ))}
+            {images.slice(0, 4).map((image, index) => {
+              const imageContent = (
+                <div
+                  key={index}
+                  className={`relative aspect-square overflow-hidden rounded-lg${image.link ? ' cursor-pointer group' : ''}`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover object-center transition-transform group-hover:scale-105"
+                  />
+                </div>
+              )
+
+              if (image.link) {
+                return (
+                  <a
+                    key={index}
+                    href={image.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {imageContent}
+                  </a>
+                )
+              }
+
+              return imageContent
+            })}
           </div>
         </div>
       </div>
