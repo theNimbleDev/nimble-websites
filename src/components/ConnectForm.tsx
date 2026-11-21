@@ -82,7 +82,7 @@ const ConnectForm = () => {
         href="/#contact"
         endContent={<MdArrowOutward />}
         radius="none"
-        className="text-white cursor-pointer mt-12 bg-primary-100"
+        className="text-brand-nearBlack bg-[#FF6A00] cursor-pointer mt-12"
       >
         Send Us a messsage
       </Button>

@@ -6,7 +6,6 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import { MdArrowOutward } from 'react-icons/md'
 import ConnectForm from '@/components/ConnectForm'
-import Testimonials from '@/components/Testimonials'
 
 export const metadata: Metadata = {
   title: 'Home | NimbleAcademy',
@@ -14,6 +13,9 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+  const academyButtonClass =
+    'bg-[#FF6A00] text-brand-nearBlack hover:bg-[#E55A00] shadow-none rounded-md px-6 py-3 min-h-[44px] w-fit'
+
   return (
     <>
       <Section classname="py-16 md:py-28 text-xl">
@@ -24,7 +26,9 @@ export default function Home() {
               <span className=" text-academy-black font-bold">
                 Transform Your Future with
               </span>{' '}
-              <span className="gradient-text font-bold">NimbleAcademy!</span>{' '}
+              <span className="gradient-text font-bold">
+                NimbleAcademy!
+              </span>{' '}
             </h2>
             <p className="text-center text-academy-black w-full md:w-3/4 md:mx-auto px-0 md:px-8 mb-8 font-light inline-block">
               Unlock your potential with exciting courses designed to give you
@@ -35,8 +39,8 @@ export default function Home() {
                 as="a"
                 href="/#contact"
                 endContent={<MdArrowOutward />}
-                radius="none"
-                className="text-white cursor-pointer bg-primary-100"
+                radius="md"
+                className={academyButtonClass}
               >
                 Start Your Journey Now!
               </Button>
@@ -57,7 +61,7 @@ export default function Home() {
 
       <Section classname="py-16 md:py-28 text-xl" id="about">
         <Container>
-          <div className="text-academy-black border border-t-0 border-l-0 border-r-0 pb-3 border-b-3 w-[20%] mb-7 md:mb-8 border-b-primary-100 text-sm md:text-4xl font-bold">
+          <div className="text-academy-black border border-t-0 border-l-0 border-r-0 pb-3 border-b-3 w-[20%] mb-7 md:mb-8 border-b-[#FF6A00] text-sm md:text-4xl font-bold">
             About Us{' '}
           </div>
           <div className="flex gap-6 md:gap-24 flex-col md:flex-row">
@@ -77,8 +81,8 @@ export default function Home() {
                 as="a"
                 href="/#contact"
                 endContent={<MdArrowOutward />}
-                radius="none"
-                className="text-white cursor-pointer bg-primary-100"
+                radius="md"
+                className={academyButtonClass}
               >
                 Start Your Journey Now!
               </Button>
@@ -188,8 +192,8 @@ export default function Home() {
               as="a"
               href="/#contact"
               endContent={<MdArrowOutward />}
-              radius="none"
-              className="text-white cursor-pointer mt-8 bg-primary-100"
+              radius="md"
+              className={`${academyButtonClass} mt-8`}
             >
               Start Your Journey Now!
             </Button>

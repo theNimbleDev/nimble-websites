@@ -11,7 +11,7 @@ export const bodMembers = [
     last_name: 'Akpan ',
     position_comp: 'CEO, theNimbles',
     imageUrl: '/abraham.svg',
-    bio: `Abraham is the <span style="color: #FF6600; font-weight: 700">CEO</span> of <span style="font-weight: 700">the</span><span style="color: #FF6600; font-weight: 700">Nimbles</span> and a Software Engineer.`
+    bio: `Abraham Akpan is the CEO of theNimbles Group and a Software Engineer. He leads the strategic vision across all three divisions: NimbleDev, NimbleTrade, and NimbleAcademy ensuring technology, trade, and talent work together to drive sustainable economic impact.`
   },
   {
     id: uuidv4(),
@@ -238,7 +238,7 @@ interface Sponsor {
   alt: string
 }
 
-interface Testimonial {
+export interface Testimonial {
   id: number
   name: string
   role: string
@@ -430,9 +430,21 @@ export const creativeHighlightData: CreativeHighlightData = {
           description:
             'Students honed their skills in portrait and landscape photography, capturing stunning visuals. Their best work is showcased right here and some gained recognition online. Each shot tells a unique story, reflecting their creative growth.',
           images: [
-            { src: '/internw1.png', alt: 'Professional web portfolio design', link: 'https://oyeyemi-deborah-portfolio.vercel.app/' },
-            { src: '/internw2.svg', alt: 'Stunning landscape photography', link: 'https://www.thenimblesgrp.com/' },
-            { src: '/internw3.svg', alt: 'Group photo at academy event', link: 'https://nimbleacademy.thenimblesgrp.com/' },
+            {
+              src: '/internw1.png',
+              alt: 'Professional web portfolio design',
+              link: 'https://oyeyemi-deborah-portfolio.vercel.app/'
+            },
+            {
+              src: '/internw2.svg',
+              alt: 'Stunning landscape photography',
+              link: 'https://www.thenimblesgrp.com/'
+            },
+            {
+              src: '/internw3.svg',
+              alt: 'Group photo at academy event',
+              link: 'https://nimbleacademy.thenimblesgrp.com/'
+            },
             { src: '/internw4.svg', alt: 'Creative photography composition' }
           ],
           showCTA: true,

@@ -3,50 +3,47 @@
 }
 
 .sectionH1Bg {
-  background: url('/herobg.svg') no-repeat top center fixed;
+  background-color: #ffffff;
 }
 
 .sectionH2Bg {
-  background: url('/section2_bg.svg') no-repeat center center;
+  background-color: #ffffff;
 }
 
 .sectionH3Bg {
-  background: url('/section3_bg.svg') no-repeat center center;
+  background-color: #ffffff;
 }
 
 .sectionA1Bg {
-  background: url('/section3_bg.svg') no-repeat center center;
+  background-color: #ffffff;
 }
 
 .sectionA2Bg {
-  background: url('/tradebg.svg') no-repeat center center;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .sectionANimbleDevBg {
-  background: url('/about_section_bg.svg') no-repeat center center;
+  background-color: #ffffff;
 }
 
 .sectionS1Bg {
-  background: url('/servicedev.svg') no-repeat center center;
+  background-color: #ffffff;
 }
 
 .sectionS2Bg {
-  background: url('/servicedevbg2.svg') no-repeat center center;
+  background-color: #ffffff;
 }
 
 .sectionS3Bg {
-  background: url('/servicebg3.svg') no-repeat center center;
-  background-size: cover !important;
+  background-color: #ffffff;
 }
 
 .sectionS4Bg {
-  background: url('/servicedevbg5.svg') no-repeat center center;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .sectionPBg {
-  background: url('/portfoliodetailsbg.svg') no-repeat center center;
+  background-color: #ffffff;
 }
 
 .academyBg {

@@ -1,6 +1,6 @@
-import React from "react"
-import Button from "./Button"
-import styles from "@/modules/banner.module.css"
+import React from 'react'
+import Button from './Button'
+import styles from '@/modules/banner.module.css'
 
 interface BannerProps {
   title1: string
