@@ -2,39 +2,58 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export function middleware(request: NextRequest) {
   const { nextUrl: url, headers } = request
-  const hostname = headers.get('host')?.split(':')[0] ?? ''
+  const hostname = headers.get('host')?.split(':')[0].toLowerCase() ?? ''
 
-  // Determine the environment
-  const isLocalhost = hostname.endsWith('.localhost')
-  const isProduction = hostname.endsWith('.thenimblesgrp.com')
+  const isLocalhost =
+    hostname.endsWith('.localhost') || hostname === 'localhost'
+  const isProduction =
+    hostname === 'thenimblesgrp.com' || hostname.endsWith('.thenimblesgrp.com')
   const isVercel = hostname.includes('.vercel.app')
 
-  // Extract the subdomain
   let subdomain = ''
   if (isLocalhost || isVercel) {
-    subdomain = hostname.split('.')[0] // nimbledev.localhost or nimbledev.vercel.app
+    subdomain = hostname.split('.')[0]
   } else if (isProduction) {
     const parts = hostname.split('.')
-    subdomain = parts.length > 2 ? parts[0] : '' // nimbledev.thenimblesgrp.com
+    subdomain = parts.length > 2 ? parts[0] : ''
   }
 
-  // Redirect `/nimbledev` to `nimbledev.localhost:3000` or `nimbledev.thenimblesgrp.com`
+  const getSubdomainUrl = (brand: 'nimbledev' | 'nimbleacademy') => {
+    if (isLocalhost) {
+      return `http://${brand}.localhost:3000${url.pathname === `/${brand}` ? '/' : url.pathname}`
+    }
+
+    if (isVercel) {
+      if (hostname.startsWith(`${brand}.`)) {
+        return `https://${hostname}${url.pathname}`
+      }
+
+      const firstPart = hostname.split('.')[0]
+      const isSubdomainHost =
+        firstPart === 'nimbledev' ||
+        firstPart === 'nimbleacademy' ||
+        firstPart === 'nimbletrade'
+      const baseHost = isSubdomainHost
+        ? hostname.split('.').slice(1).join('.')
+        : hostname
+      return `https://${brand}.${baseHost}${url.pathname === `/${brand}` ? '/' : url.pathname}`
+    }
+
+    return `https://${brand}.thenimblesgrp.com${url.pathname === `/${brand}` ? '/' : url.pathname}`
+  }
+
   if (url.pathname === '/nimbledev' && subdomain !== 'nimbledev') {
-    const redirectUrl = isProduction
-      ? `https://nimbledev.thenimblesgrp.com`
-      : `http://nimbledev.localhost:3000`
-    return NextResponse.redirect(new URL(redirectUrl, request.url))
+    return NextResponse.redirect(
+      new URL(getSubdomainUrl('nimbledev'), request.url)
+    )
   }
 
-  // Redirect `/nimbleacademy` to `nimbleacademy.localhost:3000` or `nimbleacademy.thenimblesgrp.com`
   if (url.pathname === '/nimbleacademy' && subdomain !== 'nimbleacademy') {
-    const redirectUrl = isProduction
-      ? `https://nimbleacademy.thenimblesgrp.com`
-      : `http://nimbleacademy.localhost:3000`
-    return NextResponse.redirect(new URL(redirectUrl, request.url))
+    return NextResponse.redirect(
+      new URL(getSubdomainUrl('nimbleacademy'), request.url)
+    )
   }
 
-  // Handle subdomain routing
   const subdomainPaths: { [key: string]: string } = {
     nimbledev: '/nimbledev',
     nimbletrade: '/nimbletrade',
@@ -48,7 +67,6 @@ export function middleware(request: NextRequest) {
       url.pathname = `${subdomainPaths[subdomain]}${url.pathname}`
     }
   } else if (isProduction || isVercel || isLocalhost) {
-    // Redirect to 404 for invalid paths
     if (
       url.pathname.startsWith('/nimbledev') ||
       url.pathname.startsWith('/nimbletrade') ||

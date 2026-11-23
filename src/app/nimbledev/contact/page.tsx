@@ -2,6 +2,7 @@ import Button from '@/components/Button'
 import Container from '@/components/Container'
 import Section from '@/components/Section'
 import ContactForm from '@/components/ContactForm'
+import { FaEnvelope } from 'react-icons/fa'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -37,9 +38,10 @@ const ContactPage = () => {
               </h3>
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
-                  <span className="text-[#D95200]" aria-hidden="true">
-                    📧
-                  </span>
+                  <FaEnvelope
+                    className="text-[#D95200] w-6 h-6 shrink-0"
+                    aria-hidden="true"
+                  />
                   <div>
                     <p className="text-sm font-semibold text-[#1D1D1D]">
                       Email

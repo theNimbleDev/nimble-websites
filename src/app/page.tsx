@@ -29,7 +29,7 @@ export default function Home() {
               <Button
                 cta="Discover Our Companies"
                 variant="primary"
-                href="/about"
+                href="/#companies"
               />
               <Button cta="About The Nimbles" variant="outline" href="/about" />
             </div>
@@ -57,7 +57,10 @@ export default function Home() {
       </Section>
 
       {/* D. Our Companies */}
-      <Section classname="py-20 md:py-32 bg-brand-offWhite">
+      <Section
+        classname="scroll-mt-24 py-20 md:py-32 bg-brand-offWhite"
+        id="companies"
+      >
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-nearBlack mb-6">

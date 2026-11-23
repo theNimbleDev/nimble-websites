@@ -15,6 +15,37 @@ const Footer = () => {
       : 'theNimbles Group'
   const brandLogo = isNimbleDev ? '/NimbleDev.svg' : '/logo.svg'
 
+  const getSubdomainUrl = (subdomain: 'nimbledev' | 'nimbleacademy') => {
+    if (typeof window === 'undefined') return '/'
+
+    const hostname = window.location.hostname.toLowerCase()
+
+    if (hostname === 'localhost' || hostname.endsWith('.localhost')) {
+      return `http://${subdomain}.localhost:3000/`
+    }
+
+    if (hostname.endsWith('.vercel.app')) {
+      const firstPart = hostname.split('.')[0]
+      const isSubdomainHost =
+        firstPart === 'nimbledev' ||
+        firstPart === 'nimbleacademy' ||
+        firstPart === 'nimbletrade'
+      const baseHost = isSubdomainHost
+        ? hostname.split('.').slice(1).join('.')
+        : hostname
+      return `https://${subdomain}.${baseHost}/`
+    }
+
+    if (
+      hostname === 'thenimblesgrp.com' ||
+      hostname.endsWith('.thenimblesgrp.com')
+    ) {
+      return `https://${subdomain}.thenimblesgrp.com/`
+    }
+
+    return `/${subdomain}`
+  }
+
   const companyLinks = isNimbleDev
     ? [
         { href: '/', label: 'Home' },
@@ -40,9 +71,17 @@ const Footer = () => {
   const subBrandLinkGroups = [companyLinks.slice(0, 3), companyLinks.slice(3)]
 
   const ourCompanies = [
-    { href: '/', label: 'NimbleDev', isAvailable: true },
+    {
+      href: getSubdomainUrl('nimbledev'),
+      label: 'NimbleDev',
+      isAvailable: true
+    },
     { href: '/', label: 'NimbleTrade', isAvailable: false },
-    { href: '/', label: 'NimbleAcademy', isAvailable: true }
+    {
+      href: getSubdomainUrl('nimbleacademy'),
+      label: 'NimbleAcademy',
+      isAvailable: true
+    }
   ]
 
   return (
@@ -110,6 +149,8 @@ const Footer = () => {
                       {company.isAvailable ? (
                         <Link
                           href={company.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-[#A3A3A3] hover:text-[#FF6600] transition"
                         >
                           {company.label}
