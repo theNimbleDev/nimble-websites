@@ -5,19 +5,31 @@ import { z } from 'zod'
 const contactSchema = z.object({
   name: z
     .string()
-    .min(2, 'First name must be at least 2 characters')
-    .max(45, 'First name must be less than 45 characters'),
+    .min(2, 'Name must be at least 2 characters')
+    .max(45, 'Name must be less than 45 characters'),
   email: z.string().email('Please enter a valid email address'),
-  description: z.string().min(1, 'Please enter a description')
+  division: z.string().min(1, 'Please select a department or division'),
+  description: z
+    .string()
+    .min(10, 'Description must be at least 10 characters')
+    .max(500, 'Description must be less than 500 characters')
 })
 
 export async function POST(request: Request) {
   try {
-    console.log('EMAIL_USER:', process.env.EMAIL_USER) // Log email user to verify it's set
-    console.log('EMAIL_PASS:', process.env.EMAIL_PASS) // Log email pass to verify it's set
-
     const body = await request.json()
     const validatedData = contactSchema.parse(body)
+
+    const hasEmailConfig = process.env.EMAIL_USER && process.env.EMAIL_PASS
+
+    if (!hasEmailConfig) {
+      return NextResponse.json(
+        {
+          error: 'Email service is not configured. Please contact us directly.'
+        },
+        { status: 503 }
+      )
+    }
 
     // Create a Nodemailer transporter
     const transporter = nodemailer.createTransport({

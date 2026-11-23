@@ -18,13 +18,13 @@ const NavItem: React.FC<NavItemProps> = ({
   const pathname = usePathname()
 
   const getNavLinkClass = (path: string) => {
-    return pathname === path
+    return pathname === path || pathname.startsWith(path + '/')
       ? mobile
-        ? 'bg-primary-100 text-black px-3 py-2 rounded-full text-sm font-medium'
-        : 'text-primary-100 px-3 py-2 rounded-md text-sm font-medium'
+        ? 'bg-brand-orange text-[#151515] px-3 py-2 rounded-full text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2'
+        : 'text-brand-orange px-3 py-2 rounded-md text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2'
       : mobile
-      ? 'hover:bg-primary-100 hover:text-black px-3 py-2 rounded-full text-sm font-medium'
-      : 'hover:text-primary-100 px-3 py-2 rounded-md text-sm font-medium'
+        ? 'hover:bg-brand-orange hover:text-white px-3 py-2 rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2'
+        : 'hover:text-brand-orange px-3 py-2 rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2'
   }
 
   return (

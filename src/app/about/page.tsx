@@ -1,224 +1,249 @@
-import Banner from '@/components/Banner'
 import Button from '@/components/Button'
-import Clientscount from '@/components/Clientscount'
 import Container from '@/components/Container'
 import Section from '@/components/Section'
-import TeamList from '@/components/TeamList'
+import Image from 'next/image'
 import { bodMembers } from '@/mockData'
 import { Metadata } from 'next'
-import Image from 'next/image'
-import React from 'react'
 
 export const metadata: Metadata = {
-  title: 'About Us | Nimblesgrp',
-  description: 'Shaping a Balanced and Innovative Tomorrow.'
+  title: 'About Us | The Nimbles Group',
+  description:
+    'Nimbles Group - building businesses, creating possibilities through technology, education, and trade.'
 }
 
 const AboutPage = () => {
   return (
     <>
-      <Section classname="">
+      {/* 1. Editorial Hero */}
+      <Section classname="pt-28 md:pt-36 pb-20 bg-white">
         <Container>
-          <div className="about-768 flex justify-between gap-6 md:gap-24 items-center flex-col md:flex-row pt-10 pb-6 md:pt-24 md:pb-16 w-auto">
-            <div className="w-full left-768 md:w-[67%] text-center md:text-left">
-              <span className="text-subtext-100 text-sm md:text-xl font-medium tracking-widest">
-                ABOUT US{' '}
-              </span>
-              <h2 className="my-3 md:my-4 text-4xl md:text-7xl">
-                {' '}
-                <span className="gradient-text font-bold">
-                  Shaping a Balanced and
-                </span>{' '}
-                <span className="font-thin">Innovative Tomorrow.</span>
-              </h2>
-              <p className="text-base md:text-2xl font-light w-full mb-10 md:mb-16">
-                Our company was founded in 2023. We bring together innovative
-                companies dedicated to solving today’s challenges with a fresh
-                approach. We prioritize economic sustainability and use advanced
-                technology to tackle societal issues head-on. Our main entities
-                are NimbleDev, which pioneers tech solutions for current
-                societal challenges, and NimbleTrade, ensuring a balanced
-                import-export system for economic stability.
-              </p>
-
-              <div className="flex gap-8 items-center flex-col-reverse md:flex-row">
-                <Button
-                  cta="Book a call"
-                  href="https://calendly.com/akpjunio4real/30min"
-                  blank="_blank"
-                  borderColor="border-primary-100"
-                />
-                <Clientscount images={['/client-image.svg']} count={1000} />
-              </div>
-            </div>
-            <div className="w-full right-768 md:w-[46%]">
-              <Image
-                src="/about_img.svg"
-                width="700"
-                height="800"
-                alt="about_img"
-              />
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section bgClass="sectionA1Bg" classname="py-8 md:py-24">
-        <Container>
-          <div className="flex md:flex-row flex-col-reverse gap-5 text-center md:text-left md:gap-20 items-center mb-6 md:mb-28">
-            <Image
-              className="mb-8 md:mb-0 mxd:w-[400px]"
-              src="/sec2_1.svg"
-              width="540"
-              height="560"
-              alt="sec2_1"
-            />
-
-            <div>
-              <span className="text-subtext-100 text-sm md:text-xl font-medium tracking-widest">
-                OUR <span className="text-white">MISSION</span>
-              </span>
-              <h1 className="font-bold mb-8 md:mb-10 mxd:text-5xl">THRIVE</h1>
-              <p>
-                Our vision is to create a sustainable future through innovation
-                and strategic economic activities.
-              </p>
-            </div>
-          </div>
-          <div className="flex md:flex-row flex-col text-center md:text-left gap-5 md:gap-20 items-center">
-            <div>
-              <span className="text-subtext-100 text-sm md:text-xl font-medium tracking-widest">
-                OUR <span className="text-white">VISION</span>
-              </span>
-              <h1 className="font-bold mb-8 md:mb-10 mxd:text-5xl">UNIFY</h1>
-              <p>
-                We unify technological advancements and trade expertise to
-                address and solve modern-day challenges, ensuring a balanced and
-                prosperous global economy.
-              </p>
-            </div>
-            <Image
-              className="mxd:w-[400px]"
-              src="/sect2_2.svg"
-              width="540"
-              height="560"
-              alt="sec2_2"
-            />
-          </div>
-        </Container>
-      </Section>
-
-      <Section id="NimbleDev" bgClass="" classname="py-8 md:py-24">
-        <Container>
-          <div className="flex md:flex-row flex-col gap-5 text-center md:text-left md:gap-20 mxd:gap-10 items-center mb-6 md:mb-28">
-            <div>
-              <span className="text-subtext-100 text-sm uppercase md:text-xl font-medium tracking-widest">
-                Nimble<span className="text-primary-100">dev</span>
-              </span>
-              <h2 className="font-normal mb-8 md:mb-10">
-                Tired of outdated solutions?
-              </h2>
-              <p>
-                Embrace the future with our advanced software solutions designed
-                to evolve with your business. We prioritize safety, scalability,
-                and innovation, ensuring that our technology grows alongside
-                your needs. Our commitment to excellence, integrity, and
-                continuous improvement means you can trust us to provide the
-                most reliable and effective solutions available.
-              </p>
-            </div>
-            <Image
-              className="mb-8 md:mb-0 mxd:w-[400px]"
-              src="/section3Abg.svg"
-              width="450"
-              height="812"
-              alt="sec2_1"
-            />
-          </div>
-          <div className="bg-custom-diagonal-gradient border-t border-l border-r border-primary-200 rounded-tl-2xl rounded-tr-2xl flex items-center justify-center flex-col text-center py-7 px-2 md:pt-20 md:px-28 md:pb-0">
-            <h2 className="font-normal mb-4 md:mb-5 w-full md:w-[80%]">
-              Looking to Elevate Your{' '}
-              <span className="font-bold">Digital Presence?</span>
-            </h2>
-            <p className="w-full md:w-[90%] mb-8 md:mb-10">
-              Our innovative approach empowers your business to thrive in a
-              competitive digital landscape, creating a lasting impact and
-              driving sustainable growth.
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="text-[#D95200] font-semibold tracking-widest text-xs uppercase block mb-6">
+              About The Nimbles Group
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-[#1D1D1D] mb-8 leading-tight">
+              Driven by Purpose. United by Innovation.
+            </h1>
+            <p className="text-[#404040] text-lg md:text-xl mb-12 leading-relaxed">
+              Nimbles Group is a growing group of businesses united by a common
+              purpose: to turn ideas into meaningful solutions, create
+              opportunities, and contribute to lasting progress.
+              <br />
+              <br />
+              Spanning technology, education, and trade, our ventures bring
+              together different capabilities and perspectives under one shared
+              vision of innovation, enterprise, and sustainable growth.
             </p>
             <Button
-              cta="Learn more"
-              borderColor="border-primary-100"
-              href="/nimbledev"
-            />
-            <Image
-              className="mt-3 md:mb-0"
-              src="/barcode.svg"
-              width="1180"
-              height="208"
-              alt="sec2_1"
+              cta="Work With Us"
+              variant="primary"
+              href="/contact"
+              className="mx-auto"
             />
           </div>
         </Container>
       </Section>
 
-      <Section
-        id="NimbleTrade"
-        bgClass="sectionA2Bg"
-        classname="py-12 md:pt-28 mxd:pb-2 md:pb-0"
-      >
-        <Container>
-          <div>
-            <span className="text-subtext-100 text-center block text-sm uppercase md:text-xl font-medium tracking-widest">
-              Nimble<span className="text-secondary-100">Trade</span>
-            </span>
-            <h2 className="font-light text-primary-300 text-center mb-7 md:mb-20 w-full">
-              Global Growth, Balanced Trade
-            </h2>
+      {/* 2. Our Story */}
+      <Section classname="py-20 md:py-32 bg-[#1D1D1D]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16 items-center">
+            <div className="p-4 sm:p-6 lg:p-8">
+              <span className="text-[#D95200] font-semibold tracking-widest text-xs uppercase block mb-6">
+                Our Story
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold text-[#FFFFFF] mb-8 leading-tight">
+                An Ambition to Build Beyond Boundaries.
+              </h2>
+              <p className="text-[#E5E5E5] text-lg md:text-xl leading-relaxed text-left">
+                Founded in 2023, Nimbles Group was established around a simple
+                belief: meaningful progress happens when ideas are transformed
+                into practical solutions.
+                <br />
+                <br />
+                We bring together complementary business interests across
+                technology, education, and trade. Each venture has a distinct
+                focus, but they share a common ambition to create value, open
+                opportunities, and contribute to long-term development.
+                <br />
+                <br />
+                We are building with the future in mind - one idea, one venture,
+                and one opportunity at a time.
+              </p>
+            </div>
+            <div className="flex items-center justify-center p-4 sm:p-6 lg:p-8">
+              <span className="text-9xl md:text-[12rem] font-bold text-[#D95200]/40 select-none">
+                2023
+              </span>
+            </div>
+          </div>
+        </div>
+      </Section>
 
-            <div className="flex md:flex-row flex-col gap-5 text-center md:text-left md:gap-20 mxd:gap-10 items-center mb-6 md:mb-28">
-              <Image
-                className="mb-8 md:mb-0 mxd:w-[400px] h-auto"
-                src="/tradeimg.svg"
-                width="600"
-                height="812"
-                alt="sec2_1"
-              />
-              <div className="text-primary-300">
-                <h2 className="font-normal mb-8 md:mb-10">
-                  Explore your next solution with us{' '}
-                </h2>
-                <p className="mb-8 md:mb-11">
-                  We prioritize economic sustainability by ensuring a healthy
-                  balance of import and export activities. Our goal is to create
-                  a stable and balanced global market, leveraging our extensive
-                  trade expertise to foster long-term growth and stability.
-                </p>
-                <div className="flex justify-center md:justify-start">
-                  <Button
-                    cta="Book a call"
-                    borderColor="border-secondary-100 text-primary-300"
-                    href="https://calendly.com/akpjunio4real/30min"
-                    blank="_blank"
-                  />
-                </div>
-              </div>
+      {/* 3. Mission & Vision Split Band */}
+      <Section classname="py-20 md:py-32 bg-[#D95200]">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8 border-y border-[rgba(29,29,29,0.2)]">
+            <div className="p-8 md:p-12 border-r border-[rgba(29,29,29,0.2)] md:border-r-0">
+              <span className="text-[#FFFFFF]/90 font-semibold tracking-widest text-xs uppercase block mb-4">
+                01 / Our Vision
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4">
+                Thrive
+              </h2>
+              <p className="text-[#FFFFFF]/90 text-base leading-relaxed">
+                To build a thriving ecosystem of sustainable businesses that
+                create opportunities, empower people, and contribute to a more
+                prosperous future.
+              </p>
+            </div>
+            <div className="p-8 md:p-12">
+              <span className="text-[#FFFFFF]/90 font-semibold tracking-widest text-xs uppercase block mb-4">
+                02 / Our Mission
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4">
+                Unify
+              </h2>
+              <p className="text-[#FFFFFF]/90 text-base leading-relaxed">
+                To connect ideas, talent, technology, and enterprise in building
+                practical solutions to evolving challenges.
+              </p>
             </div>
           </div>
         </Container>
       </Section>
 
-      <Section classname="py-10 md:pb-10 md:pt-0">
+      {/* 4. An Ecosystem of Complementary Ventures */}
+      <Section classname="py-20 md:py-32 bg-[#FAFAFA]">
         <Container>
-          <h2 className="font-normal text-center mxd:mt-8 mb-8 md:mb-10">
-            Meet <span className="text-primary-100">The</span> Team
-          </h2>
-          <TeamList teamMembers={bodMembers} />
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1D1D1D] mb-4">
+              An Ecosystem of Complementary Ventures
+            </h2>
+            <p className="text-[#404040] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+              Each business has a distinct focus, contributing to our broader
+              ambition of creating value through innovation, enterprise, and
+              opportunity.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white border border-[rgba(29,29,29,0.1)] rounded-lg p-8 flex flex-col justify-between h-full">
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-[#D95200] font-bold text-xl">01</span>
+                <h3 className="text-xl font-bold text-[#1D1D1D]">Talent</h3>
+              </div>
+              <p className="text-[#404040] leading-relaxed">
+                NimbleAcademy - Focused on learning, skills development, and
+                preparing individuals for opportunities in an evolving digital
+                economy.
+              </p>
+              <Button
+                cta="Visit NimbleAcademy"
+                variant="outline"
+                href="/nimbleacademy"
+                blank="_blank"
+                className="w-full mt-6"
+              />
+            </div>
+            <div className="bg-white border border-[rgba(29,29,29,0.1)] rounded-lg p-8 flex flex-col justify-between h-full">
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-[#D95200] font-bold text-xl">02</span>
+                <h3 className="text-xl font-bold text-[#1D1D1D]">Technology</h3>
+              </div>
+              <p className="text-[#404040] leading-relaxed">
+                NimbleDev - Focused on developing digital products, software
+                solutions, and technology services that help businesses solve
+                problems and grow.
+              </p>
+              <Button
+                cta="Visit NimbleDev"
+                variant="outline"
+                href="/nimbledev"
+                blank="_blank"
+                className="w-full mt-6"
+              />
+            </div>
+            <div className="bg-white border border-[rgba(29,29,29,0.1)] rounded-lg p-8 flex flex-col justify-between h-full">
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-[#D95200] font-bold text-xl">03</span>
+                <h3 className="text-xl font-bold text-[#1D1D1D]">Commerce</h3>
+                <span className="inline-block px-3 py-1 text-xs font-semibold text-[#D95200] border border-[#D95200] rounded-full">
+                  Coming Soon
+                </span>
+              </div>
+              <p className="text-[#404040] leading-relaxed">
+                NimbleTrade - Our planned trade venture, exploring opportunities
+                in import, export, and cross-border commerce.
+              </p>
+              <Button
+                cta="Coming Soon"
+                variant="outline"
+                disabled
+                blank="_blank"
+                className="w-full mt-6 opacity-50 cursor-not-allowed"
+              />
+            </div>
+          </div>
+        </Container>
+      </Section>
 
-          <Banner
-            title1="Explore your next"
-            title2="solution with us"
-            subtext="Creating a New world"
-          />
+      {/* 4. Leadership Team */}
+      <Section classname="py-20 md:py-32 bg-white">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1D1D1D] mb-6">
+              Leadership Team
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {bodMembers.map((member) => (
+              <div
+                key={member.id}
+                className="bg-white border border-[rgba(29,29,29,0.1)] rounded-lg p-8 flex flex-col items-center text-center h-full"
+              >
+                <Image
+                  src={member.imageUrl}
+                  alt={`${member.first_name} ${member.last_name}`}
+                  width={120}
+                  height={120}
+                  className="w-24 h-24 rounded-full mx-auto mb-6 object-cover border border-[#1D1D1D]/15 grayscale contrast-110"
+                />
+                <h3 className="text-xl font-bold text-[#1D1D1D] mb-2">
+                  {member.first_name} {member.last_name}
+                </h3>
+                <p className="text-[#D95200] font-semibold text-sm mb-4">
+                  {member.position_comp}
+                </p>
+                <p className="text-[#404040] text-sm leading-relaxed">
+                  {member.bio.replace(/<[^>]*>/g, '')}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* 5. Bottom CTA Banner */}
+      <Section classname="py-20 md:py-32 bg-[#1D1D1D]">
+        <Container>
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#FFFFFF] mb-6">
+              Let&apos;s Build Something Meaningful.
+            </h2>
+            <p className="text-[#E5E5E5] text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+              Have an idea, a partnership opportunity, or a project in mind?
+              We&apos;d love to hear from you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                cta="Book a call"
+                variant="primary"
+                href="https://calendly.com/akpjunio4real/30min"
+                blank="_blank"
+              />
+              <Button cta="Contact Us" variant="outline" href="/contact" dark />
+            </div>
+          </div>
         </Container>
       </Section>
     </>
