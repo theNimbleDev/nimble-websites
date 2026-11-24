@@ -171,7 +171,23 @@ const Footer = () => {
                 <h3 className="text-[#E5E5E5] font-semibold text-sm uppercase tracking-widest mb-6">
                   Explore
                 </h3>
-                <ul className="space-y-3">
+
+                {/* Continuous, evenly spaced list on mobile */}
+                <ul className="space-y-3 md:hidden">
+                  {companyLinks.map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className="text-[#A3A3A3] hover:text-[#FF6600] transition"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Split columns only on desktop */}
+                <ul className="hidden space-y-3 md:block">
                   {subBrandLinkGroups[0].map((item) => (
                     <li key={item.label}>
                       <Link
@@ -185,8 +201,8 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div>
-                <h3 className="text-[#E5E5E5] font-semibold text-sm uppercase tracking-widest mb-6 opacity-0">
+              <div className="hidden md:block">
+                <h3 className="text-[#E5E5E5] font-semibold text-sm uppercase tracking-widest mb-6">
                   More
                 </h3>
                 <ul className="space-y-3">
