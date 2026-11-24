@@ -4,19 +4,20 @@ import SkillUpDetail from '@/components/skillupDetail'
 import InternshipDetail from '@/components/InternshipDetail'
 
 interface PortfolioDetailPageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 function getPortfolioItem(id: string) {
   return creativeHighlightData.highlights.find((item) => item.id === id)
 }
 
-export default function PortfolioDetailPage({
+export default async function PortfolioDetailPage({
   params
 }: PortfolioDetailPageProps) {
-  const portfolioItem = getPortfolioItem(params.id)
+  const { id } = await params
+  const portfolioItem = getPortfolioItem(id)
 
   if (!portfolioItem) {
     notFound()

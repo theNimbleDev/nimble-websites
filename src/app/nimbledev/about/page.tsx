@@ -1,135 +1,137 @@
-import React from "react"
-import Section from "@/components/Section"
-import Container from "@/components/Container"
-import Button from "@/components/Button"
-import Clientscount from "@/components/Clientscount"
-import Banner from "@/components/Banner"
-import TeamList from "@/components/TeamList"
-import { teamMembers } from "@/mockData"
-import Image from "next/image"
-import { Metadata } from "next"
+import Button from '@/components/Button'
+import Container from '@/components/Container'
+import Section from '@/components/Section'
+import TeamList from '@/components/TeamList'
+import { Metadata } from 'next'
+import { teamMembers } from '@/mockData'
 
 export const metadata: Metadata = {
-  title: 'About Us | Nimbledev',
-  description: 'Shaping a Balanced and Innovative Tomorrow.'
+  title: 'About Us | NimbleDev',
+  description:
+    'NimbleDev - engineering digital solutions through software development, engineering outsourcing, and UI/UX product design.'
 }
-
-const clientImages = ["/client-image.svg"]
 
 const AboutPage = () => {
   return (
     <>
-      <Section classname="py-16 md:py-20 flex flex-col items-center">
+      {/* Hero */}
+      <Section classname="pt-28 md:pt-36 pb-20 bg-white">
         <Container>
-          <div className="w-full md:w-3/4 mx-auto flex flex-col items-center justify-center">
-            <span className="text-subtext-100 text-center mb-4 md:mb-4 block text-sm md:text-2xl font-medium tracking-widest">
-              ABOUT US
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="text-[#D95200] font-semibold tracking-widest text-xs uppercase block mb-6">
+              About NimbleDev
             </span>
-
-            <h2 className="font-normal mb-5 text-center md:mb-5">
-              {" "}
-              <span className="gradient-text font-bold">
-                Innovation, Creativity and
-              </span>{" "}
-              <span className="font-normal">
-                Technology Converge to Shape the Future
-              </span>
-            </h2>
-
-            <p className="text-center px-0 md:px-8 mb-8 font-thin md:mb-16 inline-block">
-              Our dynamic team of developers, visionaries, designers, and
-              strategists is committed to creating cutting-edge solutions that
-              tackle the challenges of today and pave the way for a brighter
-              tomorrow.
+            <h1 className="text-4xl md:text-6xl font-bold text-[#1D1D1D] mb-8 leading-tight">
+              Technology That Delivers.
+            </h1>
+            <p className="text-[#404040] text-lg md:text-xl mb-12 leading-relaxed">
+              NimbleDev is the technology arm of the Nimbles Group. We engineer
+              scalable digital solutions, build custom software, and deliver
+              UI/UX product design that helps businesses solve problems and
+              grow.
+              <br />
+              <br />
+              From engineering outsourcing to full product development, we
+              combine technical excellence with practical business outcomes.
             </p>
-
-            <div className="flex gap-8 items-center flex-col-reverse md:flex-row">
-              <Button
-                cta="Book a call"
-                href="https://calendly.com/akpjunio4real/30min"
-                blank="_blank"
-                borderColor="border-primary-100"
-              />
-              <Clientscount images={clientImages} count={1000} />
-            </div>
+            <Button
+              cta="View Services"
+              variant="primary"
+              href="/services"
+              className="mx-auto"
+            />
           </div>
         </Container>
       </Section>
 
-      <Section bgClass="sectionANimbleDevBg" classname="py-8 md:py-24">
+      {/* Our Approach */}
+      <Section classname="py-20 md:py-32 bg-[#FAFAFA]">
         <Container>
-          <div className="flex md:flex-row flex-col-reverse gap-5 text-center md:text-left md:gap-20 items-center mb-6 md:mb-28">
-            <Image
-              className="mb-8 md:mb-0 mxd:w-[400px]"
-              src="/transformative1.svg"
-              width="540"
-              height="560"
-              alt="sec2_1"
-            />
-
-            <div>
-              <h2 className="font-normal mb-5 md:mb-5">
-                {" "}
-                <span className="gradient-text font-bold">
-                  Transformative
-                </span>{" "}
-                <span className="font-normal">Technology</span>
-              </h2>
-
-              <p>
-                We harness the power of technology to create meaningful,
-                positive changes. We believe in the transformative power of
-                innovative solutions to enhance lives, streamline businesses,
-                and drive societal progress.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center md:flex-row md:text-left gap-5 md:gap-20">
-            <div>
-              <p className="mb-4 md:mb-20 md:text-start text-center">
-                We envision a world where technology serves as a tool for
-                sustainable growth and a better quality of life. Our goal is to
-                be at the forefront of this transformation, continually pushing
-                the boundaries of what is possible and setting new standards of
-                excellence.
-              </p>
-
-              <div className="hidden mb-8 md:mb-20 md:flex  items-center flex-col-reverse md:flex-row">
-                <Button
-                  cta="Book a call"
-                  href="https://calendly.com/akpjunio4real/30min"
-                  blank="_blank"
-                  borderColor="border-primary-100"
-                />
-              </div>
-            </div>
-
-            <Image
-              className="mxd:w-[400px]"
-              src="/transformative2.svg"
-              width="540"
-              height="560"
-              alt="sec2_2"
-            />
-          </div>
-          <Button
-            cta="Book a call"
-            href="https://calendly.com/akpjunio4real/30min"
-            blank="_blank"
-            borderColor="border-primary-100 w-full my-7 md:hidden"
-          />
-          <div className="mt-12 md:mt-28">
-            <h2 className="font-normal text-center mxd:mt-8 mb-8 md:mb-10">
-              Meet <span className="text-primary-100">The</span> Team
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1D1D1D] mb-6">
+              Our Approach
             </h2>
+            <p className="text-[#404040] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+              We believe technology should serve people - not the other way
+              around. Every line of code we write is guided by clarity,
+              reliability, and real-world impact.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white border border-[rgba(29,29,29,0.1)] rounded-lg p-8 flex flex-col h-full">
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-[#D95200] font-bold text-xl">01</span>
+                <h3 className="text-xl font-bold text-[#1D1D1D]">
+                  Custom Software
+                </h3>
+              </div>
+              <p className="text-[#404040] leading-relaxed">
+                Bespoke software solutions built around your business needs, not
+                the other way around.
+              </p>
+            </div>
+            <div className="bg-white border border-[rgba(29,29,29,0.1)] rounded-lg p-8 flex flex-col h-full">
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-[#D95200] font-bold text-xl">02</span>
+                <h3 className="text-xl font-bold text-[#1D1D1D]">
+                  Engineering Teams
+                </h3>
+              </div>
+              <p className="text-[#404040] leading-relaxed">
+                Pre-vetted engineers who integrate with your team and accelerate
+                delivery.
+              </p>
+            </div>
+            <div className="bg-white border border-[rgba(29,29,29,0.1)] rounded-lg p-8 flex flex-col h-full">
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-[#D95200] font-bold text-xl">03</span>
+                <h3 className="text-xl font-bold text-[#1D1D1D]">
+                  Product Design
+                </h3>
+              </div>
+              <p className="text-[#404040] leading-relaxed">
+                User-centered design that makes complex technology feel simple
+                and intuitive.
+              </p>
+            </div>
+          </div>
 
-            <TeamList teamMembers={teamMembers} />
-
-            <Banner
-              title1="Crafting Digital Solutions"
-              title2="Beyond Boundaries"
-              subtext="Creating a New world"
+          <div className="mt-10 flex justify-center">
+            <Button
+              cta="View Portfolio"
+              variant="outline"
+              href="/portfolio"
+              className="mx-auto"
             />
+          </div>
+        </Container>
+      </Section>
+
+      <Section classname="py-20 md:py-32 bg-white">
+        <Container>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1D1D1D] mb-4">
+              Meet the Team
+            </h2>
+          </div>
+          <TeamList teamMembers={teamMembers} />
+        </Container>
+      </Section>
+
+      {/* CTA */}
+      <Section classname="py-20 md:py-32 bg-[#1D1D1D]">
+        <Container>
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#FFFFFF] mb-6">
+              Ready to build something?
+            </h2>
+            <p className="text-[#E5E5E5] text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+              Have a software project or engineering challenge? Let&apos;s talk.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button cta="View Services" variant="primary" href="/services" />
+              <Button cta="Contact Us" variant="outline" href="/contact" dark />
+            </div>
           </div>
         </Container>
       </Section>

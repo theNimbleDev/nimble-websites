@@ -21,82 +21,33 @@
 }
 
 body {
-  color: white;
+  color: #1d1d1d;
+  background: #ffffff;
 }
 
 h1 {
   font-size: var(--primary-h1-size);
   line-height: 112%;
-  background: linear-gradient(90deg, #ffa673 0%, #ff7354 50%, #ff7d06 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #ffa673 0%, #ff7354 50%, #ff7d06 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
-.span-text {
-  color: white !important;
+  color: #1d1d1d;
 }
 
 h2 {
   font-size: var(--primary-h2-size);
   line-height: 118%;
+  color: #1d1d1d;
 }
 
 p {
   font-size: var(--primary-p-size);
   line-height: var(--p-line-height);
-}
-
-/* html {
-  background: url('/sitebg.svg') no-repeat top center fixed;
-  background-size: cover;
-} */
-
-/* ButtonComponent.css */
-.gradient-border {
-  background: linear-gradient(white, white) padding-box,
-    linear-gradient(90deg, #ffa673 0%, #ff7354 50%, #ff7d06 100%);
-  border-radius: 10px;
-  border: 2px solid transparent;
-}
-
-/* testimonial Slider styles - custom slider */
-/* In your global CSS file (e.g., styles/globals.css) */
-.swiper-pagination-bullet {
-  width: 20px !important;
-  height: 20px !important;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ) !important; /* Default color (gray-300) */
-  opacity: 1 !important; /* Ensure full visibility */
-  margin: 0 8px !important; /* Adjust margin to align properly */
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #ff7e06 !important; /* Active color */
-}
-
-.swiper-pagination {
-  position: unset !important;
+  color: #1d1d1d;
 }
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px transparent inset !important; /* Keeps the input background transparent */
-  -webkit-text-fill-color: white !important; /* Ensures text color is white */
-  transition: background-color 5000s ease-in-out 0s; /* Prevents autofill background override */
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  -webkit-text-fill-color: #1d1d1d !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 @layer utilities {
@@ -112,9 +63,5 @@ textarea:-webkit-autofill {
   .left-768,
   .right-768 {
     width: 100% !important;
-  }
-  .swiper-pagination-bullet {
-    width: 11px !important;
-    height: 11px !important;
   }
 }
